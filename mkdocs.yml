@@ -1,0 +1,18 @@
+site_name: My Knowledge Base
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - search.suggest
+
+plugins:
+  - search
+  - roamlinks # Converts [[Note]] to [Note](note.md) automatically
+
+markdown_extensions:
+  - nl2br # Handles Obsidian's single line breaks
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences # For your C++/Java code blocks
+  - pymdownx.tasklist:
+      custom_checkbox: true # Renders Obsidian [ ] and [x]
