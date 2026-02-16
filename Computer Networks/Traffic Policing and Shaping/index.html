@@ -8542,15 +8542,11 @@ May drop packet (if the bucket is full).</p>
 <p><strong>Result:</strong> It allows for a specific <strong>Average Rate</strong> (token generation speed) while permitting a controlled <strong>Burst Size</strong> (bucket capacity).</p>
 </li>
 </ul>
-<p>$${\displaylines Rfill=Ri-Rout\ B=Rfill\cdot BurstDuration}$$</p>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>A computer outputs packets at a certain bursty rate (e.g., peak of 100 MB/sec), but the leaky bucket limits the output to a steady 20 MB/sec. You have to calculate how long the queue (bucket) needs to be to avoid dropping packets.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>A token bucket scheme is used for traffic shaping. A new token is put into the bucket every 5μsec. Each token is good for one short packet, which contains 48 bytes of data. What is the maximum sustainable data rate?</p>
-</div>
+<p>$${\displaylines Rfill=Ri-Rout\ B=Rfill\cdot BurstDuration}$$
+!!! question
+    A computer outputs packets at a certain bursty rate (e.g., peak of 100 MB/sec), but the leaky bucket limits the output to a steady 20 MB/sec. You have to calculate how long the queue (bucket) needs to be to avoid dropping packets.</p>
+<p>!!! question
+    A token bucket scheme is used for traffic shaping. A new token is put into the bucket every 5μsec. Each token is good for one short packet, which contains 48 bytes of data. What is the maximum sustainable data rate?</p>
 
 
 

@@ -8536,10 +8536,8 @@
 <li>AAAA - Maps hostname to IPV6</li>
 <li>TTL is how long other DNS servers (resolvers or caches) should keep this information before asking again.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Important</p>
-<p>Serial number of the zone file must be incremented everytime so that slaves can detect the changes.</p>
-</div>
+<p>!!! tip "Important"
+    Serial number of the zone file must be incremented everytime so that slaves can detect the changes.</p>
 <ul>
 <li>Refresh - How often the slaves asks for any changes (Serial changes).</li>
 <li>Retry - Retry time if master not reachable.</li>
@@ -8579,12 +8577,10 @@ mail IN AAAA fd12:34ab:cdef::101
 </ul>
 <p>// 2001:db8:85a3::0/48
 // fd12:34ab:cdef::100</p>
-<div class="admonition tip">
-<p class="admonition-title">Commands</p>
-<p>sudo rndc reload
-sudo rndc zonestatus domain
-sudo rndc retransfer domain</p>
-</div>
+<p>!!! tip "Commands"
+    sudo rndc reload
+    sudo rndc zonestatus domain
+    sudo rndc retransfer domain</p>
 <p>Je suis Sreehari
 Je suis étudiant à l’Institut National de Technologie de Calicut.
 Je suis en troisième année d’informatique.

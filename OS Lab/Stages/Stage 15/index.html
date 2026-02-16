@@ -8406,7 +8406,7 @@ R3 → (Word to be printed)
 <p>Since the invoked module will be modifying the contents of the machine registers during its execution, the invoked must save the registers in use into the stack of the process before invoking the module.</p>
 <p>The Acquire Terminal function waits in a loop, in which it repeatedly invokes the scheduler if the terminal is not free (<strong>BUSY WAIT</strong>). </p>
 <p><img alt="Pasted image 20260111174348.png" src="../../../attachments/Pasted%20image%2020260111174348.png" /></p>
-<div class="highlight"><pre><span></span><code>sequenceDiagram
+<pre class="mermaid"><code>sequenceDiagram
     participant P as Process (User Mode)
     participant W as INT 7 (Write)
     participant M4 as Module 4 (Device)
@@ -8424,19 +8424,15 @@ R3 → (Word to be printed)
         M0-&gt;&gt;M0: Set Status = 1 (Locked)
     end
     M0--&gt;&gt;M4: Return
-    M4-&gt;&gt;M4: Execute &quot;print&quot; instruction
+    M4-&gt;&gt;M4: Execute "print" instruction
     M4-&gt;&gt;M0: Release Terminal (Fn 9)
     M0-&gt;&gt;M0: Set Status = 0 (Free)
     M0-&gt;&gt;M0: Set all WAIT_TERMINAL to READY
     M0--&gt;&gt;M4: Return
     M4--&gt;&gt;W: Return
-    W--&gt;&gt;P: IRET to User
-</code></pre></div>
-<div class="admonition question">
-<p class="admonition-title">Why do we need to lock the resources?</p>
-<pre><code>To ensure atomicity, lets say there is a process printing `HELLO WORLD` and another printing `1234`, it atomicity is not ensured, due to context switching, the printing of characters will not be proper
-</code></pre>
-</div>
+    W--&gt;&gt;P: IRET to User</code></pre>
+<p>!!! question "Why do we need to lock the resources?"
+        To ensure atomicity, lets say there is a process printing <code>HELLO WORLD</code> and another printing <code>1234</code>, it atomicity is not ensured, due to context switching, the printing of characters will not be proper</p>
 
 
 

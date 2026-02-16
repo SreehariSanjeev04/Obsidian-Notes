@@ -8466,16 +8466,12 @@
 <h3 id="byte-count">Byte Count</h3>
 <hr />
 <p>the size of the frame is kept in the starting of the frame.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>Data = HELLO, WORLD!!
+<p>!!! example
+    <div class="highlight"><pre><span></span><code>Data = HELLO, WORLD!!
 [5 H E L L O] [7 W O R L D ! !]
-</code></pre></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If the count byte itself gets corrupted, then the entire frame gets corrupted</p>
-</div>
+</code></pre></div></p>
+<p>!!! warning
+    If the count byte itself gets corrupted, then the entire frame gets corrupted</p>
 <h3 id="byte-stuffing">Byte Stuffing</h3>
 <hr />
 <p>We use delimiters at starting and ending of the frame. Each delimiter is of size 8 bits (1 Byte). If the delimiter itself appear in the body, we escape it by escape character</p>
@@ -8484,15 +8480,13 @@
 <li>DLE ETX =&gt; End of Frame</li>
 <li>DLE =&gt; Escape character</li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><div class="highlight"><pre><span></span><code>Data = A B DLE C D
+<p>!!! example
+    <div class="highlight"><pre><span></span><code>Data = A B DLE C D
 Frame = DLE STX A B DLE DLE C D DLE ETX
 </code></pre></div>
-Receiver sees DLE STX and understands, it is the starting of the frame
-two DLE means =&gt; interprets it as a single one
-DLE ETX =&gt; it is the end of the frame</p>
-</div>
+    Receiver sees DLE STX and understands, it is the starting of the frame
+    two DLE means =&gt; interprets it as a single one
+    DLE ETX =&gt; it is the end of the frame</p>
 <h4 id="disadvantage">Disadvantage</h4>
 <ul>
 <li>Extra overhead due to escape characters</li>
@@ -8501,17 +8495,16 @@ DLE ETX =&gt; it is the end of the frame</p>
 <h3 id="bit-stuffing">Bit Stuffing</h3>
 <hr />
 <p>special flag sequence (e.g,. 01111110) is used to mark starting and ending of frames. If the same pattern appears in the data itself, the sender inserts a 0 after every sequence of five consecutive 1s. Receiver removes the stuffed bits.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>Flag = 01111110
+<p>!!! example
+    <div class="highlight"><pre><span></span><code>Flag = 01111110
 Data = 01111101111110
 Stuffed Data = 0111110 0 111110 10
 Frame = Flag + Stuffed Data + Flag
      = 01111110 0111110011111010 01111110
-</code></pre></div>
-<p>Receiver gets the frame, finds, Flag in the start, removes the flag
-Scans the body, when it receives 5 consecutive 1s, it removes the next 0</p>
-</div>
+</code></pre></div></p>
+<pre><code>Receiver gets the frame, finds, Flag in the start, removes the flag
+Scans the body, when it receives 5 consecutive 1s, it removes the next 0
+</code></pre>
 
 
 

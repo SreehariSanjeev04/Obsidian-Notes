@@ -8483,24 +8483,20 @@
 <li><strong>Pure Aloha</strong> - When a station sends data it waits for an ack, if ack doesn't come within the allotted time then the station wait for random amount of time called back-off time and re-sends the data. Since the different stations wait for different times, collision probability decreases. Uniform frame length guarantees less collision.  </li>
 </ul>
 <p><img alt="Pasted image 20251027213039.png" src="../../../attachments/Pasted%20image%2020251027213039.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Formula</p>
-<p>Vulnerable Time = 2 * T
-Throughput = G * e ^ -2e
-G = 1/2, efficiency = 18.4%</p>
-</div>
+<p>!!! tip "Formula"
+    Vulnerable Time = 2 * T
+    Throughput = G * e ^ -2e
+    G = 1/2, efficiency = 18.4%</p>
 <h2 id="slotted-aloha">Slotted ALOHA</h2>
 <ul>
 <li>The time of the shared channel is divided into discrete time intervals called slots</li>
 <li>Sending of data is allowed only at the beginning of the time slots.</li>
 </ul>
 <p><img alt="Pasted image 20251027212440.png" src="../../../attachments/Pasted%20image%2020251027212440.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Formula</p>
-<p>Vulnerable Time =  T
-Throughput = G * e ^ -e
-G = 1, efficiency = 36.8%</p>
-</div>
+<p>!!! tip "Formula"
+    Vulnerable Time =  T
+    Throughput = G * e ^ -e
+    G = 1, efficiency = 36.8%</p>
 
 
 

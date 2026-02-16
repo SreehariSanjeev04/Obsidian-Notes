@@ -8692,12 +8692,10 @@
 <p>Identifier to locate web pages - <code>Uniform Resource Locator</code>, uses <code>HyperText Transfer Protocol</code>.</p>
 <ul>
 <li>Delivery of streaming audio and video.</li>
-<li>Real-time audio and video </li>
+<li>Real-time audio and video 
+!!! tip "Important"
+    No delay in transmission of data compared to other classes</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Important</p>
-<p>No delay in transmission of data compared to other classes</p>
-</div>
 <h4 id="scalable-connectivity">Scalable Connectivity</h4>
 <p><img alt="Pasted image 20250913215236.png" src="../../attachments/Pasted%20image%2020250913215236.png" /></p>
 <blockquote>
@@ -8709,46 +8707,36 @@
 </blockquote>
 <p>1) Circuit switched - deprecated 
 2) Packet switched</p>
-<div class="admonition detail">
-<p class="admonition-title">Detail</p>
-<p>Packet-switched networks use a strategy called store-and-forward. Each node waits for the complete packet and then transfers to the next node</p>
-</div>
+<p>!!! detail
+    Packet-switched networks use a strategy called store-and-forward. Each node waits for the complete packet and then transfers to the next node</p>
 <ul>
 <li>Routing is the process of forwarding messages toward the destination node based on it's address.</li>
 </ul>
 <h4 id="multiplexing">Multiplexing</h4>
-<div class="admonition question">
-<p class="admonition-title">How hosts share a network ?</p>
-<p>Multiplexing, which means that a system resource is shared among multiple users.</p>
-</div>
+<p>!!! question "How hosts share a network ?"
+    Multiplexing, which means that a system resource is shared among multiple users.</p>
 <p><img alt="Pasted image 20250913221225.png" src="../../attachments/Pasted%20image%2020250913221225.png" /></p>
 <h4 id="synchronous-time-division-multiplexing">Synchronous time-division multiplexing</h4>
 <p>Divides time in equal-sized quanta and in round robin fashion, give each flow a chance to send its data over the physical link.</p>
 <h4 id="frequency-division-multiplexing">Frequency Division Multiplexing</h4>
 <p>Transmission of data at a different frequency</p>
-<div class="admonition tip">
-<p class="admonition-title">Important</p>
-<p>Both have its own cons
-A device has to wait for its turn in STDM
-Link has to be compatible with multiple frequencies for FDM</p>
-</div>
+<p>!!! tip "Important"
+    Both have its own cons
+    A device has to wait for its turn in STDM
+    Link has to be compatible with multiple frequencies for FDM</p>
 <h4 id="statistical-multiplexing">Statistical Multiplexing</h4>
 <p>Like STDM → flows take turns using the physical link
 Unlike STDM → turns are not fixed, instead, each flow only sends when it actually has data.</p>
 <p>This is why packet switching is efficient</p>
-<div class="admonition danger">
-<p class="admonition-title">Problem</p>
-<p>If flows just sent as much as they want, one flow could hog the link
-The limit is a packet size</p>
-</div>
+<p>!!! danger "Problem"
+    If flows just sent as much as they want, one flow could hog the link
+    The limit is a packet size</p>
 <p>In short, statistical multiplexing - packet switching, share the link on demand, use packets to limit how much one flow sends at once.</p>
 <p><img alt="Pasted image 20250913232030.png" src="../../attachments/Pasted%20image%2020250913232030.png" /></p>
-<div class="admonition question">
-<p class="admonition-title">Who makes the decision?</p>
-<p>In a switched network, each switch decides which packet to put on its outgoing link.
-These decisions are local and packet-by-packet
-FIFO, Round-Robin or Qos (Quality of Service)</p>
-</div>
+<p>!!! question "Who makes the decision?"
+    In a switched network, each switch decides which packet to put on its outgoing link.
+    These decisions are local and packet-by-packet
+    FIFO, Round-Robin or Qos (Quality of Service)</p>
 <h4 id="congestion-and-buffering">Congestion and Buffering</h4>
 <ul>
 <li>A switch buffers the extra packets in memory</li>

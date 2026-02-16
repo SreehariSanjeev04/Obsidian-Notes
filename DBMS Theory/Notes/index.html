@@ -8881,12 +8881,11 @@ Data item - can be an attribute, record or disk block</p>
 <p>(Lost Update, Temporary Update, and Incorrect Summary)</p>
 <h4 id="the-unrepeatable-read-problem">The unrepeatable read problem</h4>
 <p>Same value is read twice, one original and one modified.</p>
-<div class="highlight"><pre><span></span><code>flowchart TB
+<pre class="mermaid"><code>flowchart TB
     A[Types] --- B[Lost Update]
     A[Types] --- C[Temporary Update]
     A[Types] --- D[Incorrect Summary]
-    A[Types] --- E[Unrepeatable Read]
-</code></pre></div>
+    A[Types] --- E[Unrepeatable Read]</code></pre>
 <h4 id="state-diagram-for-basic-database-system">State diagram for basic database system</h4>
 <p><img alt="Pasted image 20250418211134.png" src="../../attachments/Pasted%20image%2020250418211134.png" /></p>
 <p><img alt="Pasted image 20250418211441.png" src="../../attachments/Pasted%20image%2020250418211441.png" /></p>

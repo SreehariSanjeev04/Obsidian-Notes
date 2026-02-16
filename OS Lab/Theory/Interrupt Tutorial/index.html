@@ -8452,10 +8452,8 @@
 <li><strong>Mode Switch</strong> - The machine switches to Privileged Mode, Address Translation is disabled.</li>
 <li><strong>Handler Execution</strong> - The next instruction is fetched from the result address.</li>
 </ul>
-<div class="admonition question">
-<p class="admonition-title">Where is the instruction pointer of the user program pushed?</p>
-<p>The instruction pointer is stored in Kernel Stack, and is popped when the execution of the handler is done.</p>
-</div>
+<p>!!! question "Where is the instruction pointer of the user program pushed?"
+    The instruction pointer is stored in Kernel Stack, and is popped when the execution of the handler is done.</p>
 <h3 id="exception-handling-in-xsm">Exception Handling in XSM</h3>
 <p>Exceptions are synchronous events caused by the user program (e.g., illegal operations or memory access errors). The Exception handler is privileged.</p>
 <ul>

@@ -8579,10 +8579,8 @@
 <li>There is an exception when it comes to CREATED processes</li>
 <li>CREATED has not been scheduled yet, so there is no concern of BP or SP as compared to a READY process. IRETURN would fetch the first instruction address from the User Stack <strong>Important</strong> (READY has to go back to the timer to complete the restore command too).</li>
 </ul>
-<div class="admonition question">
-<p class="admonition-title">Why store BP again in scheduler?</p>
-<p>The EXPL compiler automatically stores all registers into User Stack except BP, which the OS kernel should manage. The scheduler can be called by a system call service. So the scheduler pushes BP into kernel stack before context switch.</p>
-</div>
+<p>!!! question "Why store BP again in scheduler?"
+    The EXPL compiler automatically stores all registers into User Stack except BP, which the OS kernel should manage. The scheduler can be called by a system call service. So the scheduler pushes BP into kernel stack before context switch.</p>
 <h4 id="pseudocode">Pseudocode</h4>
 <h5 id="timer">Timer</h5>
 <div class="highlight"><pre><span></span><code>// Save the SP to UPTR

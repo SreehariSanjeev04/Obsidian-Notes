@@ -8357,25 +8357,17 @@
     - generation
     - transmission
     - transit</p>
-<div class="admonition reasons for loss">
-<p class="admonition-title">Reasons</p>
-<ul>
-<li>internet disconnection</li>
-<li>physical tampering</li>
-<li>Conjuction when multiple nodes are connected to a router</li>
-</ul>
-</div>
+<p>!!! reasons for loss
+    - internet disconnection
+    - physical tampering
+    - Conjuction when multiple nodes are connected to a router</p>
 <ul>
 <li>Transport layer will check the loss of data</li>
 <li>Loss can be identified from the headers of the message</li>
 </ul>
-<div class="admonition types of medium">
-<p class="admonition-title">Types</p>
-<ul>
-<li>Guided -&gt; No possibility of loss</li>
-<li>Unguided</li>
-</ul>
-</div>
+<p>!!! types of medium
+    - Guided -&gt; No possibility of loss
+    - Unguided</p>
 <h4 id="relation-bw-bandwidth-throughput-and-input-traffic">Relation b/w <a href="../Networking%20Concepts/#band-width">Bandwidth</a>, <a href="../Networking%20Concepts/#throughput">Throughput</a> and <a href="../Networking%20Concepts/#input-traffic">Input Traffic</a></h4>
 <hr />
 <p>Throughput &lt;= Bandwidth (ideally)
@@ -8389,12 +8381,10 @@ Throughput can reduce drastically when collisions occur</p>
 <p><code>50 * 10e-3 * 45 * 10e6 bits/sec = 2.25 * 10e6</code></p>
 <p>It represents the amount of data that can be in flight in the network.</p>
 <p>Because the propagation delay, the first bit won't the receiver until after the one way delay. So the sender must be keep transmitting up to one RTT * Bandwidth worth of data before it even hears back.</p>
-<div class="admonition tip">
-<p class="admonition-title">TCP window</p>
-<p>TCP uses a sliding window mechanism, sender can only send data up to the window size before waiting for an ACK
-If the window is too small, underutilized 
-Window Size &gt;= RTT * Bandwidth</p>
-</div>
+<p>!!! tip "TCP window"
+    TCP uses a sliding window mechanism, sender can only send data up to the window size before waiting for an ACK
+    If the window is too small, underutilized 
+    Window Size &gt;= RTT * Bandwidth</p>
 
 
 

@@ -8416,11 +8416,9 @@
   <h1>XSM Unprivileged Mode Execution</h1>
 
 <p><a href="https://exposnitc.github.io/Tutorials/xsm_unprivileged_tutorial.html">XSM Unprivileged</a></p>
-<div class="admonition tip">
-<p class="admonition-title">What does PUSH operation do?</p>
-<p>PUSH increments the SP, then pushes the desired value
-It has different behaviour in privileged and unprivileged mode, pushing either physical address or the logical address into the stack</p>
-</div>
+<p>!!! tip "What does PUSH operation do?"
+    PUSH increments the SP, then pushes the desired value
+    It has different behaviour in privileged and unprivileged mode, pushing either physical address or the logical address into the stack</p>
 <p><a href="../XSM%20Paging%20Hardware%20and%20Address%20Translation/">XSM Paging Hardware and Address Translation</a></p>
 <h2 id="basic-working-of-virtual-machine-model">Basic Working of Virtual Machine Model</h2>
 <p>The application code is designed to be loaded by the OS to start execution from logical address 2056</p>
@@ -8431,10 +8429,8 @@ It has different behaviour in privileged and unprivileged mode, pushing either p
 <li>PTBR register must be set to the start address of the page table.</li>
 <li>Minimum of one page must be allocated for the stack with write bit set.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Important</p>
-<p>Before an application is run for the first time, the stack pointer register SP is set to value 4095</p>
-</div>
+<p>!!! tip "Important"
+    Before an application is run for the first time, the stack pointer register SP is set to value 4095</p>
 <ul>
 <li>The IP must be set to the entry point.</li>
 <li>Place the entry point value of the top of the stack and set the stack pointer to this value.</li>

@@ -8900,10 +8900,8 @@ end
 <p><code>t = exposcall(fun_code, arg1, arg2, arg3)</code></p>
 <p>(https://exposnitc.github.io/os_spec-files/dynamicmemoryroutines.html)</p>
 <p>The libary.lib occupies two pages of disk (13,14) and resides in (63,64)</p>
-<div class="admonition tip">
-<p class="admonition-title">Important</p>
-<p>For any library implementation, remember to save to context of the used registers before call the interrupt</p>
-</div>
+<p>!!! tip "Important"
+    For any library implementation, remember to save to context of the used registers before call the interrupt</p>
 <p><em>CALL is used for subroutines, but INT is used for interrupt handlers, for library - CALL 0</em></p>
 
 

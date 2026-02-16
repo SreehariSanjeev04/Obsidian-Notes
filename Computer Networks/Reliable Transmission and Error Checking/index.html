@@ -8457,11 +8457,9 @@
 
   <h1>Reliable Transmission and Error Checking</h1>
 
-<div class="admonition tip">
-<p class="admonition-title">Topic</p>
-<p>Reliable transmission: Stop-and-wait</p>
-</div>
-<p>protocol and Sliding window protocol
+<p>!!! tip "Topic"
+    Reliable transmission: Stop-and-wait
+protocol and Sliding window protocol
 Error detection – Parity check, Hamming
 distance, Cyclic Redundancy Code (CRC) – FDCN Chapter 10
 dataword, codeword, syndrome, and PDCN Chapter 2.4
@@ -8495,11 +8493,9 @@ error</p>
 <ul>
 <li>When an ACK arrives, the sender moves LAR to the right, thereby allowing the sender to transmit another frame. Also, the sender associates a time with each frame it transmits, and it retransmits the frame when the timer expires. </li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>-Send first 4 packets: 0,1,2,3  </p>
-</div>
-<p>(unACKed window = [0–3])
+<p>!!! example "Example"
+    -Send first 4 packets: 0,1,2,3<br />
+(unACKed window = [0–3])
  <strong>ACK(0) received:</strong> Window slides → now allowed [1–4].<br />
 Sender can send packet 4.
 -<strong>ACK(1) received:</strong> Window slides → [2–5].<br />
@@ -8512,12 +8508,10 @@ Sender can send packet 5.
 LAF = LFR + RWS
 </code></pre></div></li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Case when RWS = SWS</p>
-<p>Not MaxSeqNum &gt;= SWS + 1, when RWS=SWS
-Safe rule = SWS &lt; MaxSeqNum +  1/2
-General conditions: RWS + SWS &lt;= MaxSeqNum </p>
-</div>
+<p>!!! tip "Case when RWS = SWS"
+    Not MaxSeqNum &gt;= SWS + 1, when RWS=SWS
+    Safe rule = SWS &lt; MaxSeqNum +  1/2
+    General conditions: RWS + SWS &lt;= MaxSeqNum </p>
 <h4 id="piggybacking">PiggyBacking</h4>
 <p>The ACK is comparatively small and only has a header, so instead of wasting the bandwidth, we attach the piggybacks to the next data frame. Saves bandwidth and reduces overhead. </p>
 

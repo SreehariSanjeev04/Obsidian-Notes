@@ -8465,7 +8465,7 @@ Process continues executing the next instruction.
 <li><em>As User Stack can span multiple pages, logical addressing is preferred</em></li>
 </ul>
 <h2 id="software-interrupts">Software Interrupts</h2>
-<div class="highlight"><pre><span></span><code>sequenceDiagram
+<pre class="mermaid"><code>sequenceDiagram
     participant U as User Program (User Mode)
     participant US as User Stack
     participant KS as Kernel Stack
@@ -8503,8 +8503,7 @@ Process continues executing the next instruction.
     U-&gt;&gt;US: Pop Return Value into Register
     U-&gt;&gt;US: Pop &amp; Discard Args and Syscall No.
     U-&gt;&gt;US: Restore Registers (R0 - R15)
-    U-&gt;&gt;U: Resume Execution
-</code></pre></div>
+    U-&gt;&gt;U: Resume Execution</code></pre>
 
 
 

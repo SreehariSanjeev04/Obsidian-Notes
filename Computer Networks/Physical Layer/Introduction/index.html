@@ -8737,11 +8737,9 @@
 
   <h1>Introduction</h1>
 
-<div class="admonition tip">
-<p class="admonition-title">Module</p>
-<p>Physical Layer</p>
-</div>
-<p>-​ Analog and Digital Transmission
+<p>!!! tip "Module"
+    Physical Layer
+-​ Analog and Digital Transmission
 -​ Signal and composite signals,
 time and frequency domain
 Digital signal transmission (baseband and
@@ -8800,25 +8798,19 @@ $SNRdb = 10\log{10}{SNR}$</li>
 <li>Level of the signals we use</li>
 <li>The quality of the channel (level of noise)</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Nyquist Bit Rate</p>
-<p>BitRate = $2 * B * \log{2}{L}$</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>We need to send 265 kbps over a noiseless (ideal) channel with a bandwidth of 20 kHz. How many
-signal levels do we need? We can use the Nyquist formula as shown:
-$265000 = 2 * 20,000 * log{2}{L} \implies 98.7 levels$
-Sound Level should be in powers of 2, so either accept $L = 64 (265 kbps)$ or $L = 128 (280 kbps)$</p>
-</div>
+<p>!!! tip "Nyquist Bit Rate"
+    BitRate = $2 * B * \log{2}{L}$</p>
+<p>!!! example
+    We need to send 265 kbps over a noiseless (ideal) channel with a bandwidth of 20 kHz. How many
+    signal levels do we need? We can use the Nyquist formula as shown:
+    $265000 = 2 * 20,000 * log{2}{L} \implies 98.7 levels$
+    Sound Level should be in powers of 2, so either accept $L = 64 (265 kbps)$ or $L = 128 (280 kbps)$</p>
 <h4 id="shannon-capacity-noisy-channel">Shannon Capacity (Noisy Channel)</h4>
 <p>Channels are always noisy.</p>
 <p>$C = B * log{2}{(1 + SNR})$</p>
-<div class="admonition topic">
-<p class="admonition-title">Topic</p>
-<p>SNR, Data rate limits (Nyquist bit rate for</p>
-</div>
-<p>noiseless channel and Shannon Capacity
+<p>!!! topic
+    SNR, Data rate limits (Nyquist bit rate for
+noiseless channel and Shannon Capacity
 for noisy channel)
 Digital-to-digital transmission (line coding
 – NRZ, NRZ-L and NRZ-I, RZ, Manchester

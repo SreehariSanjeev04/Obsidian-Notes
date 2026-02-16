@@ -8434,18 +8434,12 @@
 <li>Error correction and recovery is guaranteed by link layer.</li>
 <li>For a satellite communication, before sending the frames, sender and receiver agree on communication (hand shake). And each frame is acknowledged to make the communication reliable as it is long distance and is error prone</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Steps involved</p>
-<ul>
-<li>Connection establishment</li>
-<li>Send or receive data</li>
-<li>Connection release</li>
-</ul>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>There are 4 devices, S1, S2, S3 and S4. S1 and S2 wants to communicate with S3 =&gt; S3 allocates dedicated resources for S1 and S2 resulting in a connection establishment to start communication. Consider, S3 have resource only for handling 2 devices at a time =&gt; When S4 tries to establish a connection, S3 declines until S1 or S2 releases the connection</p>
-</div>
+<p>!!! info "Steps involved"
+    - Connection establishment
+    - Send or receive data
+    - Connection release</p>
+<p>!!! example
+    There are 4 devices, S1, S2, S3 and S4. S1 and S2 wants to communicate with S3 =&gt; S3 allocates dedicated resources for S1 and S2 resulting in a connection establishment to start communication. Consider, S3 have resource only for handling 2 devices at a time =&gt; When S4 tries to establish a connection, S3 declines until S1 or S2 releases the connection</p>
 <h4 id="connection-less">Connection less</h4>
 <hr />
 <ul>
@@ -8453,13 +8447,10 @@
 <li>Each frame is treated independently</li>
 <li>No guarantee of delivery, ordering or error recovery (unless handled in higher layers)</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Steps involved</p>
-<ul>
-<li>Send or receive data</li>
-</ul>
-<p>i.e., there is no connection establishment or connection release</p>
-</div>
+<p>!!! info "Steps involved"
+    - Send or receive data</p>
+<pre><code>i.e., there is no connection establishment or connection release
+</code></pre>
 
 
 

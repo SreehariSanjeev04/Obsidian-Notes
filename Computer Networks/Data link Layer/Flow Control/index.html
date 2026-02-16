@@ -8594,14 +8594,10 @@
   <h1>Flow Control</h1>
 
 <p>Flow control is the process of regulating the amount of data the sender can transmit before waiting for acknowledgement, so that the receiver is not overwhelmed. </p>
-<div class="admonition question">
-<p class="admonition-title">Why needed?</p>
-<ul>
-<li>Sender can be fast (powerful machine or fast network)</li>
-<li>Receiver can be slow (weaker machine or limited buffer memory)</li>
-<li>If sender keeps transmitting without control -&gt; receiver's buffer overflows -&gt; frame loss</li>
-</ul>
-</div>
+<p>!!! question "Why needed?"
+    - Sender can be fast (powerful machine or fast network)
+    - Receiver can be slow (weaker machine or limited buffer memory)
+    - If sender keeps transmitting without control -&gt; receiver's buffer overflows -&gt; frame loss</p>
 <ul>
 <li>So flow control ensures the synchronization between sender and receiver speeds</li>
 </ul>
@@ -8612,9 +8608,7 @@ Here, the control between (S1 and S4), (S2 and S4), (S3 and S4) are all flow con
 - Sliding Window
     - Go-back-N ARQ
     - Selective Repeat ARQ</p>
-<div class="admonition info">
-<p class="admonition-title">ARQ stands for Automatic Repeat Request</p>
-</div>
+<p>!!! info "ARQ stands for Automatic Repeat Request"</p>
 <h3 id="stop-and-wait-arq">Stop and Wait ARQ</h3>
 <hr />
 <ul>
@@ -8679,9 +8673,7 @@ Here, the control between (S1 and S4), (S2 and S4), (S3 and S4) are all flow con
 <li>Wastage due to re-transmission: If one frame is lost, all the subsequent frames in the window has to be re-transmitted even if they are received correctly.</li>
 <li>Receiver can handle frames in order only.</li>
 </ul>
-<div class="admonition failure">
-<p class="admonition-title">Practice few questions</p>
-</div>
+<p>!!! failure "Practice few questions"</p>
 <h3 id="selective-repeat">Selective Repeat</h3>
 <hr />
 <ul>
@@ -8703,18 +8695,15 @@ Here, the control between (S1 and S4), (S2 and S4), (S3 and S4) are all flow con
 <li>Larger memory required for receiver: must store out-of-order frames</li>
 <li>sender and receiver window size should be carefully managed to avoid ambiguities</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Why window size is $2^k / 2$ each</p>
-<p>If k = 3 (number of bits for sequence number)
-sequence numbers will be -&gt; 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, ...
-suppose the window size is 6 which is larger than 2^k / 2</p>
-<ul>
-<li>suppose, sender sends frames 0 to 5,</li>
-<li>they are correctly received and acknowledged</li>
-<li>Window slides -&gt; next frames are (6, 7, 0, 1, 2, 3)</li>
-<li>But if the old frame 0 is still in the network, the receiver cannot tell whether its the old 0 or the new 0</li>
-</ul>
-</div>
+<p>!!! info "Why window size is $2^k / 2$ each"
+    If k = 3 (number of bits for sequence number)
+    sequence numbers will be -&gt; 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, ...
+    suppose the window size is 6 which is larger than 2^k / 2</p>
+<pre><code>- suppose, sender sends frames 0 to 5,
+- they are correctly received and acknowledged
+- Window slides -&gt; next frames are (6, 7, 0, 1, 2, 3)
+- But if the old frame 0 is still in the network, the receiver cannot tell whether its the old 0 or the new 0
+</code></pre>
 
 
 

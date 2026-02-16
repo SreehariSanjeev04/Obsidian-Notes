@@ -8489,20 +8489,20 @@ For unguided media, we use error correction. Because, error occurs more frequent
 2. Divides by the same G(x)
 3. If remainder = 0 -&gt; frame is correct
 4. If remainder != 0 -&gt; error detected</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Message, M = 101100
-Generator, G(x) = 1101
-=&gt; degree(G(x)) = 3 =&gt; 3 degree bits should be added
-=&gt; After appending zeroes -&gt; 101100000</p>
-<p>Doing binary division (XOR method)
+<p>!!! example
+    Message, M = 101100
+    Generator, G(x) = 1101
+    =&gt; degree(G(x)) = 3 =&gt; 3 degree bits should be added
+    =&gt; After appending zeroes -&gt; 101100000</p>
+<pre><code>Doing binary division (XOR method)
 Quotient is not needed, Just the remainder is needed
 Remainder = 0111
 =&gt; R = 111
-=&gt; Transmitted frame = M + R = 101100111</p>
-<p>In receiver side, 
-101100111 is divided by 1101 =&gt; Remainder = 0000 =&gt; No error</p>
-</div>
+=&gt; Transmitted frame = M + R = 101100111
+
+In receiver side, 
+101100111 is divided by 1101 =&gt; Remainder = 0000 =&gt; No error
+</code></pre>
 <h4 id="hamming-distance-code">Hamming Distance Code</h4>
 <hr />
 <ul>
@@ -8511,25 +8511,22 @@ Remainder = 0111
 <li>Parity bits are placed at positions that are powers of 2</li>
 <li>each parity bit checks some subset of bits</li>
 </ul>
-<div class="admonition question">
-<p class="admonition-title">How to find the number of parity bits needed?</p>
-<p>if m = number of data bits, and r = number of parity bits, r can be found by
-$2^r \ge m + r + 1$</p>
-<p>m + r = total length of code word</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>to send 4 bits of data
-<div class="highlight"><pre><span></span><code>if r = 1, 
+<p>!!! question "How to find the number of parity bits needed?"
+    if m = number of data bits, and r = number of parity bits, r can be found by
+    $2^r \ge m + r + 1$</p>
+<pre><code>m + r = total length of code word
+</code></pre>
+<p>!!! example
+    to send 4 bits of data
+    <div class="highlight"><pre><span></span><code>if r = 1, 
 2 &lt; 4 + 1 + 1
 if r = 2,
 4 &lt; 4 + 2 + 1
 if r = 3,
 8 &lt;= 4 + 3 + 1
 </code></pre></div>
-therefore, r = 3
-=&gt; sizeof code word = m + r = 4 + 3 = 7</p>
-</div>
+    therefore, r = 3
+    =&gt; sizeof code word = m + r = 4 + 3 = 7</p>
 <div class="highlight"><pre><span></span><code>Bit positions: 1  2  3  4  5  6  7 
 Bit Types:     P1 P2 D1 P3 D2 D3 D4
 </code></pre></div>
@@ -8554,9 +8551,7 @@ similarly, in third group (4, 5, 6, 7) =&gt; _ + 0 + 1 + 1 should be even =&gt; 
 <p>Therefore, the code word is =&gt; 0110011
 This code word will be transmitted to the receiver.
 The code word is unique for a given data</p>
-<div class="admonition question">
-<p class="admonition-title">How the receiver checks and correct errors?</p>
-</div>
+<p>!!! question "How the receiver checks and correct errors?"</p>
 <p>Consider the situation, due to some issue, instead of 0110011, 0110111 is received</p>
 <blockquote>
 <p>The receiver will check if all the 3 groups add of even parity
@@ -8566,16 +8561,14 @@ and, for third group (4, 5, 6, 7) =&gt; 0 + 1 + 1 + 1 =&gt; 3 =&gt; odd =&gt; er
 <p>From this we can say there is an error, to identify at which position error occurred, we add up the parity bit position which have errors =&gt; 1 + 4 = 5 
 i.e., error is in the 5th position, so we can toggle the bit and correct the error</p>
 </blockquote>
-<div class="admonition info">
-<p class="admonition-title">Minimum Hamming distance (d)</p>
-<p>Minimum Hamming distance is the minimum value obtained by doing XOR in all possible pairs of code words.</p>
-<p>Hamming Code can detect d - 1 bit errors and correct $\frac{d-1}{2}$ bit errors</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Hamming Code is not always correct</p>
-<p>Hamming code can give false positives, i.e., it may say a code is correct even though it might have some errors. 
-Solution is to use Read Solomon Codes or use LDPC (Low density parity check) or by adding one more parity bit</p>
-</div>
+<p>!!! info "Minimum Hamming distance (d)"</p>
+<pre><code>Minimum Hamming distance is the minimum value obtained by doing XOR in all possible pairs of code words.
+
+Hamming Code can detect d - 1 bit errors and correct $\frac{d-1}{2}$ bit errors
+</code></pre>
+<p>!!! warning "Hamming Code is not always correct"
+    Hamming code can give false positives, i.e., it may say a code is correct even though it might have some errors. 
+    Solution is to use Read Solomon Codes or use LDPC (Low density parity check) or by adding one more parity bit</p>
 
 
 

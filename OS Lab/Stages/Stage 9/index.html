@@ -8324,10 +8324,8 @@
 <p>Whenever there is a transfer of program control from the user mode to kernel during the interrupts, the interrupt handler will change the stack to the kernel stack (SP register must point to the top of the kernel stack of the program). Before the machine returns back, SP must be restored.</p>
 <p>Process Table lets you store the SP values of the two stacks.</p>
 <p>The Kernel Stack is used for storing the context of the registers.</p>
-<div class="admonition question">
-<p class="admonition-title">Why tho?</p>
-<p>So that kernel can use those registers without user's data.</p>
-</div>
+<p>!!! question "Why tho?"
+    So that kernel can use those registers without user's data.</p>
 <p><a href="../../Theory/Kernel%20Stack%20Management/">Kernel Stack Management</a></p>
 
 

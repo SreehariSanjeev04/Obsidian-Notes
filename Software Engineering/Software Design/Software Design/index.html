@@ -9234,7 +9234,7 @@
 <li><strong>Design by Contract (DbC)</strong> is essentially a "legal agreement" between a piece of code (the <strong>Supplier</strong>) and the code that calls it (the <strong>Client</strong>). It’s a powerful alternative to just "hoping" the data is correct.</li>
 <li>The preconditions, post conditions and invariant must be true </li>
 </ul>
-<div class="highlight"><pre><span></span><code>graph LR
+<pre class="mermaid"><code>graph LR
     %% Core Definition
     Design[Software Design: Problem-Solving Process]
 
@@ -9268,7 +9268,7 @@
     %% Coupling
     Principles --&gt; Coupling[Reduce Coupling]
     Coupling --&gt; CDef[Definition: Inter-dependencies between modules]
-    Coupling --&gt; CC1[Content: One modifies another&#39;s internal data]
+    Coupling --&gt; CC1[Content: One modifies another's internal data]
     Coupling --&gt; CC2[Common: Global variables]
     Coupling --&gt; CC3[Control: Flags/Commands control flow - use Polymorphism]
     Coupling --&gt; SC1[Stamp: Passing application classes as arguments]
@@ -9280,8 +9280,8 @@
 
     %% Design by Contract
     Principles --&gt; DbC[Design by Contract]
-    DbC --&gt; Pre[Preconditions: Client&#39;s duty before execution]
-    DbC --&gt; Post[Postconditions: Supplier&#39;s promise after execution]
+    DbC --&gt; Pre[Preconditions: Client's duty before execution]
+    DbC --&gt; Post[Postconditions: Supplier's promise after execution]
     DbC --&gt; Inv[Invariants: Truths that remain constant throughout]
 
     %% Other Strategies
@@ -9298,8 +9298,7 @@
     style Principles fill:#bbf,stroke:#333,stroke-width:2px
     style Cohesion fill:#dfd,stroke:#333
     style Coupling fill:#fdd,stroke:#333
-    style DbC fill:#ffd,stroke:#333
-</code></pre></div>
+    style DbC fill:#ffd,stroke:#333</code></pre>
 
 
 
