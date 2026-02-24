@@ -25,7 +25,7 @@
     
     
       
-        <title>Cryptographic hashing properties and applications, Digital signatures - My Knowledge Base</title>
+        <title>Applications of Cryptographic Hash Functions - My Knowledge Base</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#applications-of-cryptographic-hash-functions" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cryptographic hashing   properties and applications, Digital signatures
+              Applications of Cryptographic Hash Functions
             
           </span>
         </div>
@@ -2093,6 +2098,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications of Cryptographic Hash Functions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2101,7 +2126,7 @@
   <span class="md-ellipsis">
     
   
-    Cryptographic hashing   properties and applications, Digital signatures
+    Applications of Cryptographic Hash Functions
   
 
     
@@ -2110,6 +2135,64 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#message-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac-message-authentication-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAC (Message Authentication Code)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital Signature
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9043,6 +9126,55 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#message-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac-message-authentication-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAC (Message Authentication Code)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital Signature
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -9059,9 +9191,35 @@
 
 
 
-  <h1>Cryptographic hashing   properties and applications, Digital signatures</h1>
-
-
+<h1 id="applications-of-cryptographic-hash-functions">Applications of Cryptographic Hash Functions</h1>
+<h3 id="message-authentication">Message Authentication</h3>
+<ul>
+<li>To verify the integrity</li>
+<li>The sender hashes the messages, and sends both hash as well as message</li>
+<li>The receiver hashes the messages and checks it against the hash value</li>
+<li>The hash must be transmitted securely </li>
+<li>The message can be appended with the hash code and undergo symmetric encryption</li>
+</ul>
+<h4 id="mac-message-authentication-code">MAC (Message Authentication Code)</h4>
+<ul>
+<li>MAC function takes in a secret key as well as message → for <strong>Authority</strong> and <strong>Integrity</strong></li>
+</ul>
+<h3 id="digital-signature">Digital Signature</h3>
+<p>In this case, the hash value of the message is encrypted with user’s private key. Only the server that knows the public key will be able to decrypt it.
+- If confidentiality is necessary, then add the message to the encrypted hash value of the message and undergo symmetric encryption.</p>
+<h1 id="requirements-and-security">Requirements and Security</h1>
+<ul>
+<li>Variable input size</li>
+<li>Fixed output size</li>
+<li>Efficiency (high)</li>
+<li>Pre-image resistant</li>
+<li>Second pre-image resistant (should be computationally expensive to calculate another message from same hash value)</li>
+<li>Collision resistant</li>
+<li>Pseudo-randomness
+<img alt="Pasted image 20260224235902.png" src="../../attachments/Pasted%20image%2020260224235902.png" /></li>
+</ul>
+<h1 id="cryptanalysis">Cryptanalysis</h1>
+<p>Analysis of the hash function to exploit it rather than exhaustive search.</p>
 
 
 

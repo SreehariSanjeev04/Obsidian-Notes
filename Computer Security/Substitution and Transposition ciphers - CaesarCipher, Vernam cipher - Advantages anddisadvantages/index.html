@@ -2099,7 +2099,7 @@
   <span class="md-ellipsis">
     
   
-    Cryptographic hashing   properties and applications, Digital signatures
+    Applications of Cryptographic Hash Functions
   
 
     
@@ -9268,12 +9268,13 @@
 <li>Same process, application of subkeys is reversed, and the initial and final permutation functions are reversed as well.</li>
 </ul>
 <h4 id="disadvantages">Disadvantages</h4>
-<p><strong>Small Key Size:</strong> 56 bits provide 256 possible combinations. While this seemed huge in 1977, modern computers (and specialized "DES Cracker" hardware) can brute-force the entire key space in just a few hours.</p>
+<p><strong>Small Key Size:</strong> 56 bits provide 2^56 possible combinations. While this seemed huge in 1977, modern computers (and specialized "DES Cracker" hardware) can brute-force the entire key space in just a few hours.</p>
 <h3 id="caeser-cipher">Caeser Cipher</h3>
 <p>It is a <strong>substitution cipher</strong> where each letter in the plaintext is replaced by a letter a fixed number of positions down the alphabet.</p>
 <p><strong>Encryption:</strong> En​(x)=(x+n)(mod26)
 <strong>Decryption</strong>: Dn(x)=(x+n)(mod26)</p>
-<p><strong>Security:</strong> Extremely low. There are only 25 possible keys (excluding a shift of 0), making it trivial to break via <strong>brute force</strong> or <strong>frequency analysis</strong>.</p>
+<p><strong>Advantages</strong> - Extremely fast because of simple substitution.
+<strong>Security:</strong> Extremely low. There are only 25 possible keys (excluding a shift of 0), making it trivial to break via <strong>brute force</strong> or <strong>frequency analysis</strong>.</p>
 <h3 id="vernam-cipher">Vernam Cipher</h3>
 <ul>
 <li>Assign a number to each character of the plain text and the key according to alphabetical order. </li>
@@ -9283,6 +9284,8 @@
 <p><strong>Highly Secure, But waste of space for key</strong></p>
 <h3 id="avalanche-effect">Avalanche Effect</h3>
 <p><em>”Any small change to input or key must bring significant change to the cipher text”</em></p>
+<p><strong>Substitution</strong> → change of characters
+<strong>Transposition</strong> → change in position of characters</p>
 
 
 
