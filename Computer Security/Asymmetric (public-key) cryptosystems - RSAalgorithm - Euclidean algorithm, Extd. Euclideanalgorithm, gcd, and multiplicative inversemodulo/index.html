@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://sreeharisanjeev04.github.io/Personal-Notes/Software%20Engineering/Software%20Design/Software%20Design/">
+        <link rel="canonical" href="https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Asymmetric%20%28public-key%29%20cryptosystems%20-%20RSAalgorithm%20-%20Euclidean%20algorithm%2C%20Extd.%20Euclideanalgorithm%2C%20gcd%2C%20and%20multiplicative%20inversemodulo/">
       
       
-        <link rel="prev" href="../Class%20Diagram%20and%20Class%20Relationships/">
+        <link rel="prev" href="../../Computer%20Networks/Physical%20Layer/Introduction/">
       
       
-        <link rel="next" href="../Relationships/Aggregation/">
+        <link rel="next" href="../Crytography/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Software Design - My Knowledge Base</title>
+        <title>Asymmetric (public key) cryptosystems RSAalgorithm Euclidean algorithm, Extd. Euclideanalgorithm, gcd, and multiplicative inversemodulo - My Knowledge Base</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#system" class="md-skip">
+        <a href="#rsa-algorithm-rivest-shamir-adleman" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="My Knowledge Base" class="md-header__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Knowledge Base" class="md-header__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Software Design
+              Asymmetric (public key) cryptosystems   RSAalgorithm   Euclidean algorithm, Extd. Euclideanalgorithm, gcd, and multiplicative inversemodulo
             
           </span>
         </div>
@@ -216,7 +216,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="My Knowledge Base" class="md-nav__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Knowledge Base" class="md-nav__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -281,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Artificial%20Intelligence/Adversarial%20Search/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Adversarial%20Search/" class="md-nav__link">
         
   
   
@@ -309,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Artificial%20Intelligence/Constraint%20Satisfaction%20Problems/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Constraint%20Satisfaction%20Problems/" class="md-nav__link">
         
   
   
@@ -337,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Artificial%20Intelligence/Informed%20Search/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Informed%20Search/" class="md-nav__link">
         
   
   
@@ -365,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Artificial%20Intelligence/Intelligent%20Agents/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Intelligent%20Agents/" class="md-nav__link">
         
   
   
@@ -393,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Artificial%20Intelligence/Introduction/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Introduction/" class="md-nav__link">
         
   
   
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Artificial%20Intelligence/Minimax%20and%20Alpha-Beta%20Pruning/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Minimax%20and%20Alpha-Beta%20Pruning/" class="md-nav__link">
         
   
   
@@ -449,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Artificial%20Intelligence/Uninformed%20Search/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Uninformed%20Search/" class="md-nav__link">
         
   
   
@@ -531,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Basics/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Basics/" class="md-nav__link">
         
   
   
@@ -559,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Compiler%20Theory/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Compiler%20Theory/" class="md-nav__link">
         
   
   
@@ -587,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/LEX%20and%20YACC/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/LEX%20and%20YACC/" class="md-nav__link">
         
   
   
@@ -615,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Regex/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Regex/" class="md-nav__link">
         
   
   
@@ -643,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/XSM%20Execution%20Environment/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/XSM%20Execution%20Environment/" class="md-nav__link">
         
   
   
@@ -718,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Stage%201/Code%20Generation/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Stage%201/Code%20Generation/" class="md-nav__link">
         
   
   
@@ -801,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Stage%202/Introduction%20to%20static%20storage%20allocation/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Stage%202/Introduction%20to%20static%20storage%20allocation/" class="md-nav__link">
         
   
   
@@ -884,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Stage%203/Adding%20Flow%20Control%20Statements/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Stage%203/Adding%20Flow%20Control%20Statements/" class="md-nav__link">
         
   
   
@@ -974,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Address%20Resolution%20Protocol/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Address%20Resolution%20Protocol/" class="md-nav__link">
         
   
   
@@ -1002,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Applications%20and%20Architecture/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Applications%20and%20Architecture/" class="md-nav__link">
         
   
   
@@ -1030,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Computer%20Devices/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Computer%20Devices/" class="md-nav__link">
         
   
   
@@ -1058,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/DNS%20and%20HTTP/" class="md-nav__link">
+      <a href="../../Computer%20Networks/DNS%20and%20HTTP/" class="md-nav__link">
         
   
   
@@ -1086,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Error%20Detection/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Error%20Detection/" class="md-nav__link">
         
   
   
@@ -1114,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/MAC%20Protocols/" class="md-nav__link">
+      <a href="../../Computer%20Networks/MAC%20Protocols/" class="md-nav__link">
         
   
   
@@ -1142,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Maximum%20Data%20Rate/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Maximum%20Data%20Rate/" class="md-nav__link">
         
   
   
@@ -1170,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Multiple%20Access%20Techniques/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Multiple%20Access%20Techniques/" class="md-nav__link">
         
   
   
@@ -1198,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Network%20Devices/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Network%20Devices/" class="md-nav__link">
         
   
   
@@ -1226,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Network%20Identifiers/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Network%20Identifiers/" class="md-nav__link">
         
   
   
@@ -1254,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Network%20Models/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Network%20Models/" class="md-nav__link">
         
   
   
@@ -1282,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Network%20Topologies/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Network%20Topologies/" class="md-nav__link">
         
   
   
@@ -1310,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Networking%20Concepts/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Networking%20Concepts/" class="md-nav__link">
         
   
   
@@ -1338,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Networks/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Networks/" class="md-nav__link">
         
   
   
@@ -1366,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/OSI%20Model/" class="md-nav__link">
+      <a href="../../Computer%20Networks/OSI%20Model/" class="md-nav__link">
         
   
   
@@ -1394,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Performance%20Metrics/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Performance%20Metrics/" class="md-nav__link">
         
   
   
@@ -1422,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Portions/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Portions/" class="md-nav__link">
         
   
   
@@ -1450,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Reliable%20Transmission%20and%20Error%20Checking/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Reliable%20Transmission%20and%20Error%20Checking/" class="md-nav__link">
         
   
   
@@ -1478,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Routing%20%28Distance%20Vector%20and%20Link%20State%29/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Routing%20%28Distance%20Vector%20and%20Link%20State%29/" class="md-nav__link">
         
   
   
@@ -1506,7 +1506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Spectrum%20Allocation/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Spectrum%20Allocation/" class="md-nav__link">
         
   
   
@@ -1534,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Subnetting/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Subnetting/" class="md-nav__link">
         
   
   
@@ -1562,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/TCP%20Congestion%20Protocol/" class="md-nav__link">
+      <a href="../../Computer%20Networks/TCP%20Congestion%20Protocol/" class="md-nav__link">
         
   
   
@@ -1590,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/TCP-IP%20Basics/" class="md-nav__link">
+      <a href="../../Computer%20Networks/TCP-IP%20Basics/" class="md-nav__link">
         
   
   
@@ -1618,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Traffic%20Policing%20and%20Shaping/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Traffic%20Policing%20and%20Shaping/" class="md-nav__link">
         
   
   
@@ -1646,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Transmission%20Modes/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Transmission%20Modes/" class="md-nav__link">
         
   
   
@@ -1674,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Virtual%20Lan/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Virtual%20Lan/" class="md-nav__link">
         
   
   
@@ -1749,7 +1749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Data%20link%20Layer/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Data%20link%20Layer/" class="md-nav__link">
         
   
   
@@ -1777,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Error%20Control/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Error%20Control/" class="md-nav__link">
         
   
   
@@ -1805,7 +1805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Flow%20Control/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Flow%20Control/" class="md-nav__link">
         
   
   
@@ -1833,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Framing%20Methods/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Framing%20Methods/" class="md-nav__link">
         
   
   
@@ -1861,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/MAC%20Protocols/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/MAC%20Protocols/" class="md-nav__link">
         
   
   
@@ -1889,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Random%20Medium%20Access%20Control/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Random%20Medium%20Access%20Control/" class="md-nav__link">
         
   
   
@@ -1972,7 +1972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Physical%20Layer/Introduction/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Physical%20Layer/Introduction/" class="md-nav__link">
         
   
   
@@ -2012,18 +2012,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2044,7 +2046,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2059,10 +2061,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Asymmetric%20%28public-key%29%20cryptosystems%20-%20RSAalgorithm%20-%20Euclidean%20algorithm%2C%20Extd.%20Euclideanalgorithm%2C%20gcd%2C%20and%20multiplicative%20inversemodulo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymmetric (public key) cryptosystems   RSAalgorithm   Euclidean algorithm, Extd. Euclideanalgorithm, gcd, and multiplicative inversemodulo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2078,6 +2105,46 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rsa-algorithm-rivest-shamir-adleman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSA Algorithm (Rivest-Shamir-Adleman)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extended-euclidean-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extended Euclidean Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2090,7 +2157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Crytography/" class="md-nav__link">
+      <a href="../Crytography/" class="md-nav__link">
         
   
   
@@ -2118,7 +2185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Integer%20factorization%20problem%20and%20Discrete%20logarithm%20problem%2C%20key%20management%20issues%20-Symmetric%20key%20cryptosystems%20-%20formation%20of%20shared%20secret%20key%20%28Diffie%20Hellman%29/" class="md-nav__link">
+      <a href="../Integer%20factorization%20problem%20and%20Discrete%20logarithm%20problem%2C%20key%20management%20issues%20-Symmetric%20key%20cryptosystems%20-%20formation%20of%20shared%20secret%20key%20%28Diffie%20Hellman%29/" class="md-nav__link">
         
   
   
@@ -2146,7 +2213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Introduction%20to%20Security%20-%20Threat%2C%20Attack%2C%20Vulnerability%2C%20Exploit/" class="md-nav__link">
+      <a href="../Introduction%20to%20Security%20-%20Threat%2C%20Attack%2C%20Vulnerability%2C%20Exploit/" class="md-nav__link">
         
   
   
@@ -2174,7 +2241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Substitution%20and%20Transposition%20ciphers%20-%20CaesarCipher%2C%20Vernam%20cipher%20-%20Advantages%20anddisadvantages/" class="md-nav__link">
+      <a href="../Substitution%20and%20Transposition%20ciphers%20-%20CaesarCipher%2C%20Vernam%20cipher%20-%20Advantages%20anddisadvantages/" class="md-nav__link">
         
   
   
@@ -2256,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Mnemonics/" class="md-nav__link">
+      <a href="../../DBMS/Mnemonics/" class="md-nav__link">
         
   
   
@@ -2284,7 +2351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%201/" class="md-nav__link">
+      <a href="../../DBMS/Stage%201/" class="md-nav__link">
         
   
   
@@ -2312,7 +2379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%2010/" class="md-nav__link">
+      <a href="../../DBMS/Stage%2010/" class="md-nav__link">
         
   
   
@@ -2340,7 +2407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%2012/" class="md-nav__link">
+      <a href="../../DBMS/Stage%2012/" class="md-nav__link">
         
   
   
@@ -2368,7 +2435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%202/" class="md-nav__link">
+      <a href="../../DBMS/Stage%202/" class="md-nav__link">
         
   
   
@@ -2396,7 +2463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%203%20%28Shit%20gets%20real%20ngl%29/" class="md-nav__link">
+      <a href="../../DBMS/Stage%203%20%28Shit%20gets%20real%20ngl%29/" class="md-nav__link">
         
   
   
@@ -2424,7 +2491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%204%20%28Database%20linear%20search%20but%20cant%20search%20a%20gf%29/" class="md-nav__link">
+      <a href="../../DBMS/Stage%204%20%28Database%20linear%20search%20but%20cant%20search%20a%20gf%29/" class="md-nav__link">
         
   
   
@@ -2452,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%206%20%28Buffer%20Management%20and%20Write%20Back%20policy%29/" class="md-nav__link">
+      <a href="../../DBMS/Stage%206%20%28Buffer%20Management%20and%20Write%20Back%20policy%29/" class="md-nav__link">
         
   
   
@@ -2480,7 +2547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%207/" class="md-nav__link">
+      <a href="../../DBMS/Stage%207/" class="md-nav__link">
         
   
   
@@ -2508,7 +2575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%208/" class="md-nav__link">
+      <a href="../../DBMS/Stage%208/" class="md-nav__link">
         
   
   
@@ -2536,7 +2603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%209/" class="md-nav__link">
+      <a href="../../DBMS/Stage%209/" class="md-nav__link">
         
   
   
@@ -2618,7 +2685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Block%20Access%20Layer/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Block%20Access%20Layer/" class="md-nav__link">
         
   
   
@@ -2646,7 +2713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/BlockBuffer%20%28Bada%20Bhai%29/" class="md-nav__link">
+      <a href="../../DBMS%20Components/BlockBuffer%20%28Bada%20Bhai%29/" class="md-nav__link">
         
   
   
@@ -2674,7 +2741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Buffer%20Layer/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Buffer%20Layer/" class="md-nav__link">
         
   
   
@@ -2702,7 +2769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Cache%20Layer/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Cache%20Layer/" class="md-nav__link">
         
   
   
@@ -2730,7 +2797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Constants/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Constants/" class="md-nav__link">
         
   
   
@@ -2758,7 +2825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Functions/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Functions/" class="md-nav__link">
         
   
   
@@ -2786,7 +2853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Static%20Buffer/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Static%20Buffer/" class="md-nav__link">
         
   
   
@@ -2814,7 +2881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/XFS%20Interface%20Command/" class="md-nav__link">
+      <a href="../../DBMS%20Components/XFS%20Interface%20Command/" class="md-nav__link">
         
   
   
@@ -2896,7 +2963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Theory/Notes/" class="md-nav__link">
+      <a href="../../DBMS%20Theory/Notes/" class="md-nav__link">
         
   
   
@@ -2924,7 +2991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Theory/SQL/" class="md-nav__link">
+      <a href="../../DBMS%20Theory/SQL/" class="md-nav__link">
         
   
   
@@ -3006,7 +3073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/C%2B%2B%20STL/" class="md-nav__link">
+      <a href="../../DSA/C%2B%2B%20STL/" class="md-nav__link">
         
   
   
@@ -3034,7 +3101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/DP/" class="md-nav__link">
+      <a href="../../DSA/DP/" class="md-nav__link">
         
   
   
@@ -3062,7 +3129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Dynamic%20Programming/" class="md-nav__link">
+      <a href="../../DSA/Dynamic%20Programming/" class="md-nav__link">
         
   
   
@@ -3090,7 +3157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Greedy%20Algorithm/" class="md-nav__link">
+      <a href="../../DSA/Greedy%20Algorithm/" class="md-nav__link">
         
   
   
@@ -3118,7 +3185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Java/" class="md-nav__link">
+      <a href="../../DSA/Java/" class="md-nav__link">
         
   
   
@@ -3146,7 +3213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Revision%20Series/" class="md-nav__link">
+      <a href="../../DSA/Revision%20Series/" class="md-nav__link">
         
   
   
@@ -3174,7 +3241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Sliding%20Window/" class="md-nav__link">
+      <a href="../../DSA/Sliding%20Window/" class="md-nav__link">
         
   
   
@@ -3256,7 +3323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Devops/Bash/" class="md-nav__link">
+      <a href="../../Devops/Bash/" class="md-nav__link">
         
   
   
@@ -3284,7 +3351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Devops/Makefile/" class="md-nav__link">
+      <a href="../../Devops/Makefile/" class="md-nav__link">
         
   
   
@@ -3312,7 +3379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Devops/Roadmap/" class="md-nav__link">
+      <a href="../../Devops/Roadmap/" class="md-nav__link">
         
   
   
@@ -3394,7 +3461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/Commands/" class="md-nav__link">
+      <a href="../../Docker/Commands/" class="md-nav__link">
         
   
   
@@ -3422,7 +3489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/NodeJS%20API%20Dockerfile/" class="md-nav__link">
+      <a href="../../Docker/NodeJS%20API%20Dockerfile/" class="md-nav__link">
         
   
   
@@ -3450,7 +3517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/Notes/" class="md-nav__link">
+      <a href="../../Docker/Notes/" class="md-nav__link">
         
   
   
@@ -3532,7 +3599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Basic%20Analysis/" class="md-nav__link">
+      <a href="../../Final%20Project/Basic%20Analysis/" class="md-nav__link">
         
   
   
@@ -3560,7 +3627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Malware%20Analysis%20Primer/" class="md-nav__link">
+      <a href="../../Final%20Project/Malware%20Analysis%20Primer/" class="md-nav__link">
         
   
   
@@ -3588,7 +3655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Malware%20Detection%20Using%20Artificial%20Intelligence/" class="md-nav__link">
+      <a href="../../Final%20Project/Malware%20Detection%20Using%20Artificial%20Intelligence/" class="md-nav__link">
         
   
   
@@ -3616,7 +3683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Roadmap/" class="md-nav__link">
+      <a href="../../Final%20Project/Roadmap/" class="md-nav__link">
         
   
   
@@ -3644,7 +3711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Workflow/" class="md-nav__link">
+      <a href="../../Final%20Project/Workflow/" class="md-nav__link">
         
   
   
@@ -3719,7 +3786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/References/A%20Survey%20of%20Malware%20Detection%20Using%20Deep%20Learning/" class="md-nav__link">
+      <a href="../../Final%20Project/References/A%20Survey%20of%20Malware%20Detection%20Using%20Deep%20Learning/" class="md-nav__link">
         
   
   
@@ -3747,7 +3814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/References/ByteEnc/" class="md-nav__link">
+      <a href="../../Final%20Project/References/ByteEnc/" class="md-nav__link">
         
   
   
@@ -3775,7 +3842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/References/Malware%20Detection%20and%20Classification%20Using%20Generative%20Adversarial%20Network/" class="md-nav__link">
+      <a href="../../Final%20Project/References/Malware%20Detection%20and%20Classification%20Using%20Generative%20Adversarial%20Network/" class="md-nav__link">
         
   
   
@@ -3865,7 +3932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Indian%20Financial%20Market/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Indian%20Financial%20Market/" class="md-nav__link">
         
   
   
@@ -3893,7 +3960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Introduction/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Introduction/" class="md-nav__link">
         
   
   
@@ -3921,7 +3988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Monetary%20Policy%20Instruments/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Monetary%20Policy%20Instruments/" class="md-nav__link">
         
   
   
@@ -3949,7 +4016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Money%20Market%20Products/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Money%20Market%20Products/" class="md-nav__link">
         
   
   
@@ -3977,7 +4044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Money%20Market%20vs%20Capital%20Market/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Money%20Market%20vs%20Capital%20Market/" class="md-nav__link">
         
   
   
@@ -4005,7 +4072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Questions/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Questions/" class="md-nav__link">
         
   
   
@@ -4033,7 +4100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Reserve%20Bank%20of%20India/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Reserve%20Bank%20of%20India/" class="md-nav__link">
         
   
   
@@ -4115,7 +4182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Asynchronous%20Programming/" class="md-nav__link">
+      <a href="../../Flutter/Asynchronous%20Programming/" class="md-nav__link">
         
   
   
@@ -4143,7 +4210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Dart%20Roadmap/" class="md-nav__link">
+      <a href="../../Flutter/Dart%20Roadmap/" class="md-nav__link">
         
   
   
@@ -4171,7 +4238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Functional%20Features/" class="md-nav__link">
+      <a href="../../Flutter/Functional%20Features/" class="md-nav__link">
         
   
   
@@ -4199,7 +4266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Fundametals/" class="md-nav__link">
+      <a href="../../Flutter/Fundametals/" class="md-nav__link">
         
   
   
@@ -4227,7 +4294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Inheritance/" class="md-nav__link">
+      <a href="../../Flutter/Inheritance/" class="md-nav__link">
         
   
   
@@ -4255,7 +4322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Mixin/" class="md-nav__link">
+      <a href="../../Flutter/Mixin/" class="md-nav__link">
         
   
   
@@ -4283,7 +4350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Null%20Safety/" class="md-nav__link">
+      <a href="../../Flutter/Null%20Safety/" class="md-nav__link">
         
   
   
@@ -4311,7 +4378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/OOPS/" class="md-nav__link">
+      <a href="../../Flutter/OOPS/" class="md-nav__link">
         
   
   
@@ -4393,7 +4460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Adjective%20Possessive/" class="md-nav__link">
+      <a href="../../French/Adjective%20Possessive/" class="md-nav__link">
         
   
   
@@ -4421,7 +4488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Conjugation/" class="md-nav__link">
+      <a href="../../French/Conjugation/" class="md-nav__link">
         
   
   
@@ -4449,7 +4516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Cooked%20up%20sentences/" class="md-nav__link">
+      <a href="../../French/Cooked%20up%20sentences/" class="md-nav__link">
         
   
   
@@ -4477,7 +4544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Futur%20Proche%20%2B%20Passe%20Compose/" class="md-nav__link">
+      <a href="../../French/Futur%20Proche%20%2B%20Passe%20Compose/" class="md-nav__link">
         
   
   
@@ -4505,7 +4572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Gender/" class="md-nav__link">
+      <a href="../../French/Gender/" class="md-nav__link">
         
   
   
@@ -4533,7 +4600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Negation/" class="md-nav__link">
+      <a href="../../French/Negation/" class="md-nav__link">
         
   
   
@@ -4561,7 +4628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Prepositions/" class="md-nav__link">
+      <a href="../../French/Prepositions/" class="md-nav__link">
         
   
   
@@ -4589,7 +4656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Pronouns/" class="md-nav__link">
+      <a href="../../French/Pronouns/" class="md-nav__link">
         
   
   
@@ -4617,7 +4684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Questions/" class="md-nav__link">
+      <a href="../../French/Questions/" class="md-nav__link">
         
   
   
@@ -4645,7 +4712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Words/" class="md-nav__link">
+      <a href="../../French/Words/" class="md-nav__link">
         
   
   
@@ -4727,7 +4794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Collections/" class="md-nav__link">
+      <a href="../../Java/Collections/" class="md-nav__link">
         
   
   
@@ -4755,7 +4822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Exception%20Handling/" class="md-nav__link">
+      <a href="../../Java/Exception%20Handling/" class="md-nav__link">
         
   
   
@@ -4783,7 +4850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Generics/" class="md-nav__link">
+      <a href="../../Java/Generics/" class="md-nav__link">
         
   
   
@@ -4811,7 +4878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Java%20Arrays/" class="md-nav__link">
+      <a href="../../Java/Java%20Arrays/" class="md-nav__link">
         
   
   
@@ -4839,7 +4906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Java%20Class/" class="md-nav__link">
+      <a href="../../Java/Java%20Class/" class="md-nav__link">
         
   
   
@@ -4867,7 +4934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Java%20Foundations/" class="md-nav__link">
+      <a href="../../Java/Java%20Foundations/" class="md-nav__link">
         
   
   
@@ -4895,7 +4962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Java%20Strings/" class="md-nav__link">
+      <a href="../../Java/Java%20Strings/" class="md-nav__link">
         
   
   
@@ -4977,7 +5044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/Assg%204/" class="md-nav__link">
+      <a href="../../Network%20Lab/Assg%204/" class="md-nav__link">
         
   
   
@@ -5005,7 +5072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/Crimping/" class="md-nav__link">
+      <a href="../../Network%20Lab/Crimping/" class="md-nav__link">
         
   
   
@@ -5033,7 +5100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/DNS%20Assignment/" class="md-nav__link">
+      <a href="../../Network%20Lab/DNS%20Assignment/" class="md-nav__link">
         
   
   
@@ -5061,7 +5128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/First%20Lab/" class="md-nav__link">
+      <a href="../../Network%20Lab/First%20Lab/" class="md-nav__link">
         
   
   
@@ -5089,7 +5156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/Routing%20Protocols/" class="md-nav__link">
+      <a href="../../Network%20Lab/Routing%20Protocols/" class="md-nav__link">
         
   
   
@@ -5171,7 +5238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOPS/OOPS/" class="md-nav__link">
+      <a href="../../OOPS/OOPS/" class="md-nav__link">
         
   
   
@@ -5253,7 +5320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS/Booting%20Into%20OS/" class="md-nav__link">
+      <a href="../../OS/Booting%20Into%20OS/" class="md-nav__link">
         
   
   
@@ -5281,7 +5348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS/OS%20Concepts/" class="md-nav__link">
+      <a href="../../OS/OS%20Concepts/" class="md-nav__link">
         
   
   
@@ -5309,7 +5376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS/Three%20Pieces/" class="md-nav__link">
+      <a href="../../OS/Three%20Pieces/" class="md-nav__link">
         
   
   
@@ -5391,7 +5458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Preparation/" class="md-nav__link">
+      <a href="../../OS%20Lab/Preparation/" class="md-nav__link">
         
   
   
@@ -5419,7 +5486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Pseudocode/" class="md-nav__link">
+      <a href="../../OS%20Lab/Pseudocode/" class="md-nav__link">
         
   
   
@@ -5541,7 +5608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage%2024/File%20Status%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage%2024/File%20Status%20Table/" class="md-nav__link">
         
   
   
@@ -5569,7 +5636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage%2024/Open%20File%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage%2024/Open%20File%20Table/" class="md-nav__link">
         
   
   
@@ -5652,7 +5719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-2/Data%20Free%20List/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-2/Data%20Free%20List/" class="md-nav__link">
         
   
   
@@ -5680,7 +5747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-2/Inode%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-2/Inode%20Table/" class="md-nav__link">
         
   
   
@@ -5708,7 +5775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-2/Root%20File/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-2/Root%20File/" class="md-nav__link">
         
   
   
@@ -5736,7 +5803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-2/User%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-2/User%20Table/" class="md-nav__link">
         
   
   
@@ -5819,7 +5886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-9/Per-Process%20Resource%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-9/Per-Process%20Resource%20Table/" class="md-nav__link">
         
   
   
@@ -5847,7 +5914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-9/Process%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-9/Process%20Table/" class="md-nav__link">
         
   
   
@@ -5875,7 +5942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-9/System%20Status%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-9/System%20Status%20Table/" class="md-nav__link">
         
   
   
@@ -5903,7 +5970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-9/User%20Area/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-9/User%20Area/" class="md-nav__link">
         
   
   
@@ -5994,7 +6061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2010/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2010/" class="md-nav__link">
         
   
   
@@ -6022,7 +6089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2011/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2011/" class="md-nav__link">
         
   
   
@@ -6050,7 +6117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2012/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2012/" class="md-nav__link">
         
   
   
@@ -6078,7 +6145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2013/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2013/" class="md-nav__link">
         
   
   
@@ -6106,7 +6173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2014/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2014/" class="md-nav__link">
         
   
   
@@ -6134,7 +6201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2015/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2015/" class="md-nav__link">
         
   
   
@@ -6162,7 +6229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2016/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2016/" class="md-nav__link">
         
   
   
@@ -6190,7 +6257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2017/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2017/" class="md-nav__link">
         
   
   
@@ -6218,7 +6285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2018/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2018/" class="md-nav__link">
         
   
   
@@ -6246,7 +6313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2019/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2019/" class="md-nav__link">
         
   
   
@@ -6274,7 +6341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%202/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%202/" class="md-nav__link">
         
   
   
@@ -6302,7 +6369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2020/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2020/" class="md-nav__link">
         
   
   
@@ -6330,7 +6397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2021/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2021/" class="md-nav__link">
         
   
   
@@ -6358,7 +6425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2022/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2022/" class="md-nav__link">
         
   
   
@@ -6386,7 +6453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2023/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2023/" class="md-nav__link">
         
   
   
@@ -6414,7 +6481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2024/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2024/" class="md-nav__link">
         
   
   
@@ -6442,7 +6509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%203/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%203/" class="md-nav__link">
         
   
   
@@ -6470,7 +6537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%204/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%204/" class="md-nav__link">
         
   
   
@@ -6498,7 +6565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%205/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%205/" class="md-nav__link">
         
   
   
@@ -6526,7 +6593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%206/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%206/" class="md-nav__link">
         
   
   
@@ -6554,7 +6621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%207/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%207/" class="md-nav__link">
         
   
   
@@ -6582,7 +6649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%208/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%208/" class="md-nav__link">
         
   
   
@@ -6610,7 +6677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%209/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%209/" class="md-nav__link">
         
   
   
@@ -6693,7 +6760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/ABI/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/ABI/" class="md-nav__link">
         
   
   
@@ -6721,7 +6788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Disk%20Organisation/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Disk%20Organisation/" class="md-nav__link">
         
   
   
@@ -6749,7 +6816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Experimental%20File%20System/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Experimental%20File%20System/" class="md-nav__link">
         
   
   
@@ -6777,7 +6844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Inode%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Inode%20Table/" class="md-nav__link">
         
   
   
@@ -6805,7 +6872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Interrupt%20Tutorial/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Interrupt%20Tutorial/" class="md-nav__link">
         
   
   
@@ -6833,7 +6900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Kernel%20Stack%20Management%20during%20Kernel%20Module%20Calls/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Kernel%20Stack%20Management%20during%20Kernel%20Module%20Calls/" class="md-nav__link">
         
   
   
@@ -6861,7 +6928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Kernel%20Stack%20Management/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Kernel%20Stack%20Management/" class="md-nav__link">
         
   
   
@@ -6889,7 +6956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/SPL/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/SPL/" class="md-nav__link">
         
   
   
@@ -6917,7 +6984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Virtual%20Machine%20Model/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Virtual%20Machine%20Model/" class="md-nav__link">
         
   
   
@@ -6945,7 +7012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XFS%20Interface%20Usage/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XFS%20Interface%20Usage/" class="md-nav__link">
         
   
   
@@ -6973,7 +7040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XSM%20Instruction%20Set/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XSM%20Instruction%20Set/" class="md-nav__link">
         
   
   
@@ -7001,7 +7068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XSM%20Machine%20Organisation/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XSM%20Machine%20Organisation/" class="md-nav__link">
         
   
   
@@ -7029,7 +7096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XSM%20Paging%20Hardware%20and%20Address%20Translation/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XSM%20Paging%20Hardware%20and%20Address%20Translation/" class="md-nav__link">
         
   
   
@@ -7057,7 +7124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XSM%20Unprivileged%20Mode%20Execution/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XSM%20Unprivileged%20Mode%20Execution/" class="md-nav__link">
         
   
   
@@ -7147,7 +7214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/AlgoBrawl/" class="md-nav__link">
+      <a href="../../Projects/AlgoBrawl/" class="md-nav__link">
         
   
   
@@ -7175,7 +7242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/NITCBase/" class="md-nav__link">
+      <a href="../../Projects/NITCBase/" class="md-nav__link">
         
   
   
@@ -7203,7 +7270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/Offline%20and%20Online%20Sync%20Web%20Application/" class="md-nav__link">
+      <a href="../../Projects/Offline%20and%20Online%20Sync%20Web%20Application/" class="md-nav__link">
         
   
   
@@ -7231,7 +7298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/Project%20Management%20Software/" class="md-nav__link">
+      <a href="../../Projects/Project%20Management%20Software/" class="md-nav__link">
         
   
   
@@ -7259,7 +7326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/Ride%20Booking%20System/" class="md-nav__link">
+      <a href="../../Projects/Ride%20Booking%20System/" class="md-nav__link">
         
   
   
@@ -7341,7 +7408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../SQL/SQL%20Commands/" class="md-nav__link">
+      <a href="../../SQL/SQL%20Commands/" class="md-nav__link">
         
   
   
@@ -7373,20 +7440,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
         
           
           <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
@@ -7407,7 +7472,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_22">
             <span class="md-nav__icon md-icon"></span>
             
@@ -7425,7 +7490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOPS/" class="md-nav__link">
+      <a href="../../Software%20Engineering/OOPS/" class="md-nav__link">
         
   
   
@@ -7453,7 +7518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Software%20Requirements%20Specification/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Requirements%20Specification/" class="md-nav__link">
         
   
   
@@ -7528,7 +7593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Design%20Patterns/Adapter/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Design%20Patterns/Adapter/" class="md-nav__link">
         
   
   
@@ -7556,7 +7621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Design%20Patterns/Design%20Patterns/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Design%20Patterns/Design%20Patterns/" class="md-nav__link">
         
   
   
@@ -7584,7 +7649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Design%20Patterns/Facade/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Design%20Patterns/Facade/" class="md-nav__link">
         
   
   
@@ -7612,7 +7677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Design%20Patterns/Observer/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Design%20Patterns/Observer/" class="md-nav__link">
         
   
   
@@ -7695,7 +7760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Process%20Models/Classical%20Waterfall%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Classical%20Waterfall%20Model/" class="md-nav__link">
         
   
   
@@ -7723,7 +7788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Process%20Models/Evolutionary%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Evolutionary%20Model/" class="md-nav__link">
         
   
   
@@ -7751,7 +7816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Process%20Models/Incremental%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Incremental%20Model/" class="md-nav__link">
         
   
   
@@ -7779,7 +7844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Process%20Models/Iterative%20Waterfall%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Iterative%20Waterfall%20Model/" class="md-nav__link">
         
   
   
@@ -7807,7 +7872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Process%20Models/Prototyping%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Prototyping%20Model/" class="md-nav__link">
         
   
   
@@ -7835,7 +7900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Process%20Models/SDLC/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/SDLC/" class="md-nav__link">
         
   
   
@@ -7863,7 +7928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Process%20Models/V%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/V%20Model/" class="md-nav__link">
         
   
   
@@ -7946,7 +8011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Requirements%20Modelling/Activity%20Diagram/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/Activity%20Diagram/" class="md-nav__link">
         
   
   
@@ -7974,7 +8039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Requirements%20Modelling/Requirements%20Modelling/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/Requirements%20Modelling/" class="md-nav__link">
         
   
   
@@ -8002,7 +8067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Requirements%20Modelling/Sequence%20Diagram/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/Sequence%20Diagram/" class="md-nav__link">
         
   
   
@@ -8030,7 +8095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Requirements%20Modelling/State%20Diagram/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/State%20Diagram/" class="md-nav__link">
         
   
   
@@ -8058,7 +8123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Requirements%20Modelling/Use%20Case/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/Use%20Case/" class="md-nav__link">
         
   
   
@@ -8091,20 +8156,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22_6" >
         
           
           <label class="md-nav__link" for="__nav_22_6" id="__nav_22_6_label" tabindex="0">
@@ -8125,7 +8188,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_22_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_22_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_22_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -8143,7 +8206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Class%20Diagram%20and%20Class%20Relationships/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Class%20Diagram%20and%20Class%20Relationships/" class="md-nav__link">
         
   
   
@@ -8168,35 +8231,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Software Design
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Software%20Engineering/Software%20Design/Software%20Design/" class="md-nav__link">
         
   
   
@@ -8212,372 +8250,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        System
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subsystem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subsystem
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#component" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Component
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#module" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Module
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design Principles
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Design Principles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#divide-and-conquer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Divide and Conquer
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#increase-cohesion-where-possible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Increase cohesion where possible
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Increase cohesion where possible">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functional-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Functional Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#layer-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Layer Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sequential-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sequential Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#procedural-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Procedural Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#temporal-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Temporal Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reduce-coupling-where-possible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reduce coupling where possible
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reduce coupling where possible">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#content-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Content Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#control-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Control Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stamp-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stamp Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#routine-call-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Routine Call Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-use-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Type use Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inclusion-or-import-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Inclusion or Import Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#external-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        External Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keep-the-level-of-abstraction-as-high-as-possible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Keep the level of abstraction as high as possible
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reuse-existing-designs-and-code-where-possible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reuse existing designs and code where possible
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-for-flexibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design for flexibility
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anticipate-obsolescence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anticipate Obsolescence
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-for-portability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design for Portability
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-for-test-ability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design for Test ability
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-defensively" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design defensively
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-by-contract" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design by contract
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -8637,7 +8309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Relationships/Aggregation/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Aggregation/" class="md-nav__link">
         
   
   
@@ -8665,7 +8337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Relationships/Association/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Association/" class="md-nav__link">
         
   
   
@@ -8693,7 +8365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Relationships/Composition/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Composition/" class="md-nav__link">
         
   
   
@@ -8721,7 +8393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Relationships/Dependency/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Dependency/" class="md-nav__link">
         
   
   
@@ -8749,7 +8421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Relationships/Inheritance/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Inheritance/" class="md-nav__link">
         
   
   
@@ -8847,7 +8519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../System%20Design/System%20Design/" class="md-nav__link">
+      <a href="../../System%20Design/System%20Design/" class="md-nav__link">
         
   
   
@@ -8976,7 +8648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../TaskNotes/Tasks/Study%20AI/" class="md-nav__link">
+      <a href="../../TaskNotes/Tasks/Study%20AI/" class="md-nav__link">
         
   
   
@@ -9011,7 +8683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../TaskNotes/Tasks/Study%20Financial%20Markets/" class="md-nav__link">
+      <a href="../../TaskNotes/Tasks/Study%20Financial%20Markets/" class="md-nav__link">
         
   
   
@@ -9079,10 +8751,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#system" class="md-nav__link">
+  <a href="#rsa-algorithm-rivest-shamir-adleman" class="md-nav__link">
     <span class="md-ellipsis">
       
-        System
+        RSA Algorithm (Rivest-Shamir-Adleman)
       
     </span>
   </a>
@@ -9090,339 +8762,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subsystem" class="md-nav__link">
+  <a href="#extended-euclidean-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subsystem
+        Extended Euclidean Algorithm
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#component" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Component
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#module" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Module
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design Principles
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Design Principles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#divide-and-conquer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Divide and Conquer
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#increase-cohesion-where-possible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Increase cohesion where possible
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Increase cohesion where possible">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functional-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Functional Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#layer-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Layer Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sequential-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sequential Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#procedural-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Procedural Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#temporal-cohesion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Temporal Cohesion
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reduce-coupling-where-possible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reduce coupling where possible
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reduce coupling where possible">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#content-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Content Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#control-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Control Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stamp-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stamp Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#routine-call-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Routine Call Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-use-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Type use Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inclusion-or-import-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Inclusion or Import Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#external-coupling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        External Coupling
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keep-the-level-of-abstraction-as-high-as-possible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Keep the level of abstraction as high as possible
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reuse-existing-designs-and-code-where-possible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reuse existing designs and code where possible
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-for-flexibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design for flexibility
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anticipate-obsolescence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anticipate Obsolescence
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-for-portability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design for Portability
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-for-test-ability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design for Test ability
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-defensively" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design defensively
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-by-contract" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design by contract
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -9443,252 +8789,105 @@
 
 
 
-  <h1>Software Design</h1>
+  <h1>Asymmetric (public key) cryptosystems   RSAalgorithm   Euclidean algorithm, Extd. Euclideanalgorithm, gcd, and multiplicative inversemodulo</h1>
 
-<p>Software design is a <strong>problem-solving process</strong> that occurs after software requirements have been analyzed and modeled. Its primary objective is to describe how to implement a system’s functional requirements while respecting constraints like quality, platform, budget, and deadlines.</p>
-<h4 id="system">System</h4>
-<p>A logical entity with definable responsibilities, consisting of both hardware and software.</p>
-<h4 id="subsystem">Subsystem</h4>
-<p>A system that is part of a larger system and has a definite interface.</p>
-<h4 id="component">Component</h4>
-<p>Any piece of hardware or software with a clear role that can be isolated and replaced with an equivalent part.</p>
-<h4 id="module">Module</h4>
-<p>A component specifically defined at the programming language level.</p>
-<h2 id="design-principles">Design Principles</h2>
-<h4 id="divide-and-conquer">Divide and Conquer</h4>
-<p>Dividing a system into pieces has many advantages - 
-- Parallel working
-- Specialisation
-- Replacement</p>
-<h4 id="increase-cohesion-where-possible">Increase cohesion where possible</h4>
-<p><strong>Mnemonic: F-L-S-P-T</strong> (<em>"Fast Logical Software Provides Truth"</em>)</p>
-<p><img alt="Pasted image 20260215131710.png" src="../../../attachments/Pasted%20image%2020260215131710.png" /></p>
-<p>Cohesion refers to the degree to which elements within elements within a module work together to fulfil a single well-defined purpose. </p>
-<h5 id="functional-cohesion">Functional Cohesion</h5>
-<p>This is achieved when a module only performs a single computation and returns a result without any side effects.</p>
+<h3 id="rsa-algorithm-rivest-shamir-adleman">RSA Algorithm (Rivest-Shamir-Adleman)</h3>
+<p>It is an asymmetric/public-key cryptography algorithm. The public key is used for <strong>encryption</strong> and private key is used for <strong>decryption</strong>.</p>
 <ul>
-<li>A mathematical function such as sine or cosine</li>
+<li>Can be used for <strong>Key Exchange</strong></li>
+<li>Can be used for <strong>Digital Signatures</strong></li>
+<li>Based on the difficulty of <strong>Integer Factorisation</strong></li>
 </ul>
-<h5 id="layer-cohesion">Layer Cohesion</h5>
-<p>When the tasks within a module are grouped according to their level of abstraction or responsibility. Eg. Tasks related to higher-level layers are grouped together.</p>
-<h5 id="sequential-cohesion">Sequential Cohesion</h5>
-<p>An element outputs some data that becomes the input for other element, i.e., data flow between the parts. It occurs naturally in functional programming languages.</p>
-<h5 id="procedural-cohesion">Procedural Cohesion</h5>
-<p>Elements of procedural cohesion ensure the order of execution. Actions are still weakly connected and unlikely to be reusable. Ex- calculate student GPA, print student record, calculate cumulative GPA, print cumulative GPA. eg. Registration system</p>
-<h5 id="temporal-cohesion">Temporal Cohesion</h5>
-<p>Temporal Cohesion occurs when the elements in a module are arranged on the basis of their timing or frequency of execution. Especially for module that deals with periodic and scheduled tasks in a system.</p>
-<h4 id="reduce-coupling-where-possible">Reduce coupling where possible</h4>
-<p><strong>Mnemonic: C-C-C-S-D</strong> (<em>"Constant Change Causes System Defects"</em>)</p>
-<p>Coupling occurs when there are inter-dependencies between modules. It refers to the degree of inter-dependencies between modules.</p>
-<p>Re-usability reduced, difficult to comprehend, difficult to modify. </p>
-<p><img alt="Pasted image 20260215131856.png" src="../../../attachments/Pasted%20image%2020260215131856.png" /></p>
-<h5 id="content-coupling">Content Coupling</h5>
-<p>This occurs when one component modifies the data that is internal to another component.</p>
-<p>To reduce this - (encapsulation) private members, get and set function should be provided</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Line</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">end</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="nf">getStart</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="n">start</span><span class="p">;}</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="nf">getEnd</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="n">end</span><span class="p">;}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Arch</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Line</span><span class="w"> </span><span class="n">baseline</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">slant</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">newY</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Point</span><span class="w"> </span><span class="n">theEnd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseline</span><span class="p">.</span><span class="na">getEnd</span><span class="p">();</span>
-<span class="w">        </span><span class="n">theEnd</span><span class="p">.</span><span class="na">setLocation</span><span class="p">(</span><span class="n">theEnd</span><span class="p">.</span><span class="na">getX</span><span class="p">(),</span><span class="w"> </span><span class="n">newY</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code>Choose two large prime numbers, p and q
+Calculate n = p * q
+Calculate Φ(n)
+Choose e such that 1 &lt; e &lt; Φ(n) and gcd(e, Φ(n)) = 1
+Calculate (d * e) ≡ 1 mod Φ(n)
+Cipher Text = M ^ e mod(n)
+Decrypted Text = C ^ d mod(n)
 </code></pre></div>
-<h5 id="common-coupling">Common coupling</h5>
-<p>Occurs whenever you use a global variable</p>
-<p>All the components using the global variable become coupled to each other</p>
-<p>Can be acceptable for creating global variable that represent system wide default values.</p>
-<p>The Single Pattern provides encapsulated global access to an object</p>
-<h5 id="control-coupling">Control Coupling</h5>
-<p>Occurs when one procedure calls another using a flag that explicitly controls what the second procedure does.</p>
-<ul>
-<li>To make a change you have to change both the calling and called method.</li>
-<li>The use of polymorphic operations is normally best way to avoid control</li>
-<li>Look-up table is great too.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">PacketHandler</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"> </span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LoginHandler</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">PacketHandler</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Login: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BroadcastHandler</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">PacketHandler</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Broadcasting message: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DecoupledServer</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">PacketHandler</span><span class="o">&gt;</span><span class="w"> </span><span class="n">handlers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">DecoupledServer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">handlers</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LoginHandler</span><span class="p">());</span><span class="w"> </span>
-<span class="w">        </span><span class="n">handlers</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BroadcastHandler</span><span class="p">());</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">PacketHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">handlers</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">type</span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">handler</span><span class="p">.</span><span class="na">execute</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h5 id="stamp-coupling">Stamp Coupling</h5>
-<p>Occurs whenever one of your application classes is declared as the type of a method argument.</p>
-<p>Since one class now uses the other, changing the system becomes harder.</p>
-<ul>
-<li>Use an interface as the argument type</li>
-<li>Passing simple variables</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Emailer</span>
-<span class="p">{</span>
-<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendEmail</span><span class="p">(</span><span class="n">Employee</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
-<span class="p">{...}</span>
-<span class="p">...</span>
-<span class="p">}</span>
-<span class="n">Using</span><span class="w"> </span><span class="n">simple</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">types</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">it</span><span class="p">:</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Emailer</span>
-<span class="p">{</span>
-<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendEmail</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">String</span>
-<span class="n">text</span><span class="p">)</span>
-<span class="p">{...}</span>
-<span class="p">...</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Addressee</span>
-<span class="p">{</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">();</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getEmail</span><span class="p">();</span>
-<span class="p">}</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Employee</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Addressee</span><span class="w"> </span><span class="p">{</span><span class="err">…</span><span class="p">}</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Emailer</span>
-<span class="p">{</span>
-<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendEmail</span><span class="p">(</span><span class="n">Addressee</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
-<span class="p">{...}</span>
-<span class="p">...</span>
-<span class="p">}</span>
-</code></pre></div>
-<h5 id="data-coupling">Data Coupling</h5>
-<p>Occurs when the modules only communicate by passing data.</p>
-<ul>
-<li>You should reduce coupling by not giving methods unnecessary arguments. </li>
-</ul>
-<h5 id="routine-call-coupling">Routine Call Coupling</h5>
-<p>Occurs when one routine call another.</p>
-<ul>
-<li>If you repetitively use a sequence of two or more methods to compute something, you can reduce routine call coupling by writing a single routine that encapsulates the sequence.</li>
-</ul>
-<h5 id="type-use-coupling">Type use Coupling</h5>
-<p>Occurs when a module uses a data type defined in another module.</p>
-<ul>
-<li>If the type definition changes, then the users of he type may have to change.</li>
-</ul>
-<p>Always declare the type of variable to be the most general possible class or interface that contains required operations.</p>
-<h5 id="inclusion-or-import-coupling">Inclusion or Import Coupling</h5>
-<p>Occurs when a component imports a package or when one component includes another.</p>
-<ul>
-<li>Issue arises where there is some kind of change in the package</li>
-</ul>
-<h5 id="external-coupling">External Coupling</h5>
-<p>When a module has a dependency on such things as operating system, shared libraries or the hardware</p>
-<ul>
-<li>Facade design pattern, reduce the number of places in the code where such dependencies exist</li>
-</ul>
-<h4 id="keep-the-level-of-abstraction-as-high-as-possible">Keep the level of abstraction as high as possible</h4>
-<h4 id="reuse-existing-designs-and-code-where-possible">Reuse existing designs and code where possible</h4>
-<h4 id="design-for-flexibility">Design for flexibility</h4>
-<ul>
-<li>Reduce coupling and increase cohesion</li>
-<li>Create abstractions</li>
-<li>Do not hard-code anything</li>
-</ul>
-<h4 id="anticipate-obsolescence">Anticipate Obsolescence</h4>
-<h4 id="design-for-portability">Design for Portability</h4>
-<h4 id="design-for-test-ability">Design for Test ability</h4>
-<h4 id="design-defensively">Design defensively</h4>
-<h4 id="design-by-contract">Design by contract</h4>
-<ul>
-<li><strong>Design by Contract (DbC)</strong> is essentially a "legal agreement" between a piece of code (the <strong>Supplier</strong>) and the code that calls it (the <strong>Client</strong>). It’s a powerful alternative to just "hoping" the data is correct.</li>
-<li>The preconditions, post conditions and invariant must be true </li>
-</ul>
-<pre class="mermaid"><code>graph LR
-    %% Core Definition
-    Design[Software Design: Problem-Solving Process]
-
-    %% Objectives and Constraints
-    Design --&gt; Obj[Primary Objective: Functional Requirements]
-    Design --&gt; Con[Constraints: Quality, Platform, Budget, Deadlines]
-
-    %% Hierarchy of Components
-    Design --&gt; Entities[System Hierarchy]
-    Entities --&gt; System[System: Hardware + Software]
-    System --&gt; Subsystem[Subsystem: Part of larger system with Interface]
-    Subsystem --&gt; Component[Component: Isolated/Replaceable piece]
-    Component --&gt; Module[Module: Component at Programming Level]
-
-    %% Main Principles
-    Design --&gt; Principles[Design Principles]
-
-    %% Divide and Conquer
-    Principles --&gt; DC[Divide and Conquer]
-    DC --&gt; DCBenefits[Benefits: Parallel work, Specialization, Replacement]
-
-    %% Cohesion
-    Principles --&gt; Cohesion[Increase Cohesion]
-    Cohesion --&gt; CohDef[Definition: Elements working for a single purpose]
-    Cohesion --&gt; FC[Functional: Single computation, no side effects]
-    Cohesion --&gt; LC[Layer: Grouped by abstraction level]
-    Cohesion --&gt; SC[Sequential: Data flow between parts]
-    Cohesion --&gt; PC[Procedural: Order of execution, weakly connected]
-    Cohesion --&gt; TC[Temporal: Timing or frequency of execution]
-
-    %% Coupling
-    Principles --&gt; Coupling[Reduce Coupling]
-    Coupling --&gt; CDef[Definition: Inter-dependencies between modules]
-    Coupling --&gt; CC1[Content: One modifies another's internal data]
-    Coupling --&gt; CC2[Common: Global variables]
-    Coupling --&gt; CC3[Control: Flags/Commands control flow - use Polymorphism]
-    Coupling --&gt; SC1[Stamp: Passing application classes as arguments]
-    Coupling --&gt; DC1[Data: Passing only necessary data]
-    Coupling --&gt; RCC[Routine Call: Repetitive sequences - use Encapsulation]
-    Coupling --&gt; TUC[Type Use: Dependency on external type definitions]
-    Coupling --&gt; IIC[Inclusion/Import: Importing packages/components]
-    Coupling --&gt; EC[External: OS/Library/Hardware dependency - use Facade]
-
-    %% Design by Contract
-    Principles --&gt; DbC[Design by Contract]
-    DbC --&gt; Pre[Preconditions: Client's duty before execution]
-    DbC --&gt; Post[Postconditions: Supplier's promise after execution]
-    DbC --&gt; Inv[Invariants: Truths that remain constant throughout]
-
-    %% Other Strategies
-    Principles --&gt; Strat[Other Strategies]
-    Strat --&gt; Abstr[Keep Abstraction Level High]
-    Strat --&gt; Reuse[Reuse Designs/Code]
-    Strat --&gt; Flex[Design for Flexibility: No hard-coding, use Abstractions]
-    Strat --&gt; Port[Portability &amp; Testability]
-    Strat --&gt; Obs[Anticipate Obsolescence]
-    Strat --&gt; Def[Design Defensively]
-
-    %% Styling for MkDocs/Mermaid
-    style Design fill:#f9f,stroke:#333,stroke-width:4px
-    style Principles fill:#bbf,stroke:#333,stroke-width:2px
-    style Cohesion fill:#dfd,stroke:#333
-    style Coupling fill:#fdd,stroke:#333
-    style DbC fill:#ffd,stroke:#333</code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>Feature</strong></th>
+<th><strong>RSA (Asymmetric Transport)</strong></th>
+<th><strong>Diffie-Hellman (Shared Secret Formation)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mathematical Basis</strong></td>
+<td>Integer Factorization.</td>
+<td>Discrete Logarithm.</td>
+</tr>
+<tr>
+<td><strong>Primary Goal</strong></td>
+<td>Encryption and Digital Signatures.</td>
+<td>Formation of a <strong>shared secret key</strong> over an insecure channel.</td>
+</tr>
+<tr>
+<td><strong>How it works</strong></td>
+<td>One party <strong>selects</strong> a key and transmits it to the other using public-key encryption.</td>
+<td>Both parties <strong>agree</strong> on a key by calculating it simultaneously; the key is never sent.</td>
+</tr>
+<tr>
+<td><strong>Category</strong></td>
+<td>Asymmetric Cryptosystem.</td>
+<td>Often categorized as a <strong>Symmetric key exchange</strong> tool because its end goal is a shared symmetric key.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-euclidean-algorithm">Extended Euclidean Algorithm</h3>
+<p>Extended Euclidean algorithm also finds integer coefficients x and y such that: <strong><em>ax + by = gcd(a, b)</em></strong></p>
+<p>eg. </p>
+<table>
+<thead>
+<tr>
+<th><strong>Step</strong></th>
+<th><strong>q (Quotient)</strong></th>
+<th><strong>r (Remainder)</strong></th>
+<th><strong>T (The Inverse calculation)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Start</strong></td>
+<td>—</td>
+<td>26</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Start</strong></td>
+<td>—</td>
+<td>11</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>2</strong> ($26 \div 11$)</td>
+<td><strong>4</strong> ($26 \pmod{11}$)</td>
+<td><strong>-2</strong> ($0 - 2 \times 1$)</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>2</strong> ($11 \div 4$)</td>
+<td><strong>3</strong> ($11 \pmod{4}$)</td>
+<td><strong>5</strong> ($1 - 2 \times -2$)</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>1</strong> ($4 \div 3$)</td>
+<td><strong>1</strong> ($4 \pmod{3}$)</td>
+<td><strong>-7</strong> ($-2 - 1 \times 5$)</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>3</strong> ($3 \div 1$)</td>
+<td><strong>0</strong></td>
+<td><strong>26</strong> ($5 - 3 \times -7$)</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -9738,10 +8937,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
