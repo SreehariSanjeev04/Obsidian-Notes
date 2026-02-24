@@ -197,10 +197,6 @@
          <lastmod>2026-02-24</lastmod>
     </url>
     <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Authentication%2C%20Definition%20and%20Properties%2CPassword%20schemes/</loc>
-         <lastmod>2026-02-24</lastmod>
-    </url>
-    <url>
          <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Cryptographic%20hashing%20-%20properties%20and%20applications%2C%20Digital%20signatures/</loc>
          <lastmod>2026-02-24</lastmod>
     </url>
@@ -217,15 +213,39 @@
          <lastmod>2026-02-24</lastmod>
     </url>
     <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Lampost%20Hash/</loc>
-         <lastmod>2026-02-24</lastmod>
-    </url>
-    <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Needham%20Schroeder%20Protocol/</loc>
-         <lastmod>2026-02-24</lastmod>
-    </url>
-    <url>
          <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Substitution%20and%20Transposition%20ciphers%20-%20CaesarCipher%2C%20Vernam%20cipher%20-%20Advantages%20anddisadvantages/</loc>
+         <lastmod>2026-02-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Authentication/Authentication%2C%20Definition%20and%20Properties%2CPassword%20schemes/</loc>
+         <lastmod>2026-02-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Authentication/Lampost%20Hash/</loc>
+         <lastmod>2026-02-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Authentication/Needham%20Schroeder%20Protocol/</loc>
+         <lastmod>2026-02-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Strong%20Security%20Protocols/Augmented%20PDM/</loc>
+         <lastmod>2026-02-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Strong%20Security%20Protocols/EKE%20%28Encrypted%20Key%20Exchange%29/</loc>
+         <lastmod>2026-02-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Strong%20Security%20Protocols/Password%20Derived%20Moduli/</loc>
+         <lastmod>2026-02-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Strong%20Security%20Protocols/Secure%20Remote%20Password/</loc>
+         <lastmod>2026-02-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Strong%20Security%20Protocols/Simple%20Password%20Exponential%20Key%20Exchange/</loc>
          <lastmod>2026-02-24</lastmod>
     </url>
     <url>
