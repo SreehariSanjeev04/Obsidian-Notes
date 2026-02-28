@@ -9205,7 +9205,7 @@
 <li>MAC function takes in a secret key as well as message → for <strong>Authority</strong> and <strong>Integrity</strong></li>
 </ul>
 <h3 id="digital-signature">Digital Signature</h3>
-<p>In this case, the hash value of the message is encrypted with user’s private key. Only the server that knows the public key will be able to decrypt it.
+<p>In this case, the hash value of the <strong>message is encrypted with user’s private key</strong>. Only the server that knows the public key will be able to decrypt it.
 - If confidentiality is necessary, then add the message to the encrypted hash value of the message and undergo symmetric encryption.</p>
 <h1 id="requirements-and-security">Requirements and Security</h1>
 <ul>
@@ -9214,7 +9214,7 @@
 <li>Efficiency (high)</li>
 <li>Pre-image resistant</li>
 <li>Second pre-image resistant (should be computationally expensive to calculate another message from same hash value)</li>
-<li>Collision resistant</li>
+<li>Collision resistant (Should be computationally expensive to find pairs of data blocks that yield the same hash)</li>
 <li>Pseudo-randomness
 <img alt="Pasted image 20260224235902.png" src="../../attachments/Pasted%20image%2020260224235902.png" /></li>
 </ul>
