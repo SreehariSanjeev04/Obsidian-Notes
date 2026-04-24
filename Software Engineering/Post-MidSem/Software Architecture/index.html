@@ -10857,36 +10857,36 @@ View = Presentation only</p>
 <table>
 <thead>
 <tr>
-<th><strong>Architecture</strong></th>
+<th><strong>Pattern</strong></th>
 <th><strong>Best For...</strong></th>
-<th><strong>Avoid If...</strong></th>
+<th><strong>Avoid if...</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Layered</strong></td>
-<td>Organization &amp; standard apps.</td>
-<td>You need extreme performance (too many "jumps" between layers).</td>
-</tr>
-<tr>
-<td><strong>MVC</strong></td>
-<td>Dynamic Web/UI apps.</td>
-<td>The app is very small (adds unnecessary complexity).</td>
-</tr>
-<tr>
-<td><strong>Pipe-Filter</strong></td>
-<td>Compilers, Signal processing.</td>
-<td>You need lots of user interaction (it’s a one-way flow).</td>
+<td>General Enterprise Apps</td>
+<td>You need ultra-low latency (layers add overhead).</td>
 </tr>
 <tr>
 <td><strong>Repository</strong></td>
-<td>Complex data-driven apps.</td>
-<td>You have a simple, single-table database.</td>
+<td>Data abstraction/Testing</td>
+<td>The app is very simple (it adds unnecessary files).</td>
+</tr>
+<tr>
+<td><strong>MVC</strong></td>
+<td>Dynamic User Interfaces</td>
+<td>There is no UI (e.g., a background service).</td>
 </tr>
 <tr>
 <td><strong>Client-Server</strong></td>
-<td>Distributed systems.</td>
-<td>You have a standalone offline application.</td>
+<td>Network-based sharing</td>
+<td>You have no network or need offline-first logic.</td>
+</tr>
+<tr>
+<td><strong>Pipe-Filter</strong></td>
+<td>Data transformation / Compilers</td>
+<td>The steps need a lot of back-and-forth interaction.</td>
 </tr>
 </tbody>
 </table>
