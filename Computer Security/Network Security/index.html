@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://sreeharisanjeev04.github.io/Personal-Notes/Artificial%20Intelligence/AI%20Report/Neural%20Network/">
+        <link rel="canonical" href="https://sreeharisanjeev04.github.io/Personal-Notes/Computer%20Security/Network%20Security/">
       
       
-        <link rel="prev" href="../Logistic%20Regression/">
+        <link rel="prev" href="../Introduction%20to%20Security%20-%20Threat%2C%20Attack%2C%20Vulnerability%2C%20Exploit/">
       
       
-        <link rel="next" href="../Random%20Forest/">
+        <link rel="next" href="../Substitution%20and%20Transposition%20ciphers%20-%20CaesarCipher%2C%20Vernam%20cipher%20-%20Advantages%20anddisadvantages/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Neural Network - My Knowledge Base</title>
+        <title>Network Security - My Knowledge Base</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tunable-features" class="md-skip">
+        <a href="#packet-sniffing" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="My Knowledge Base" class="md-header__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Knowledge Base" class="md-header__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Neural Network
+              Network Security
             
           </span>
         </div>
@@ -216,7 +216,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="My Knowledge Base" class="md-nav__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Knowledge Base" class="md-nav__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -234,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Untitled/" class="md-nav__link">
+      <a href="../../Untitled/" class="md-nav__link">
         
   
   
@@ -261,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u/" class="md-nav__link">
+      <a href="../../u/" class="md-nav__link">
         
   
   
@@ -285,20 +285,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -319,7 +317,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -337,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Adversarial%20Search/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Adversarial%20Search/" class="md-nav__link">
         
   
   
@@ -365,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CNN/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/CNN/" class="md-nav__link">
         
   
   
@@ -393,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Constraint%20Satisfaction%20Problems/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Constraint%20Satisfaction%20Problems/" class="md-nav__link">
         
   
   
@@ -421,7 +419,91 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Informed%20Search/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Convolutional%20Neural%20Network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Convolutional Neural Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Artificial%20Intelligence/Hidden%20Markov%20Model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hidden Markov Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Artificial%20Intelligence/Important%20Formula/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Important Formula
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Artificial%20Intelligence/Informed%20Search/" class="md-nav__link">
         
   
   
@@ -449,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Intelligent%20Agents/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Intelligent%20Agents/" class="md-nav__link">
         
   
   
@@ -477,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Introduction/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Introduction/" class="md-nav__link">
         
   
   
@@ -505,7 +587,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Machine%20Learning/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Loss%20Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loss Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Artificial%20Intelligence/Machine%20Learning/" class="md-nav__link">
         
   
   
@@ -533,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Minimax%20and%20Alpha-Beta%20Pruning/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Minimax%20and%20Alpha-Beta%20Pruning/" class="md-nav__link">
         
   
   
@@ -561,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Natural%20Language%20Processing/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Natural%20Language%20Processing/" class="md-nav__link">
         
   
   
@@ -589,7 +699,63 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Regression/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Neural%20Network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neural Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Artificial%20Intelligence/Recurrent%20Neural%20Networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recurrent Neural Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Artificial%20Intelligence/Regression/" class="md-nav__link">
         
   
   
@@ -617,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Uninformed%20Search/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/Uninformed%20Search/" class="md-nav__link">
         
   
   
@@ -642,23 +808,21 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
         
           
-          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
             
   
   
@@ -676,8 +840,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -694,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Basics/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/AI%20Report/Basics/" class="md-nav__link">
         
   
   
@@ -722,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Input%20vectorization/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/AI%20Report/Input%20vectorization/" class="md-nav__link">
         
   
   
@@ -750,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logistic%20Regression/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/AI%20Report/Logistic%20Regression/" class="md-nav__link">
         
   
   
@@ -775,142 +939,10 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Neural Network
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Neural Network
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tunable-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tunable Features
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tunable Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#activation-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Activation Functions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learning-rate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Learning Rate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optimiser" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Optimiser
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialisation-and-regularisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initialisation and Regularisation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../Random%20Forest/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/AI%20Report/Random%20Forest/" class="md-nav__link">
         
   
   
@@ -938,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Weight%20Initialisation%20Techniques/" class="md-nav__link">
+      <a href="../../Artificial%20Intelligence/AI%20Report/Weight%20Initialisation%20Techniques/" class="md-nav__link">
         
   
   
@@ -1028,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Basics/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Basics/" class="md-nav__link">
         
   
   
@@ -1056,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Compiler%20Theory/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Compiler%20Theory/" class="md-nav__link">
         
   
   
@@ -1084,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/LEX%20and%20YACC/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/LEX%20and%20YACC/" class="md-nav__link">
         
   
   
@@ -1112,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Regex/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Regex/" class="md-nav__link">
         
   
   
@@ -1140,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/XSM%20Execution%20Environment/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/XSM%20Execution%20Environment/" class="md-nav__link">
         
   
   
@@ -1215,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Stage%201/Code%20Generation/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Stage%201/Code%20Generation/" class="md-nav__link">
         
   
   
@@ -1298,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Stage%202/Introduction%20to%20static%20storage%20allocation/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Stage%202/Introduction%20to%20static%20storage%20allocation/" class="md-nav__link">
         
   
   
@@ -1381,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Compiler%20Lab/Stage%203/Adding%20Flow%20Control%20Statements/" class="md-nav__link">
+      <a href="../../Compiler%20Lab/Stage%203/Adding%20Flow%20Control%20Statements/" class="md-nav__link">
         
   
   
@@ -1471,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Address%20Resolution%20Protocol/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Address%20Resolution%20Protocol/" class="md-nav__link">
         
   
   
@@ -1499,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Applications%20and%20Architecture/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Applications%20and%20Architecture/" class="md-nav__link">
         
   
   
@@ -1527,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Computer%20Devices/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Computer%20Devices/" class="md-nav__link">
         
   
   
@@ -1555,7 +1587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/DNS%20and%20HTTP/" class="md-nav__link">
+      <a href="../../Computer%20Networks/DNS%20and%20HTTP/" class="md-nav__link">
         
   
   
@@ -1583,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Error%20Detection/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Error%20Detection/" class="md-nav__link">
         
   
   
@@ -1611,7 +1643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/MAC%20Protocols/" class="md-nav__link">
+      <a href="../../Computer%20Networks/MAC%20Protocols/" class="md-nav__link">
         
   
   
@@ -1639,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Maximum%20Data%20Rate/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Maximum%20Data%20Rate/" class="md-nav__link">
         
   
   
@@ -1667,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Multiple%20Access%20Techniques/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Multiple%20Access%20Techniques/" class="md-nav__link">
         
   
   
@@ -1695,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Network%20Devices/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Network%20Devices/" class="md-nav__link">
         
   
   
@@ -1723,7 +1755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Network%20Identifiers/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Network%20Identifiers/" class="md-nav__link">
         
   
   
@@ -1751,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Network%20Models/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Network%20Models/" class="md-nav__link">
         
   
   
@@ -1779,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Network%20Topologies/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Network%20Topologies/" class="md-nav__link">
         
   
   
@@ -1807,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Networking%20Concepts/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Networking%20Concepts/" class="md-nav__link">
         
   
   
@@ -1835,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Networks/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Networks/" class="md-nav__link">
         
   
   
@@ -1863,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/OSI%20Model/" class="md-nav__link">
+      <a href="../../Computer%20Networks/OSI%20Model/" class="md-nav__link">
         
   
   
@@ -1891,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Performance%20Metrics/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Performance%20Metrics/" class="md-nav__link">
         
   
   
@@ -1919,7 +1951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Portions/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Portions/" class="md-nav__link">
         
   
   
@@ -1947,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Reliable%20Transmission%20and%20Error%20Checking/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Reliable%20Transmission%20and%20Error%20Checking/" class="md-nav__link">
         
   
   
@@ -1975,7 +2007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Routing%20%28Distance%20Vector%20and%20Link%20State%29/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Routing%20%28Distance%20Vector%20and%20Link%20State%29/" class="md-nav__link">
         
   
   
@@ -2003,7 +2035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Spectrum%20Allocation/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Spectrum%20Allocation/" class="md-nav__link">
         
   
   
@@ -2031,7 +2063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Subnetting/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Subnetting/" class="md-nav__link">
         
   
   
@@ -2059,7 +2091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/TCP%20Congestion%20Protocol/" class="md-nav__link">
+      <a href="../../Computer%20Networks/TCP%20Congestion%20Protocol/" class="md-nav__link">
         
   
   
@@ -2087,7 +2119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/TCP-IP%20Basics/" class="md-nav__link">
+      <a href="../../Computer%20Networks/TCP-IP%20Basics/" class="md-nav__link">
         
   
   
@@ -2115,7 +2147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Traffic%20Policing%20and%20Shaping/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Traffic%20Policing%20and%20Shaping/" class="md-nav__link">
         
   
   
@@ -2143,7 +2175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Transmission%20Modes/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Transmission%20Modes/" class="md-nav__link">
         
   
   
@@ -2171,7 +2203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Virtual%20Lan/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Virtual%20Lan/" class="md-nav__link">
         
   
   
@@ -2246,7 +2278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Data%20link%20Layer/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Data%20link%20Layer/" class="md-nav__link">
         
   
   
@@ -2274,7 +2306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Error%20Control/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Error%20Control/" class="md-nav__link">
         
   
   
@@ -2302,7 +2334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Flow%20Control/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Flow%20Control/" class="md-nav__link">
         
   
   
@@ -2330,7 +2362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Framing%20Methods/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Framing%20Methods/" class="md-nav__link">
         
   
   
@@ -2358,7 +2390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/MAC%20Protocols/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/MAC%20Protocols/" class="md-nav__link">
         
   
   
@@ -2386,7 +2418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Data%20link%20Layer/Random%20Medium%20Access%20Control/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Data%20link%20Layer/Random%20Medium%20Access%20Control/" class="md-nav__link">
         
   
   
@@ -2469,7 +2501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Networks/Physical%20Layer/Introduction/" class="md-nav__link">
+      <a href="../../Computer%20Networks/Physical%20Layer/Introduction/" class="md-nav__link">
         
   
   
@@ -2509,18 +2541,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -2541,7 +2575,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2559,7 +2593,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Asymmetric%20%28public-key%29%20cryptosystems%20-%20RSAalgorithm%20-%20Euclidean%20algorithm%2C%20Extd.%20Euclideanalgorithm%2C%20gcd%2C%20and%20multiplicative%20inversemodulo/" class="md-nav__link">
+      <a href="../Access%20Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Asymmetric%20%28public-key%29%20cryptosystems%20-%20RSAalgorithm%20-%20Euclidean%20algorithm%2C%20Extd.%20Euclideanalgorithm%2C%20gcd%2C%20and%20multiplicative%20inversemodulo/" class="md-nav__link">
         
   
   
@@ -2587,7 +2649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Cryptographic%20hashing%20-%20properties%20and%20applications%2C%20Digital%20signatures/" class="md-nav__link">
+      <a href="../Cryptographic%20hashing%20-%20properties%20and%20applications%2C%20Digital%20signatures/" class="md-nav__link">
         
   
   
@@ -2615,7 +2677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Crytography/" class="md-nav__link">
+      <a href="../Crytography/" class="md-nav__link">
         
   
   
@@ -2643,7 +2705,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Integer%20factorization%20problem%20and%20Discrete%20logarithm%20problem%2C%20key%20management%20issues%20-Symmetric%20key%20cryptosystems%20-%20formation%20of%20shared%20secret%20key%20%28Diffie%20Hellman%29/" class="md-nav__link">
+      <a href="../Design%20Principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Integer%20factorization%20problem%20and%20Discrete%20logarithm%20problem%2C%20key%20management%20issues%20-Symmetric%20key%20cryptosystems%20-%20formation%20of%20shared%20secret%20key%20%28Diffie%20Hellman%29/" class="md-nav__link">
         
   
   
@@ -2671,7 +2761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Introduction%20to%20Security%20-%20Threat%2C%20Attack%2C%20Vulnerability%2C%20Exploit/" class="md-nav__link">
+      <a href="../Introduction%20to%20Security%20-%20Threat%2C%20Attack%2C%20Vulnerability%2C%20Exploit/" class="md-nav__link">
         
   
   
@@ -2696,10 +2786,550 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Security
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packet-sniffing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packet Sniffing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promiscuous-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Promiscuous Mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packet-spoofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packet Spoofing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-security-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Security Attacks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#denial-of-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Denial of Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Denial of Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syn-flooding-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SYN flooding attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smurf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smurf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-reset-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Reset Attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-bomb-rabbit-virus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fork Bomb (Rabbit virus)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#denial-of-service_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Denial of Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Denial of Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-ddos-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of DDos Attacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigate-ddos-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigate DDoS Attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#botnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Botnet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntp-reflection-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NTP Reflection Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amplification-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Amplification Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memcached-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memcached Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snmp-reflection-amplification-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SNMP Reflection / Amplification Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-amplification-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Amplification Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arp-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARP Protocol
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARP Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arp-spoofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARP Spoofing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible Attacks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-scanning-reconnaissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port Scanning / Reconnaissance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port States
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiguity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiguity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-ack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP ACK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-window-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Window Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-fin-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP FIN Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-null-fin-xmas-scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP NULL, FIN, Xmas Scans
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-maimon-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Maimon Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-idle-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Idle Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UDP Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertical-and-horizontal-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertical and Horizontal Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-query-and-reply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Query and Reply
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-cache-poisoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Cache Poisoning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks-at-name-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checks at Name-server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Cache
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Substitution%20and%20Transposition%20ciphers%20-%20CaesarCipher%2C%20Vernam%20cipher%20-%20Advantages%20anddisadvantages/" class="md-nav__link">
+      <a href="../Substitution%20and%20Transposition%20ciphers%20-%20CaesarCipher%2C%20Vernam%20cipher%20-%20Advantages%20anddisadvantages/" class="md-nav__link">
         
   
   
@@ -2735,10 +3365,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -2756,8 +3386,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2774,7 +3404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Authentication/Authentication%2C%20Definition%20and%20Properties%2CPassword%20schemes/" class="md-nav__link">
+      <a href="../Authentication/Authentication%2C%20Definition%20and%20Properties%2CPassword%20schemes/" class="md-nav__link">
         
   
   
@@ -2802,7 +3432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Authentication/Lampost%20Hash/" class="md-nav__link">
+      <a href="../Authentication/Lampost%20Hash/" class="md-nav__link">
         
   
   
@@ -2830,7 +3460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Authentication/Needham%20Schroeder%20Protocol/" class="md-nav__link">
+      <a href="../Authentication/Needham%20Schroeder%20Protocol/" class="md-nav__link">
         
   
   
@@ -2874,10 +3504,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
         
           
-          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
             
   
   
@@ -2895,8 +3525,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2913,7 +3543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Strong%20Security%20Protocols/Augmented%20PDM/" class="md-nav__link">
+      <a href="../Strong%20Security%20Protocols/Augmented%20PDM/" class="md-nav__link">
         
   
   
@@ -2941,7 +3571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Strong%20Security%20Protocols/EKE%20%28Encrypted%20Key%20Exchange%29/" class="md-nav__link">
+      <a href="../Strong%20Security%20Protocols/EKE%20%28Encrypted%20Key%20Exchange%29/" class="md-nav__link">
         
   
   
@@ -2969,7 +3599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Strong%20Security%20Protocols/Password%20Derived%20Moduli/" class="md-nav__link">
+      <a href="../Strong%20Security%20Protocols/Password%20Derived%20Moduli/" class="md-nav__link">
         
   
   
@@ -2997,7 +3627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Strong%20Security%20Protocols/Secure%20Remote%20Password/" class="md-nav__link">
+      <a href="../Strong%20Security%20Protocols/Secure%20Remote%20Password/" class="md-nav__link">
         
   
   
@@ -3025,7 +3655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Computer%20Security/Strong%20Security%20Protocols/Simple%20Password%20Exponential%20Key%20Exchange/" class="md-nav__link">
+      <a href="../Strong%20Security%20Protocols/Simple%20Password%20Exponential%20Key%20Exchange/" class="md-nav__link">
         
   
   
@@ -3115,7 +3745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Mnemonics/" class="md-nav__link">
+      <a href="../../DBMS/Mnemonics/" class="md-nav__link">
         
   
   
@@ -3143,7 +3773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%201/" class="md-nav__link">
+      <a href="../../DBMS/Stage%201/" class="md-nav__link">
         
   
   
@@ -3171,7 +3801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%2010/" class="md-nav__link">
+      <a href="../../DBMS/Stage%2010/" class="md-nav__link">
         
   
   
@@ -3199,7 +3829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%2012/" class="md-nav__link">
+      <a href="../../DBMS/Stage%2012/" class="md-nav__link">
         
   
   
@@ -3227,7 +3857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%202/" class="md-nav__link">
+      <a href="../../DBMS/Stage%202/" class="md-nav__link">
         
   
   
@@ -3255,7 +3885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%203%20%28Shit%20gets%20real%20ngl%29/" class="md-nav__link">
+      <a href="../../DBMS/Stage%203%20%28Shit%20gets%20real%20ngl%29/" class="md-nav__link">
         
   
   
@@ -3283,7 +3913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%204%20%28Database%20linear%20search%20but%20cant%20search%20a%20gf%29/" class="md-nav__link">
+      <a href="../../DBMS/Stage%204%20%28Database%20linear%20search%20but%20cant%20search%20a%20gf%29/" class="md-nav__link">
         
   
   
@@ -3311,7 +3941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%206%20%28Buffer%20Management%20and%20Write%20Back%20policy%29/" class="md-nav__link">
+      <a href="../../DBMS/Stage%206%20%28Buffer%20Management%20and%20Write%20Back%20policy%29/" class="md-nav__link">
         
   
   
@@ -3339,7 +3969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%207/" class="md-nav__link">
+      <a href="../../DBMS/Stage%207/" class="md-nav__link">
         
   
   
@@ -3367,7 +3997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%208/" class="md-nav__link">
+      <a href="../../DBMS/Stage%208/" class="md-nav__link">
         
   
   
@@ -3395,7 +4025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS/Stage%209/" class="md-nav__link">
+      <a href="../../DBMS/Stage%209/" class="md-nav__link">
         
   
   
@@ -3477,7 +4107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Block%20Access%20Layer/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Block%20Access%20Layer/" class="md-nav__link">
         
   
   
@@ -3505,7 +4135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/BlockBuffer%20%28Bada%20Bhai%29/" class="md-nav__link">
+      <a href="../../DBMS%20Components/BlockBuffer%20%28Bada%20Bhai%29/" class="md-nav__link">
         
   
   
@@ -3533,7 +4163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Buffer%20Layer/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Buffer%20Layer/" class="md-nav__link">
         
   
   
@@ -3561,7 +4191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Cache%20Layer/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Cache%20Layer/" class="md-nav__link">
         
   
   
@@ -3589,7 +4219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Constants/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Constants/" class="md-nav__link">
         
   
   
@@ -3617,7 +4247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Functions/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Functions/" class="md-nav__link">
         
   
   
@@ -3645,7 +4275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/Static%20Buffer/" class="md-nav__link">
+      <a href="../../DBMS%20Components/Static%20Buffer/" class="md-nav__link">
         
   
   
@@ -3673,7 +4303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Components/XFS%20Interface%20Command/" class="md-nav__link">
+      <a href="../../DBMS%20Components/XFS%20Interface%20Command/" class="md-nav__link">
         
   
   
@@ -3755,7 +4385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Theory/Notes/" class="md-nav__link">
+      <a href="../../DBMS%20Theory/Notes/" class="md-nav__link">
         
   
   
@@ -3783,7 +4413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DBMS%20Theory/SQL/" class="md-nav__link">
+      <a href="../../DBMS%20Theory/SQL/" class="md-nav__link">
         
   
   
@@ -3865,7 +4495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/C%2B%2B%20STL/" class="md-nav__link">
+      <a href="../../DSA/C%2B%2B%20STL/" class="md-nav__link">
         
   
   
@@ -3893,7 +4523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/DP/" class="md-nav__link">
+      <a href="../../DSA/DP/" class="md-nav__link">
         
   
   
@@ -3921,7 +4551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Dynamic%20Programming/" class="md-nav__link">
+      <a href="../../DSA/Dynamic%20Programming/" class="md-nav__link">
         
   
   
@@ -3949,7 +4579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Greedy%20Algorithm/" class="md-nav__link">
+      <a href="../../DSA/Greedy%20Algorithm/" class="md-nav__link">
         
   
   
@@ -3977,7 +4607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Java/" class="md-nav__link">
+      <a href="../../DSA/Java/" class="md-nav__link">
         
   
   
@@ -4005,7 +4635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Revision%20Series/" class="md-nav__link">
+      <a href="../../DSA/Revision%20Series/" class="md-nav__link">
         
   
   
@@ -4033,7 +4663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DSA/Sliding%20Window/" class="md-nav__link">
+      <a href="../../DSA/Sliding%20Window/" class="md-nav__link">
         
   
   
@@ -4115,7 +4745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Devops/Bash/" class="md-nav__link">
+      <a href="../../Devops/Bash/" class="md-nav__link">
         
   
   
@@ -4143,7 +4773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Devops/Makefile/" class="md-nav__link">
+      <a href="../../Devops/Makefile/" class="md-nav__link">
         
   
   
@@ -4171,7 +4801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Devops/Roadmap/" class="md-nav__link">
+      <a href="../../Devops/Roadmap/" class="md-nav__link">
         
   
   
@@ -4253,7 +4883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/Commands/" class="md-nav__link">
+      <a href="../../Docker/Commands/" class="md-nav__link">
         
   
   
@@ -4281,7 +4911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/NodeJS%20API%20Dockerfile/" class="md-nav__link">
+      <a href="../../Docker/NodeJS%20API%20Dockerfile/" class="md-nav__link">
         
   
   
@@ -4309,7 +4939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/Notes/" class="md-nav__link">
+      <a href="../../Docker/Notes/" class="md-nav__link">
         
   
   
@@ -4391,7 +5021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/A%20Survey%20of%20Malware%20Detection%20Using%20Deep%20Learning/" class="md-nav__link">
+      <a href="../../Final%20Project/A%20Survey%20of%20Malware%20Detection%20Using%20Deep%20Learning/" class="md-nav__link">
         
   
   
@@ -4419,7 +5049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Basic%20Analysis/" class="md-nav__link">
+      <a href="../../Final%20Project/Basic%20Analysis/" class="md-nav__link">
         
   
   
@@ -4447,7 +5077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Malware%20Analysis%20Primer/" class="md-nav__link">
+      <a href="../../Final%20Project/Malware%20Analysis%20Primer/" class="md-nav__link">
         
   
   
@@ -4475,7 +5105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Malware%20Detection%20Using%20Artificial%20Intelligence/" class="md-nav__link">
+      <a href="../../Final%20Project/Malware%20Detection%20Using%20Artificial%20Intelligence/" class="md-nav__link">
         
   
   
@@ -4503,7 +5133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Roadmap/" class="md-nav__link">
+      <a href="../../Final%20Project/Roadmap/" class="md-nav__link">
         
   
   
@@ -4531,7 +5161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Static%20Malware%20Analysis%20Dataset/" class="md-nav__link">
+      <a href="../../Final%20Project/Static%20Malware%20Analysis%20Dataset/" class="md-nav__link">
         
   
   
@@ -4559,7 +5189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/Workflow/" class="md-nav__link">
+      <a href="../../Final%20Project/Workflow/" class="md-nav__link">
         
   
   
@@ -4634,7 +5264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/References/BODMAS%20Dataset/" class="md-nav__link">
+      <a href="../../Final%20Project/References/BODMAS%20Dataset/" class="md-nav__link">
         
   
   
@@ -4662,7 +5292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/References/ByteEnc/" class="md-nav__link">
+      <a href="../../Final%20Project/References/ByteEnc/" class="md-nav__link">
         
   
   
@@ -4690,7 +5320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Final%20Project/References/Malware%20Detection%20and%20Classification%20Using%20Generative%20Adversarial%20Network/" class="md-nav__link">
+      <a href="../../Final%20Project/References/Malware%20Detection%20and%20Classification%20Using%20Generative%20Adversarial%20Network/" class="md-nav__link">
         
   
   
@@ -4780,7 +5410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/End%20Sem/" class="md-nav__link">
+      <a href="../../Financial%20Markets/End%20Sem/" class="md-nav__link">
         
   
   
@@ -4808,7 +5438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Indian%20Financial%20Market/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Indian%20Financial%20Market/" class="md-nav__link">
         
   
   
@@ -4836,7 +5466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Introduction/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Introduction/" class="md-nav__link">
         
   
   
@@ -4864,7 +5494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Monetary%20Policy%20Instruments/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Monetary%20Policy%20Instruments/" class="md-nav__link">
         
   
   
@@ -4892,7 +5522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Money%20Market%20Products/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Money%20Market%20Products/" class="md-nav__link">
         
   
   
@@ -4920,7 +5550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Money%20Market%20vs%20Capital%20Market/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Money%20Market%20vs%20Capital%20Market/" class="md-nav__link">
         
   
   
@@ -4948,7 +5578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Questions/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Questions/" class="md-nav__link">
         
   
   
@@ -4976,7 +5606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Reserve%20Bank%20of%20India/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Reserve%20Bank%20of%20India/" class="md-nav__link">
         
   
   
@@ -5004,7 +5634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Financial%20Markets/Stock%20Market/" class="md-nav__link">
+      <a href="../../Financial%20Markets/Stock%20Market/" class="md-nav__link">
         
   
   
@@ -5086,7 +5716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Asynchronous%20Programming/" class="md-nav__link">
+      <a href="../../Flutter/Asynchronous%20Programming/" class="md-nav__link">
         
   
   
@@ -5114,7 +5744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Dart%20Roadmap/" class="md-nav__link">
+      <a href="../../Flutter/Dart%20Roadmap/" class="md-nav__link">
         
   
   
@@ -5142,7 +5772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Functional%20Features/" class="md-nav__link">
+      <a href="../../Flutter/Functional%20Features/" class="md-nav__link">
         
   
   
@@ -5170,7 +5800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Fundametals/" class="md-nav__link">
+      <a href="../../Flutter/Fundametals/" class="md-nav__link">
         
   
   
@@ -5198,7 +5828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Inheritance/" class="md-nav__link">
+      <a href="../../Flutter/Inheritance/" class="md-nav__link">
         
   
   
@@ -5226,7 +5856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Mixin/" class="md-nav__link">
+      <a href="../../Flutter/Mixin/" class="md-nav__link">
         
   
   
@@ -5254,7 +5884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/Null%20Safety/" class="md-nav__link">
+      <a href="../../Flutter/Null%20Safety/" class="md-nav__link">
         
   
   
@@ -5282,7 +5912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Flutter/OOPS/" class="md-nav__link">
+      <a href="../../Flutter/OOPS/" class="md-nav__link">
         
   
   
@@ -5364,7 +5994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Adjective%20Possessive/" class="md-nav__link">
+      <a href="../../French/Adjective%20Possessive/" class="md-nav__link">
         
   
   
@@ -5392,7 +6022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Conjugation/" class="md-nav__link">
+      <a href="../../French/Conjugation/" class="md-nav__link">
         
   
   
@@ -5420,7 +6050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Cooked%20up%20sentences/" class="md-nav__link">
+      <a href="../../French/Cooked%20up%20sentences/" class="md-nav__link">
         
   
   
@@ -5448,7 +6078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Futur%20Proche%20%2B%20Passe%20Compose/" class="md-nav__link">
+      <a href="../../French/Futur%20Proche%20%2B%20Passe%20Compose/" class="md-nav__link">
         
   
   
@@ -5476,7 +6106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Gender/" class="md-nav__link">
+      <a href="../../French/Gender/" class="md-nav__link">
         
   
   
@@ -5504,7 +6134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Negation/" class="md-nav__link">
+      <a href="../../French/Negation/" class="md-nav__link">
         
   
   
@@ -5532,7 +6162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Prepositions/" class="md-nav__link">
+      <a href="../../French/Prepositions/" class="md-nav__link">
         
   
   
@@ -5560,7 +6190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Pronouns/" class="md-nav__link">
+      <a href="../../French/Pronouns/" class="md-nav__link">
         
   
   
@@ -5588,7 +6218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Questions/" class="md-nav__link">
+      <a href="../../French/Questions/" class="md-nav__link">
         
   
   
@@ -5616,7 +6246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../French/Words/" class="md-nav__link">
+      <a href="../../French/Words/" class="md-nav__link">
         
   
   
@@ -5698,7 +6328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Collections/" class="md-nav__link">
+      <a href="../../Java/Collections/" class="md-nav__link">
         
   
   
@@ -5726,7 +6356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Exception%20Handling/" class="md-nav__link">
+      <a href="../../Java/Exception%20Handling/" class="md-nav__link">
         
   
   
@@ -5754,7 +6384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Generics/" class="md-nav__link">
+      <a href="../../Java/Generics/" class="md-nav__link">
         
   
   
@@ -5782,7 +6412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Introduction/" class="md-nav__link">
+      <a href="../../Java/Introduction/" class="md-nav__link">
         
   
   
@@ -5810,7 +6440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Java%20Arrays/" class="md-nav__link">
+      <a href="../../Java/Java%20Arrays/" class="md-nav__link">
         
   
   
@@ -5838,7 +6468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Java%20Class/" class="md-nav__link">
+      <a href="../../Java/Java%20Class/" class="md-nav__link">
         
   
   
@@ -5866,7 +6496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Java%20Foundations/" class="md-nav__link">
+      <a href="../../Java/Java%20Foundations/" class="md-nav__link">
         
   
   
@@ -5894,7 +6524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Java/Java%20Strings/" class="md-nav__link">
+      <a href="../../Java/Java%20Strings/" class="md-nav__link">
         
   
   
@@ -6023,7 +6653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Machine%20Learning/Decision%20Trees/Decision%20Trees/" class="md-nav__link">
+      <a href="../../Machine%20Learning/Decision%20Trees/Decision%20Trees/" class="md-nav__link">
         
   
   
@@ -6106,7 +6736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Machine%20Learning/Deep%20Learning/Deep%20Learning/" class="md-nav__link">
+      <a href="../../Machine%20Learning/Deep%20Learning/Deep%20Learning/" class="md-nav__link">
         
   
   
@@ -6134,7 +6764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Machine%20Learning/Deep%20Learning/Neural%20Network/" class="md-nav__link">
+      <a href="../../Machine%20Learning/Deep%20Learning/Neural%20Network/" class="md-nav__link">
         
   
   
@@ -6224,7 +6854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/Assg%204/" class="md-nav__link">
+      <a href="../../Network%20Lab/Assg%204/" class="md-nav__link">
         
   
   
@@ -6252,7 +6882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/Crimping/" class="md-nav__link">
+      <a href="../../Network%20Lab/Crimping/" class="md-nav__link">
         
   
   
@@ -6280,7 +6910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/DNS%20Assignment/" class="md-nav__link">
+      <a href="../../Network%20Lab/DNS%20Assignment/" class="md-nav__link">
         
   
   
@@ -6308,7 +6938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/First%20Lab/" class="md-nav__link">
+      <a href="../../Network%20Lab/First%20Lab/" class="md-nav__link">
         
   
   
@@ -6336,7 +6966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Network%20Lab/Routing%20Protocols/" class="md-nav__link">
+      <a href="../../Network%20Lab/Routing%20Protocols/" class="md-nav__link">
         
   
   
@@ -6418,7 +7048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOPS/OOPS/" class="md-nav__link">
+      <a href="../../OOPS/OOPS/" class="md-nav__link">
         
   
   
@@ -6500,7 +7130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS/Booting%20Into%20OS/" class="md-nav__link">
+      <a href="../../OS/Booting%20Into%20OS/" class="md-nav__link">
         
   
   
@@ -6528,7 +7158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS/OS%20Concepts/" class="md-nav__link">
+      <a href="../../OS/OS%20Concepts/" class="md-nav__link">
         
   
   
@@ -6556,7 +7186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS/Three%20Pieces/" class="md-nav__link">
+      <a href="../../OS/Three%20Pieces/" class="md-nav__link">
         
   
   
@@ -6638,7 +7268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Preparation/" class="md-nav__link">
+      <a href="../../OS%20Lab/Preparation/" class="md-nav__link">
         
   
   
@@ -6666,7 +7296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Pseudocode/" class="md-nav__link">
+      <a href="../../OS%20Lab/Pseudocode/" class="md-nav__link">
         
   
   
@@ -6788,7 +7418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage%2024/File%20Status%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage%2024/File%20Status%20Table/" class="md-nav__link">
         
   
   
@@ -6816,7 +7446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage%2024/Open%20File%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage%2024/Open%20File%20Table/" class="md-nav__link">
         
   
   
@@ -6899,7 +7529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-2/Data%20Free%20List/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-2/Data%20Free%20List/" class="md-nav__link">
         
   
   
@@ -6927,7 +7557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-2/Inode%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-2/Inode%20Table/" class="md-nav__link">
         
   
   
@@ -6955,7 +7585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-2/Root%20File/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-2/Root%20File/" class="md-nav__link">
         
   
   
@@ -6983,7 +7613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-2/User%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-2/User%20Table/" class="md-nav__link">
         
   
   
@@ -7066,7 +7696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-9/Per-Process%20Resource%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-9/Per-Process%20Resource%20Table/" class="md-nav__link">
         
   
   
@@ -7094,7 +7724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-9/Process%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-9/Process%20Table/" class="md-nav__link">
         
   
   
@@ -7122,7 +7752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-9/System%20Status%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-9/System%20Status%20Table/" class="md-nav__link">
         
   
   
@@ -7150,7 +7780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Data%20Structures/Stage-9/User%20Area/" class="md-nav__link">
+      <a href="../../OS%20Lab/Data%20Structures/Stage-9/User%20Area/" class="md-nav__link">
         
   
   
@@ -7241,7 +7871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2010/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2010/" class="md-nav__link">
         
   
   
@@ -7269,7 +7899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2011/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2011/" class="md-nav__link">
         
   
   
@@ -7297,7 +7927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2012/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2012/" class="md-nav__link">
         
   
   
@@ -7325,7 +7955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2013/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2013/" class="md-nav__link">
         
   
   
@@ -7353,7 +7983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2014/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2014/" class="md-nav__link">
         
   
   
@@ -7381,7 +8011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2015/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2015/" class="md-nav__link">
         
   
   
@@ -7409,7 +8039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2016/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2016/" class="md-nav__link">
         
   
   
@@ -7437,7 +8067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2017/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2017/" class="md-nav__link">
         
   
   
@@ -7465,7 +8095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2018/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2018/" class="md-nav__link">
         
   
   
@@ -7493,7 +8123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2019/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2019/" class="md-nav__link">
         
   
   
@@ -7521,7 +8151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%202/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%202/" class="md-nav__link">
         
   
   
@@ -7549,7 +8179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2020/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2020/" class="md-nav__link">
         
   
   
@@ -7577,7 +8207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2021/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2021/" class="md-nav__link">
         
   
   
@@ -7605,7 +8235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2022/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2022/" class="md-nav__link">
         
   
   
@@ -7633,7 +8263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2023/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2023/" class="md-nav__link">
         
   
   
@@ -7661,7 +8291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2024/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2024/" class="md-nav__link">
         
   
   
@@ -7689,7 +8319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2025/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2025/" class="md-nav__link">
         
   
   
@@ -7717,7 +8347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2026/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2026/" class="md-nav__link">
         
   
   
@@ -7745,7 +8375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2027/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2027/" class="md-nav__link">
         
   
   
@@ -7773,7 +8403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%2028/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%2028/" class="md-nav__link">
         
   
   
@@ -7801,7 +8431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%203/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%203/" class="md-nav__link">
         
   
   
@@ -7829,7 +8459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%204/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%204/" class="md-nav__link">
         
   
   
@@ -7857,7 +8487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%205/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%205/" class="md-nav__link">
         
   
   
@@ -7885,7 +8515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%206/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%206/" class="md-nav__link">
         
   
   
@@ -7913,7 +8543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%207/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%207/" class="md-nav__link">
         
   
   
@@ -7941,7 +8571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%208/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%208/" class="md-nav__link">
         
   
   
@@ -7969,7 +8599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Stages/Stage%209/" class="md-nav__link">
+      <a href="../../OS%20Lab/Stages/Stage%209/" class="md-nav__link">
         
   
   
@@ -8052,7 +8682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/ABI/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/ABI/" class="md-nav__link">
         
   
   
@@ -8080,7 +8710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Disk%20Organisation/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Disk%20Organisation/" class="md-nav__link">
         
   
   
@@ -8108,7 +8738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Experimental%20File%20System/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Experimental%20File%20System/" class="md-nav__link">
         
   
   
@@ -8136,7 +8766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Inode%20Table/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Inode%20Table/" class="md-nav__link">
         
   
   
@@ -8164,7 +8794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Interrupt%20Tutorial/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Interrupt%20Tutorial/" class="md-nav__link">
         
   
   
@@ -8192,7 +8822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Kernel%20Stack%20Management%20during%20Kernel%20Module%20Calls/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Kernel%20Stack%20Management%20during%20Kernel%20Module%20Calls/" class="md-nav__link">
         
   
   
@@ -8220,7 +8850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Kernel%20Stack%20Management/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Kernel%20Stack%20Management/" class="md-nav__link">
         
   
   
@@ -8248,7 +8878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/SPL/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/SPL/" class="md-nav__link">
         
   
   
@@ -8276,7 +8906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/Virtual%20Machine%20Model/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/Virtual%20Machine%20Model/" class="md-nav__link">
         
   
   
@@ -8304,7 +8934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XFS%20Interface%20Usage/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XFS%20Interface%20Usage/" class="md-nav__link">
         
   
   
@@ -8332,7 +8962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XSM%20Instruction%20Set/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XSM%20Instruction%20Set/" class="md-nav__link">
         
   
   
@@ -8360,7 +8990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XSM%20Machine%20Organisation/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XSM%20Machine%20Organisation/" class="md-nav__link">
         
   
   
@@ -8388,7 +9018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XSM%20Paging%20Hardware%20and%20Address%20Translation/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XSM%20Paging%20Hardware%20and%20Address%20Translation/" class="md-nav__link">
         
   
   
@@ -8416,7 +9046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OS%20Lab/Theory/XSM%20Unprivileged%20Mode%20Execution/" class="md-nav__link">
+      <a href="../../OS%20Lab/Theory/XSM%20Unprivileged%20Mode%20Execution/" class="md-nav__link">
         
   
   
@@ -8506,7 +9136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/AlgoBrawl/" class="md-nav__link">
+      <a href="../../Projects/AlgoBrawl/" class="md-nav__link">
         
   
   
@@ -8534,7 +9164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/NITCBase/" class="md-nav__link">
+      <a href="../../Projects/NITCBase/" class="md-nav__link">
         
   
   
@@ -8562,7 +9192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/Offline%20and%20Online%20Sync%20Web%20Application/" class="md-nav__link">
+      <a href="../../Projects/Offline%20and%20Online%20Sync%20Web%20Application/" class="md-nav__link">
         
   
   
@@ -8590,7 +9220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/Project%20Management%20Software/" class="md-nav__link">
+      <a href="../../Projects/Project%20Management%20Software/" class="md-nav__link">
         
   
   
@@ -8618,7 +9248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Projects/Ride%20Booking%20System/" class="md-nav__link">
+      <a href="../../Projects/Ride%20Booking%20System/" class="md-nav__link">
         
   
   
@@ -8700,7 +9330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../RISC-V/Boot/" class="md-nav__link">
+      <a href="../../RISC-V/Boot/" class="md-nav__link">
         
   
   
@@ -8728,7 +9358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../RISC-V/Booting%20the%20Kernel/" class="md-nav__link">
+      <a href="../../RISC-V/Booting%20the%20Kernel/" class="md-nav__link">
         
   
   
@@ -8756,7 +9386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../RISC-V/Introduction/" class="md-nav__link">
+      <a href="../../RISC-V/Introduction/" class="md-nav__link">
         
   
   
@@ -8784,7 +9414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../RISC-V/Overview/" class="md-nav__link">
+      <a href="../../RISC-V/Overview/" class="md-nav__link">
         
   
   
@@ -8866,7 +9496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../SQL/SQL%20Commands/" class="md-nav__link">
+      <a href="../../SQL/SQL%20Commands/" class="md-nav__link">
         
   
   
@@ -8948,7 +9578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/OOPS/" class="md-nav__link">
+      <a href="../../Software%20Engineering/OOPS/" class="md-nav__link">
         
   
   
@@ -8976,7 +9606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Software%20Requirements%20Specification/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Requirements%20Specification/" class="md-nav__link">
         
   
   
@@ -9051,7 +9681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Design%20Patterns/Adapter/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Design%20Patterns/Adapter/" class="md-nav__link">
         
   
   
@@ -9079,7 +9709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Design%20Patterns/Design%20Patterns/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Design%20Patterns/Design%20Patterns/" class="md-nav__link">
         
   
   
@@ -9107,7 +9737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Design%20Patterns/Facade/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Design%20Patterns/Facade/" class="md-nav__link">
         
   
   
@@ -9135,7 +9765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Design%20Patterns/Observer/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Design%20Patterns/Observer/" class="md-nav__link">
         
   
   
@@ -9218,7 +9848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/Agile%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/Agile%20Model/" class="md-nav__link">
         
   
   
@@ -9246,7 +9876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/Estimation%20Techniques/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/Estimation%20Techniques/" class="md-nav__link">
         
   
   
@@ -9274,7 +9904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/Halstead%27s%20Theory/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/Halstead%27s%20Theory/" class="md-nav__link">
         
   
   
@@ -9302,7 +9932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/MC-DC/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/MC-DC/" class="md-nav__link">
         
   
   
@@ -9330,7 +9960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/SOAP/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/SOAP/" class="md-nav__link">
         
   
   
@@ -9358,7 +9988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/Software%20Architecture/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/Software%20Architecture/" class="md-nav__link">
         
   
   
@@ -9386,7 +10016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/Software%20Project%20Management/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/Software%20Project%20Management/" class="md-nav__link">
         
   
   
@@ -9414,7 +10044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/Unit%20Testing%20-%201/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/Unit%20Testing%20-%201/" class="md-nav__link">
         
   
   
@@ -9442,7 +10072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/Unit%20Testing%20-%202/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/Unit%20Testing%20-%202/" class="md-nav__link">
         
   
   
@@ -9470,7 +10100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Post-MidSem/Unit%20Testing%20-%203/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Post-MidSem/Unit%20Testing%20-%203/" class="md-nav__link">
         
   
   
@@ -9553,7 +10183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Process%20Models/Classical%20Waterfall%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Classical%20Waterfall%20Model/" class="md-nav__link">
         
   
   
@@ -9581,7 +10211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Process%20Models/Evolutionary%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Evolutionary%20Model/" class="md-nav__link">
         
   
   
@@ -9609,7 +10239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Process%20Models/Incremental%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Incremental%20Model/" class="md-nav__link">
         
   
   
@@ -9637,7 +10267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Process%20Models/Iterative%20Waterfall%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Iterative%20Waterfall%20Model/" class="md-nav__link">
         
   
   
@@ -9665,7 +10295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Process%20Models/Prototyping%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/Prototyping%20Model/" class="md-nav__link">
         
   
   
@@ -9693,7 +10323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Process%20Models/SDLC/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/SDLC/" class="md-nav__link">
         
   
   
@@ -9721,7 +10351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Process%20Models/V%20Model/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Process%20Models/V%20Model/" class="md-nav__link">
         
   
   
@@ -9804,7 +10434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Requirements%20Modelling/Activity%20Diagram/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/Activity%20Diagram/" class="md-nav__link">
         
   
   
@@ -9832,7 +10462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Requirements%20Modelling/Requirements%20Modelling/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/Requirements%20Modelling/" class="md-nav__link">
         
   
   
@@ -9860,7 +10490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Requirements%20Modelling/Sequence%20Diagram/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/Sequence%20Diagram/" class="md-nav__link">
         
   
   
@@ -9888,7 +10518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Requirements%20Modelling/State%20Diagram/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/State%20Diagram/" class="md-nav__link">
         
   
   
@@ -9916,7 +10546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Requirements%20Modelling/Use%20Case/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Requirements%20Modelling/Use%20Case/" class="md-nav__link">
         
   
   
@@ -9999,7 +10629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Software%20Design/Class%20Diagram%20and%20Class%20Relationships/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Class%20Diagram%20and%20Class%20Relationships/" class="md-nav__link">
         
   
   
@@ -10027,7 +10657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Software%20Design/Software%20Design/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Software%20Design/" class="md-nav__link">
         
   
   
@@ -10102,7 +10732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Software%20Design/Relationships/Aggregation/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Aggregation/" class="md-nav__link">
         
   
   
@@ -10130,7 +10760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Software%20Design/Relationships/Association/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Association/" class="md-nav__link">
         
   
   
@@ -10158,7 +10788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Software%20Design/Relationships/Composition/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Composition/" class="md-nav__link">
         
   
   
@@ -10186,7 +10816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Software%20Design/Relationships/Dependency/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Dependency/" class="md-nav__link">
         
   
   
@@ -10214,7 +10844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software%20Engineering/Software%20Design/Relationships/Inheritance/" class="md-nav__link">
+      <a href="../../Software%20Engineering/Software%20Design/Relationships/Inheritance/" class="md-nav__link">
         
   
   
@@ -10312,7 +10942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../System%20Design/System%20Design/" class="md-nav__link">
+      <a href="../../System%20Design/System%20Design/" class="md-nav__link">
         
   
   
@@ -10441,7 +11071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../TaskNotes/Tasks/Study%20AI/" class="md-nav__link">
+      <a href="../../TaskNotes/Tasks/Study%20AI/" class="md-nav__link">
         
   
   
@@ -10476,7 +11106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../TaskNotes/Tasks/Study%20Financial%20Markets/" class="md-nav__link">
+      <a href="../../TaskNotes/Tasks/Study%20Financial%20Markets/" class="md-nav__link">
         
   
   
@@ -10573,7 +11203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eBPF/Introduction/" class="md-nav__link">
+      <a href="../../eBPF/Introduction/" class="md-nav__link">
         
   
   
@@ -10626,22 +11256,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tunable-features" class="md-nav__link">
+  <a href="#packet-sniffing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tunable Features
+        Packet Sniffing
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Tunable Features">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promiscuous-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Promiscuous Mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packet-spoofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packet Spoofing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-security-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Security Attacks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#denial-of-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Denial of Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Denial of Service">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#activation-functions" class="md-nav__link">
+  <a href="#syn-flooding-attack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Activation Functions
+        SYN flooding attack
       
     </span>
   </a>
@@ -10649,10 +11323,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#learning-rate" class="md-nav__link">
+  <a href="#smurf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Learning Rate
+        Smurf
       
     </span>
   </a>
@@ -10660,21 +11334,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optimiser" class="md-nav__link">
+  <a href="#tcp-reset-attack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Optimiser
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialisation-and-regularisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initialisation and Regularisation
+        TCP Reset Attack
       
     </span>
   </a>
@@ -10683,6 +11346,381 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-bomb-rabbit-virus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fork Bomb (Rabbit virus)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#denial-of-service_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Denial of Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Denial of Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-ddos-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of DDos Attacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigate-ddos-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigate DDoS Attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#botnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Botnet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntp-reflection-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NTP Reflection Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amplification-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Amplification Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memcached-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memcached Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snmp-reflection-amplification-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SNMP Reflection / Amplification Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-amplification-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Amplification Attack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arp-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARP Protocol
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARP Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arp-spoofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARP Spoofing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible Attacks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-scanning-reconnaissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port Scanning / Reconnaissance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port States
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiguity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiguity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-ack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP ACK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-window-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Window Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-fin-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP FIN Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-null-fin-xmas-scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP NULL, FIN, Xmas Scans
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-maimon-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Maimon Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-idle-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Idle Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UDP Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertical-and-horizontal-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertical and Horizontal Scan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-query-and-reply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Query and Reply
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-cache-poisoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Cache Poisoning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks-at-name-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checks at Name-server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Cache
+      
+    </span>
+  </a>
   
 </li>
       
@@ -10703,63 +11741,330 @@
 
 
 
-  <h1>Neural Network</h1>
+  <h1>Network Security</h1>
 
-<h3 id="tunable-features">Tunable Features</h3>
-<h4 id="activation-functions">Activation Functions</h4>
-<ul>
-<li><strong>ReLU</strong> - The industry standard</li>
-<li><strong>LeakyReLU</strong></li>
-<li><strong>Tanh</strong> - squashes values between -1 and 1</li>
-<li><strong>ELU</strong> </li>
-</ul>
-<p><img alt="Pasted image 20260420022708.png" src="../../../attachments/Pasted%20image%2020260420022708.png" /></p>
-<h4 id="learning-rate">Learning Rate</h4>
-<p><strong>Too high</strong> - You might overshoot the minimum and model will fail to converge
-<strong>Too low</strong> - Training will be agonisingly slow and might get stuck in a local minimum</p>
-<h4 id="optimiser">Optimiser</h4>
-<p>These are the algorithms that actually update the weight
-<strong>SGD (Stochastic Gradient Descent)</strong> - Updates weight frequently with high noise.
-<img alt="Pasted image 20260420023710.png" src="../../../attachments/Pasted%20image%2020260420023710.png" /></p>
-<p><strong>Adam</strong> - It combines <strong>Momentum</strong> (keep moving in the same direction) and <strong>RMSprop</strong> (adjusting step size for each weight)</p>
-<p><strong>RMSprop</strong> - Introduces decay factor to prevent the learning rate from decreasing too rapidly.</p>
+<h3 id="packet-sniffing">Packet Sniffing</h3>
+<p>In sniffing attacks, attackers can eavesdrop on a physical network, wired or wireless and capture packets transmitted over the network</p>
+<p>NIC is a physical or logical link between a machine and a network</p>
+<p>When a frame arrives via the medium, it is copied to memory inside NIA and checks the MAC address, after which it is copied to kernel using DMA. The card then raises Interrupt Request (IRQ) to the CPU to inform about the packet. CPU copies all the packets from buffer to a queue. Based on the protocol, different handler functions are invoked by the kernel to process the data.</p>
+<p><img alt="Pasted image 20260503194443.png" src="../../attachments/Pasted%20image%2020260503194443.png" /></p>
+<p><img alt="Pasted image 20260503195107.png" src="../../attachments/Pasted%20image%2020260503195107.png" /></p>
+<p><img alt="Pasted image 20260503195615.png" src="../../attachments/Pasted%20image%2020260503195615.png" /></p>
+<h3 id="promiscuous-mode">Promiscuous Mode</h3>
+<p>Frames that are not destined to a given NIC are discarded rather than being passed to CPU processing, making it impossible to sniff. This allows to pass the packets to kernel, regardless of whether the mac address matches.</p>
+<h3 id="packet-spoofing">Packet Spoofing</h3>
+<p>Sending packets under false identity</p>
+<p>If we want to send a TCP packet out with both SYN
+and FIN bits turned on, we cannot achieve that via the typical
+socket programming, because these two bits are never set at
+the same time in normal TCP packets</p>
 <table>
 <thead>
 <tr>
-<th>Optimizer</th>
-<th>Advantages</th>
-<th>Disadvantages</th>
+<th><strong>Function Name</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>SGD</strong></td>
-<td>Simple, easy to implement</td>
-<td>Slow convergence, requires tuning</td>
+<td>socket()</td>
+<td>Create a socket</td>
 </tr>
 <tr>
-<td><strong>RMSProp</strong></td>
-<td>Prevents fast decay of learning rates</td>
-<td>Computationally expensive</td>
+<td>bind(), connect()</td>
+<td>Assign a socket to IP address and port</td>
 </tr>
 <tr>
-<td><strong>Adam</strong></td>
-<td>Fast, combines momentum and RMSProp</td>
-<td>Memory-intensive, computationally expensive</td>
+<td>send(), recv(), write(), read()</td>
+<td>Tx and Rx to and from the socket</td>
+</tr>
+</tbody>
+</table>
+<h3 id="common-security-attacks">Common Security Attacks</h3>
+<ul>
+<li>Finding a way into they network</li>
+<li>Exploiting software bugs, buffer overflows</li>
+<li>Denial of Service</li>
+<li>Packet Sniffing</li>
+</ul>
+<h3 id="denial-of-service">Denial of Service</h3>
+<p>Make a network service unusable by overloading the network / server</p>
+<h4 id="syn-flooding-attack">SYN flooding attack</h4>
+<ul>
+<li>Send SYN packets with bogus source IP address</li>
+<li>Server responds with SYN-ACK and keeps the state half open</li>
+</ul>
+<h4 id="smurf">Smurf</h4>
+<ul>
+<li>Source IP address of a broadcast ping is forged</li>
+<li>Large number of machines respond back to victim, overloading it</li>
+<li>ICMP <strong>ECHO</strong></li>
+</ul>
+<p><img alt="Pasted image 20260503211011.png" src="../../attachments/Pasted%20image%2020260503211011.png" /></p>
+<h4 id="tcp-reset-attack">TCP Reset Attack</h4>
+<ul>
+<li>Break an existing connection between two victim host</li>
+<li>Closing TCP connections - TCP FIN protocol</li>
+<li>Success is sensitive to sequence number</li>
+</ul>
+<h3 id="fork-bomb-rabbit-virus">Fork Bomb (Rabbit virus)</h3>
+<p>Continuous forking, depleting resources of the system</p>
+<ul>
+<li><strong>Prevention</strong> - limit the maximum number of process that a single user may own</li>
+</ul>
+<h3 id="denial-of-service_1">Denial of Service</h3>
+<ul>
+<li>Distributed Denial of Service</li>
+</ul>
+<h4 id="types-of-ddos-attacks">Types of DDos Attacks</h4>
+<ul>
+<li><strong>Volume-based attacks</strong> - ICMP, UDP and spoofed packet flood attacks, size of the volume is measured in bits per second</li>
+<li><strong>Protocol or network layer based</strong> - SYN floods, SMURF DDoS</li>
+<li><strong>Application-layer attacks</strong>* - Flooding applications with crafted packets - requests / second</li>
+</ul>
+<h4 id="techniques">Techniques</h4>
+<ul>
+<li>Spoofing</li>
+<li>Reflection</li>
+<li>Amplification</li>
+</ul>
+<h4 id="mitigate-ddos-attack">Mitigate DDoS Attack</h4>
+<ul>
+<li>Rate limiting</li>
+<li>Port blocking</li>
+<li>Traffic signatures for IDS</li>
+<li>Intelligence</li>
+</ul>
+<h3 id="botnet">Botnet</h3>
+<p>Group of computers infected with malware under the control of bot master.</p>
+<h3 id="reflection-attack">Reflection Attack</h3>
+<ul>
+<li>Attacker forges the source address of the request, pretending to be the victim</li>
+<li>Server are unable to distinguish legit packets from spoofed when UDP is used</li>
+</ul>
+<h3 id="ntp-reflection-attack">NTP Reflection Attack</h3>
+<ul>
+<li>Monlist contains list of hosts that recently interacted with the server</li>
+<li>A single monlist request of 250 bytes can cause the server to send back several kB of data.</li>
+</ul>
+<h3 id="amplification-attack">Amplification Attack</h3>
+<ul>
+<li>Attacker’s goal is to make the abused server produce as much as response data as possible. The ration between the sizes of response and the request is called <strong>amplification factor</strong>.</li>
+</ul>
+<h3 id="memcached-server">Memcached Server</h3>
+<ul>
+<li>Memcached servers allow applications that need to access a lot of data from an external database to cache some of the data in the memory</li>
+<li>They can be some times exposed to open internet</li>
+</ul>
+<h3 id="snmp-reflection-amplification-attack">SNMP Reflection / Amplification Attack</h3>
+<ul>
+<li><strong>SNMP</strong> - A common network management protocol used for configuring and collecting information from network devices like servers, hubs, switches, routers and printers. The amplification ratio is around <strong>30</strong>.</li>
+</ul>
+<h3 id="dns-amplification-attack">DNS Amplification Attack</h3>
+<p>The attackers uses a compromised endpoint to send UDP packets with spoofed IP addresses to a DNS recursor, often passing an arguement “ANY”.</p>
+<h3 id="arp-protocol">ARP Protocol</h3>
+<p>ARP protocol is used to get the mac-address of a system, given that the IP address is known.</p>
+<h4 id="steps">Steps</h4>
+<ul>
+<li>Source checks cache</li>
+<li>Source generates ARP request</li>
+<li>Source broadcasts ARP request</li>
+<li>Local Devices process ARP request</li>
+<li>Destination Device generates ARP reply</li>
+<li>Destination updates ARP cache</li>
+<li>Destination sends ARP reply</li>
+<li>Source Processes ARP reply</li>
+<li>Source updates ARP Cache</li>
+</ul>
+<h3 id="arp-spoofing">ARP Spoofing</h3>
+<ul>
+<li>Attacker must have access to internet</li>
+<li>The forged responses advertise that the correct MAC address for both IP addresses, belonging to the router and workstation is the attacker’s MAC address. </li>
+<li>The two devices update their ARP cache entries.</li>
+</ul>
+<h3 id="possible-attacks">Possible Attacks</h3>
+<ul>
+<li>Sniff the packets</li>
+<li>Perform session hijacking</li>
+<li>Alter communication</li>
+<li>DOS</li>
+<li>DNS poisoning</li>
+</ul>
+<h3 id="port-scanning-reconnaissance">Port Scanning / Reconnaissance</h3>
+<ul>
+<li>To discover serves that can be exploited to break into systems. </li>
+</ul>
+<h3 id="ports">Ports</h3>
+<ul>
+<li>Ports are software abstraction, used to distinguish between multiple services. </li>
+<li>Reserved ports and Ephemeral ports</li>
+</ul>
+<h3 id="port-states">Port States</h3>
+<ul>
+<li><strong>Open</strong> - An application is actively TCP connections or UDP packets</li>
+<li><strong>Closed</strong> - A closed is accessible, but there is no application listening to it</li>
+<li><strong>Filtered</strong> - Cannot determine whether the port is open because packet filtering prevents its probes from reaching the port</li>
+</ul>
+<h3 id="ambiguity">Ambiguity</h3>
+<ul>
+<li><strong>Unfiltered</strong></li>
+<li><strong>Open | Filtered</strong></li>
+<li><strong>Closed | Filtered</strong></li>
+</ul>
+<h3 id="tcp-scan">TCP Scan</h3>
+<ul>
+<li>TCP connect scan - completes a three-way handshake</li>
+<li>TCP SYN scan - Half-opening scanning</li>
+<li>TCP-FIN scan - Scanner sends a FIN packet<ul>
+<li>Closed ports reply with RST packet</li>
+<li>Open ports ignores the packet</li>
+</ul>
+</li>
+</ul>
+<h3 id="tcp-ack">TCP ACK</h3>
+<ul>
+<li>It never determines open</li>
+<li>Unfiltered systems send RST packet, whereas the ones that do not respond is classified as filtered</li>
+</ul>
+<h3 id="tcp-window-scan">TCP Window Scan</h3>
+<ul>
+<li>Exactly the same as ACK scan</li>
+<li>Rather than always printing unfiltered when a RST is returned, it checks the TCP Window field</li>
+<li>If positive → Open</li>
+<li>If zero → Closed</li>
+</ul>
+<h3 id="tcp-fin-scan">TCP FIN Scan</h3>
+<p>Send a FIN packet without SYN to bypass the SYN loggers or when the root privilege is required to create raw TCP packet</p>
+<p>FIN may be dropped by firewall/pass through</p>
+<h3 id="tcp-null-fin-xmas-scans">TCP NULL, FIN, Xmas Scans</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Scan Type</strong></th>
+<th><strong>Flags Set</strong></th>
+<th><strong>Typical Response (Open Port)</strong></th>
+<th><strong>Typical Response (Closed Port)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Null</strong></td>
+<td>None</td>
+<td>No Response</td>
+<td><strong>RST</strong></td>
 </tr>
 <tr>
-<td>#### Training Mechanics</td>
+<td><strong>FIN</strong></td>
+<td>FIN</td>
+<td>No Response</td>
+<td><strong>RST</strong></td>
+</tr>
+<tr>
+<td><strong>Xmas</strong></td>
+<td>FIN, PSH, URG</td>
+<td>No Response</td>
+<td><strong>RST</strong></td>
+</tr>
+<tr>
+<td>When RST packet is received → Closed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>No response → Open</td>
+<td>Filtered</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ICMP unreachable → Filtered</strong></td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Batch Size</strong> - How many samples the model looks at before updating weights
-- Small - More noise, but better generalisation</p>
-<p><strong>Number of Epochs</strong> - How many full passes the model makes through the entire dataset</p>
-<h4 id="initialisation-and-regularisation">Initialisation and Regularisation</h4>
-<p><strong>Weight Initialisation</strong> - Starting weights at exactly causes same updates. We can use <strong>He initialisation (For ReLU)</strong> and <strong>Xavier (for Tanh and Sigmoid)</strong> to keep variance steady across layers</p>
-<p><strong>Dropout</strong> - Randomly turn off a percentage of neurons during training. This forces the network to depend overly on unwanted neurons.</p>
+<h3 id="tcp-maimon-scan">TCP Maimon Scan</h3>
+<ul>
+<li>Probe is FIN/ACK</li>
+<li>Flaw in TCP<ul>
+<li>A RST packet should be generated in response to such a probe, but many BSD derived systems just drop it if the port is open</li>
+</ul>
+</li>
+</ul>
+<h3 id="tcp-idle-scan">TCP Idle Scan</h3>
+<ul>
+<li>Complete blind port scanning </li>
+<li>
+<p>Attackers can scan the target without sending a single packet to the target from their own IP address. Instead a clever side-channel attack allows for the scan to be bounced off a dumb zombie 
+<img alt="Pasted image 20260504000317.png" src="../../attachments/Pasted%20image%2020260504000317.png" /><img alt="Pasted image 20260504000517.png" src="../../attachments/Pasted%20image%2020260504000517.png" /></p>
+</li>
+<li>
+<p>Stealth scan</p>
+</li>
+<li>Used to defeat certain packet filtering firewalls and routers</li>
+</ul>
+<h3 id="udp-scan">UDP Scan</h3>
+<ul>
+<li>In order to find UDP ports, the attackers generally sends empty UDP datagrams.</li>
+<li>If the port is listening → error or ignore the datagram</li>
+<li>ICMP Port Unreachable → Closed</li>
+</ul>
+<h3 id="vertical-and-horizontal-scan">Vertical and Horizontal Scan</h3>
+<ul>
+<li><strong>Vertical Scan</strong> - Scan multiple ports on a single machine</li>
+<li><strong>Horizontal Scan</strong> - Scan the same port on multiple machines</li>
+</ul>
+<h3 id="dns-query-and-reply">DNS Query and Reply</h3>
+<p><img alt="Pasted image 20260504001007.png" src="../../attachments/Pasted%20image%2020260504001007.png" /></p>
+<h3 id="dns-cache-poisoning">DNS Cache Poisoning</h3>
+<p>Act of entering false information into a DNS cache </p>
+<h3 id="checks-at-name-server">Checks at Name-server</h3>
+<ul>
+<li>Port checking</li>
+<li>Query ID checking</li>
+<li>Bailiwick checking (Additional and Authority sections should have the same domain as the query domain)</li>
+</ul>
+<h3 id="dns-cache">DNS Cache</h3>
+<p>DNS resolvers save responses in their cache for as long as the TTL associated with that IP address allows them to.</p>
+<p><img alt="Pasted image 20260504011717.png" src="../../attachments/Pasted%20image%2020260504011717.png" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Probe Type</strong></th>
+<th><strong>Open Port Response</strong></th>
+<th><strong>Closed Port Response</strong></th>
+<th><strong>Filtered (Firewall) Response</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SYN</strong></td>
+<td><strong>SYN/ACK</strong></td>
+<td><strong>RST</strong></td>
+<td><strong>No Response</strong> or <strong>ICMP</strong></td>
+</tr>
+<tr>
+<td><strong>FIN / NULL / Xmas</strong></td>
+<td><strong>No Response</strong></td>
+<td><strong>RST</strong></td>
+<td><strong>No Response</strong> or <strong>ICMP</strong></td>
+</tr>
+<tr>
+<td><strong>UDP</strong></td>
+<td><strong>No Response</strong> (usually)</td>
+<td><strong>ICMP Unreachable</strong></td>
+<td><strong>No Response</strong> or <strong>ICMP</strong></td>
+</tr>
+<tr>
+<td><strong>ACK</strong></td>
+<td><strong>RST</strong></td>
+<td><strong>RST</strong></td>
+<td><strong>No Response</strong> or <strong>ICMP</strong></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -10809,10 +12114,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
