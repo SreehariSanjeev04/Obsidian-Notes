@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-what-is-a-computer-network" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -5787,7 +5792,7 @@
   <span class="md-ellipsis">
     
   
-    1. What is ARP?
+    ARP
   
 
     
@@ -5814,6 +5819,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics of Networking
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -5831,6 +5856,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#end-systems-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End Systems / Hosts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9865,6 +9942,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#end-systems-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End Systems / Hosts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -9881,9 +10001,1335 @@
 
 
 
-  <h1>Basics of Networking</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These notes use only the five references specified: Kurose &amp; Ross (8th ed.), Gordon Lyon's <em>Nmap Network Scanning</em>, James Forshaw's <em>Attacking Network Protocols</em>, Gregor N. Purdy's <em>Linux iptables Pocket Reference</em>, and Wenliang Du's <em>Computer &amp; Internet Security: A Hands-on Approach</em>, 2nd ed.</p>
+</div>
+<h1 id="1-what-is-a-computer-network">1. What Is a Computer Network?</h1>
+<p>A computer network is a collection of interconnected computing devices that communicate using defined <strong>protocols</strong>.</p>
+<p>Kurose &amp; Ross presents the Internet in two complementary ways:</p>
+<ul>
+<li><strong>Nuts-and-bolts view:</strong> end systems, packet switches, communication links, and interconnected networks.</li>
+<li><strong>Services view:</strong> infrastructure providing communication services to distributed applications.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>                    Internet
+                       |
+        +--------------+--------------+
+        |                             |
+      Router                        Router
+        |                             |
+   +----+----+                   +----+----+
+   |         |                   |         |
+ Host A    Host B               Host C   Host D
+</code></pre></div>
+<h2 id="end-systems-hosts">End Systems / Hosts</h2>
+<p>Devices at the network edge that run applications.</p>
+<h2 id="routers">Routers</h2>
+<p>Routers forward packets between networks.</p>
+<h2 id="links">Links</h2>
+<p>Communication paths between network devices, including copper, fiber, and radio links.</p>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 1, §1.1 and §1.2.</p>
+<h1 id="2-protocols">2. Protocols</h1>
+<p>A <strong>protocol</strong> defines the format and order of messages exchanged between communicating entities and the actions taken when messages are sent or received.</p>
+<div class="highlight"><pre><span></span><code>Sender                         Receiver
+   |                              |
+   | -------- Message 1 --------&gt; |
+   |                              |
+   | &lt;------- Message 2 ----------|
+   |                              |
+   | -------- Message 3 --------&gt; |
+</code></pre></div>
+<p>Important protocol properties:</p>
+<ul>
+<li>Message format</li>
+<li>Message order</li>
+<li>Meaning of fields</li>
+<li>Sender/receiver actions</li>
+</ul>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 1, §1.1.3, <em>What Is a Protocol?</em></p>
+<h1 id="3-packet-switching">3. Packet Switching</h1>
+<p>The Internet primarily uses <strong>packet switching</strong>. A large message is divided into packets that are forwarded through the network.</p>
+<div class="highlight"><pre><span></span><code>Original message
++----------------------------------------+
+|                  DATA                  |
++----------------------------------------+
 
+                ↓ divide
 
++----------+ +----------+ +----------+
+| Packet 1 | | Packet 2 | | Packet 3 |
++----------+ +----------+ +----------+
+</code></pre></div>
+<p>A packet can pass through multiple routers:</p>
+<div class="highlight"><pre><span></span><code>Host A
+  |
+  v
+Router 1
+  |
+  v
+Router 2
+  |
+  v
+Router 3
+  |
+  v
+Host B
+</code></pre></div>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 1, §1.3.1, <em>Packet Switching</em>.</p>
+<h1 id="4-delay-loss-and-throughput">4. Delay, Loss, and Throughput</h1>
+<h2 id="41-processing-delay">4.1 Processing Delay</h2>
+<p>Time required for a router to examine and process a packet.</p>
+<div class="highlight"><pre><span></span><code>Packet arrives
+     ↓
+Inspect header
+     ↓
+Forwarding decision
+</code></pre></div>
+<h2 id="42-queuing-delay">4.2 Queuing Delay</h2>
+<p>Time spent waiting in a router queue before transmission.</p>
+<div class="highlight"><pre><span></span><code>+----------------+
+| Output Queue   |
+| [P1][P2][P3]  |
++----------------+
+        |
+        v
+     Transmit
+</code></pre></div>
+<h2 id="43-transmission-delay">4.3 Transmission Delay</h2>
+<p>For a packet of <code>L</code> bits and a link rate of <code>R</code> bits/s:</p>
+<div class="highlight"><pre><span></span><code>Transmission delay = L / R
+</code></pre></div>
+<h2 id="44-propagation-delay">4.4 Propagation Delay</h2>
+<p>Time required for a signal to physically travel through the communication medium.</p>
+<h2 id="packet-loss">Packet Loss</h2>
+<p>Routers have finite buffers. When a queue is full, arriving packets may be discarded.</p>
+<div class="highlight"><pre><span></span><code>Incoming packets
+       ↓
++------------------+
+| Router Queue     |
+| [P1][P2][P3][P4]|
++------------------+
+       ↓
+   queue full
+       ↓
+     DROP
+</code></pre></div>
+<h2 id="throughput">Throughput</h2>
+<p>Throughput is the rate at which bits are delivered from source to destination. A slower link on the path can become the bottleneck.</p>
+<div class="highlight"><pre><span></span><code>100 Mb/s → 10 Mb/s → 100 Mb/s
+               ^
+            bottleneck
+</code></pre></div>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 1, §1.4.</p>
+<h1 id="5-internet-protocol-stack">5. Internet Protocol Stack</h1>
+<p>Kurose &amp; Ross uses a five-layer Internet protocol stack:</p>
+<div class="highlight"><pre><span></span><code>+----------------------+
+| Application          |
++----------------------+
+| Transport            |
++----------------------+
+| Network              |
++----------------------+
+| Link                 |
++----------------------+
+| Physical             |
++----------------------+
+</code></pre></div>
+<h2 id="application-layer">Application Layer</h2>
+<p>Network applications and application protocols such as HTTP, DNS, and SMTP.</p>
+<h2 id="transport-layer">Transport Layer</h2>
+<p>Logical communication between application processes.</p>
+<p>Main Internet transport protocols:</p>
+<ul>
+<li>TCP</li>
+<li>UDP</li>
+</ul>
+<h2 id="network-layer">Network Layer</h2>
+<p>Moves datagrams between hosts across interconnected networks.</p>
+<p>Main protocol:</p>
+<ul>
+<li>IP</li>
+</ul>
+<h2 id="link-layer">Link Layer</h2>
+<p>Moves frames over an individual link/LAN.</p>
+<p>Examples:</p>
+<ul>
+<li>Ethernet</li>
+<li>Wi-Fi</li>
+</ul>
+<h2 id="physical-layer">Physical Layer</h2>
+<p>Carries raw bits across the physical medium.</p>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 1, §1.5.1.</p>
+<h1 id="6-encapsulation">6. Encapsulation</h1>
+<p>Each layer adds its own control information.</p>
+<div class="highlight"><pre><span></span><code>Application:
++------------------+
+| Application Data |
++------------------+
+
+Transport:
++-----------+------------------+
+| TCP/UDP   | Application Data|
+| Header    |                  |
++-----------+------------------+
+
+Network:
++---------+---------------------+
+| IP      | TCP/UDP + Data      |
+| Header  |                     |
++---------+---------------------+
+
+Link:
++---------+----------------------+----------+
+| Ethernet| IP + TCP/UDP + Data | Trailer  |
+| Header  |                      |          |
++---------+----------------------+----------+
+</code></pre></div>
+<p>The hierarchy is:</p>
+<div class="highlight"><pre><span></span><code>Application message
+        ↓
+Transport segment
+        ↓
+IP datagram
+        ↓
+Link-layer frame
+</code></pre></div>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapter 1, §1.5.2; Forshaw, Chapter 1, <em>Data Encapsulation</em>.</p>
+<h1 id="7-host-ip-address-and-port">7. Host, IP Address, and Port</h1>
+<p>A host can run multiple applications simultaneously. Transport-layer <strong>port numbers</strong> identify application endpoints.</p>
+<div class="highlight"><pre><span></span><code>192.168.1.10:80
+192.168.1.10:22
+192.168.1.10:443
+</code></pre></div>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code>IP address → host/interface
+Port       → transport endpoint / application process
+</code></pre></div>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapters 2–3; Lyon, Nmap Network Scanning, Chapter 4.</p>
+<h1 id="8-ipv4-addressing-and-subnets">8. IPv4 Addressing and Subnets</h1>
+<p>An IPv4 address is 32 bits. A prefix divides the address into network and host portions.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>192.168.1.0/24
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Network portion | Host portion
+&lt;---- 24 -----&gt; | &lt;- 8 bits -&gt;
+</code></pre></div>
+<p>A host can determine whether a destination is local by comparing the destination address with its configured prefix.</p>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 4, §4.3.2.</p>
+<h1 id="9-same-network-vs-different-network-communication">9. Same-Network vs Different-Network Communication</h1>
+<h2 id="same-network">Same Network</h2>
+<p>If Host A and Host B are in the same subnet, A can use ARP to learn B's MAC address and send the Ethernet frame directly.</p>
+<div class="highlight"><pre><span></span><code>Host A
+   |
+   | Ethernet frame
+   | Dest MAC = Host B
+   v
+Switch
+   |
+   v
+Host B
+</code></pre></div>
+<p>The router does not need to route this traffic.</p>
+<h2 id="different-network">Different Network</h2>
+<p>If B is on another subnet, A sends the frame to its next hop, normally the default gateway.</p>
+<div class="highlight"><pre><span></span><code>Host A
+   |
+   | Ethernet:
+   | Dest MAC = Router
+   |
+   | IP:
+   | Dest IP = Host B
+   v
+Router
+   |
+   | New Ethernet frame:
+   | Dest MAC = Host B
+   v
+Host B
+</code></pre></div>
+<p>Important distinction:</p>
+<div class="highlight"><pre><span></span><code>Different network:
+
+Destination IP  = final Host B
+Destination MAC = next hop / gateway (on the current LAN)
+</code></pre></div>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapters 4 and 6; Forshaw, Chapter 1.</p>
+<h1 id="10-mac-addresses-and-ethernet">10. MAC Addresses and Ethernet</h1>
+<p>A MAC address is a link-layer address used on a local network.</p>
+<div class="highlight"><pre><span></span><code>Host A
+MAC = AA:AA:AA:AA:AA:AA
+
+Host B
+MAC = BB:BB:BB:BB:BB:BB
+</code></pre></div>
+<p>An Ethernet frame contains source and destination MAC addresses.</p>
+<div class="highlight"><pre><span></span><code>+-------------+-------------+-------------------+
+| Dest MAC    | Source MAC  | Payload           |
++-------------+-------------+-------------------+
+</code></pre></div>
+<p>Ethernet switches use MAC addresses for local forwarding.</p>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 6, §6.4.2.</p>
+<h1 id="11-arp-address-resolution-protocol">11. ARP — Address Resolution Protocol</h1>
+<p>ARP maps an IPv4 address to a MAC address on the local network.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>Host A: Who has 192.168.1.20?
+
+Host B: 192.168.1.20 is at BB:BB:BB:BB:BB:BB
+</code></pre></div>
+<p>Then A can construct:</p>
+<div class="highlight"><pre><span></span><code>IP destination      = 192.168.1.20
+Ethernet destination = BB:BB:BB:BB:BB:BB
+</code></pre></div>
+<p>ARP does <strong>not</strong> determine the route. Routing determines the next hop; ARP resolves that next hop to a MAC address on the current LAN.</p>
+<div class="highlight"><pre><span></span><code>Destination IP
+      ↓
+Routing decision
+      ↓
+Next-hop IP
+      ↓
+ARP
+      ↓
+Next-hop MAC
+      ↓
+Ethernet frame
+</code></pre></div>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 6, §6.4.1, <em>Link-Layer Addressing and ARP</em>.</p>
+<h1 id="12-routing-vs-forwarding">12. Routing vs Forwarding</h1>
+<h2 id="forwarding">Forwarding</h2>
+<p>The local action performed by a router to move a packet from an input interface to the appropriate output interface.</p>
+<div class="highlight"><pre><span></span><code>Incoming packet
+      ↓
+Forwarding table
+      ↓
+Output interface
+      ↓
+Transmit
+</code></pre></div>
+<h2 id="routing">Routing</h2>
+<p>Determines paths/reachability and produces information used for forwarding.</p>
+<div class="highlight"><pre><span></span><code>Network topology
+      ↓
+Routing algorithms/protocols
+      ↓
+Routing table
+      ↓
+Forwarding
+</code></pre></div>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 4, §4.1 and Chapter 5.</p>
+<h1 id="13-routing-table-and-longest-prefix-match">13. Routing Table and Longest-Prefix Match</h1>
+<p>A routing table associates destination prefixes with next hops and/or outgoing interfaces.</p>
+<div class="highlight"><pre><span></span><code>Destination       Next Hop        Interface
+------------------------------------------------
+192.168.1.0/24    directly conn.  eth0
+10.0.0.0/24       192.168.1.1     eth0
+0.0.0.0/0         192.168.1.254   eth0
+</code></pre></div>
+<p>If multiple routes match, the router chooses the <strong>longest matching prefix</strong>.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>10.0.0.0/8
+10.1.0.0/16
+10.1.2.0/24
+</code></pre></div>
+<p>For <code>10.1.2.50</code>, the <code>/24</code> route is preferred.</p>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 4 forwarding/routing material.</p>
+<h1 id="14-ipv4-datagram">14. IPv4 Datagram</h1>
+<p>An IPv4 datagram consists of an IPv4 header followed by a payload.</p>
+<div class="highlight"><pre><span></span><code>+------------------------------------------------+
+| IPv4 Header                                    |
++------------------------------------------------+
+| IPv4 Payload                                   |
++------------------------------------------------+
+</code></pre></div>
+<p>Important header fields include:</p>
+<ul>
+<li>Version</li>
+<li>Header Length</li>
+<li>Total Length</li>
+<li>Identification</li>
+<li>Flags</li>
+<li>Fragment Offset</li>
+<li>TTL</li>
+<li>Protocol</li>
+<li>Header Checksum</li>
+<li>Source Address</li>
+<li>Destination Address</li>
+</ul>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapter 4, §4.3.1; Lyon, Nmap TCP/IP Reference.</p>
+<h1 id="15-ttl">15. TTL</h1>
+<p>IPv4 contains a <strong>TTL (Time to Live)</strong> field. A router decrements TTL when forwarding a packet.</p>
+<div class="highlight"><pre><span></span><code>Initial TTL = 5
+
+Router 1 → 4
+Router 2 → 3
+Router 3 → 2
+</code></pre></div>
+<p>This prevents a packet from circulating indefinitely. Kurose &amp; Ross connects TTL expiration with ICMP error reporting.</p>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapter 4; Lyon, Nmap TCP/IP Reference.</p>
+<h1 id="16-ip-protocol-field">16. IP Protocol Field</h1>
+<p>The IPv4 <code>Protocol</code> field identifies the protocol carried in the IP payload.</p>
+<div class="highlight"><pre><span></span><code>IP
+ |
+ +-- TCP
+ |
+ +-- UDP
+ |
+ +-- ICMP
+</code></pre></div>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapter 4; Lyon, Nmap TCP/IP Reference.</p>
+<h1 id="17-tcp">17. TCP</h1>
+<p>TCP is a <strong>connection-oriented transport protocol</strong>.</p>
+<p>It provides mechanisms for:</p>
+<ul>
+<li>Reliable data transfer</li>
+<li>Ordering</li>
+<li>Acknowledgments</li>
+<li>Retransmission</li>
+<li>Flow control</li>
+<li>Congestion control</li>
+</ul>
+<h2 id="three-way-handshake">Three-Way Handshake</h2>
+<div class="highlight"><pre><span></span><code>Client                         Server
+   | -------- SYN ------------&gt; |
+   | &lt;------ SYN + ACK -------- |
+   | -------- ACK ------------&gt; |
+   |                            |
+   |      Connection ready      |
+</code></pre></div>
+<p>Important TCP fields/concepts:</p>
+<ul>
+<li>Source port</li>
+<li>Destination port</li>
+<li>Sequence number</li>
+<li>Acknowledgment number</li>
+<li>Flags</li>
+<li>Window</li>
+<li>Checksum</li>
+</ul>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 3, §3.5.</p>
+<h1 id="18-udp">18. UDP</h1>
+<p>UDP is a <strong>connectionless transport protocol</strong>.</p>
+<p>UDP provides a simpler transport service than TCP and contains:</p>
+<ul>
+<li>Source port</li>
+<li>Destination port</li>
+<li>Length</li>
+<li>Checksum</li>
+</ul>
+<div class="highlight"><pre><span></span><code>+-------------------------+
+| UDP Header              |
++-------------------------+
+| Application Data        |
++-------------------------+
+</code></pre></div>
+<p>There is no TCP-style connection establishment.</p>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapter 3, §3.3; Lyon, Nmap TCP/IP Reference.</p>
+<h1 id="19-tcp-vs-udp">19. TCP vs UDP</h1>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>TCP</th>
+<th>UDP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Connection-oriented</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Three-way handshake</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Reliable transfer</td>
+<td>Yes</td>
+<td>No built-in reliability</td>
+</tr>
+<tr>
+<td>Ordering</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Retransmission</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>TCP congestion control</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Header complexity</td>
+<td>Higher</td>
+<td>Lower</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 3.</p>
+<h1 id="20-dns">20. DNS</h1>
+<p>The <strong>Domain Name System (DNS)</strong> provides name-resolution services.</p>
+<div class="highlight"><pre><span></span><code>www.example.com
+       ↓
+DNS resolver
+       ↓
+DNS system
+       ↓
+IP address
+</code></pre></div>
+<p>DNS is an application-layer protocol.</p>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 2, §2.4.</p>
+<p>Du discusses DNS from the security perspective, including DNS attacks.</p>
+<h1 id="21-http">21. HTTP</h1>
+<p>HTTP is an application-layer protocol used for Web communication.</p>
+<div class="highlight"><pre><span></span><code>Client                         Server
+   | -------- HTTP request ---&gt; |
+   | &lt;-------- HTTP response -- |
+</code></pre></div>
+<p>In the traditional HTTP-over-TCP model:</p>
+<div class="highlight"><pre><span></span><code>HTTP
+ ↓
+TCP
+ ↓
+IP
+ ↓
+Ethernet
+</code></pre></div>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 2, §2.2.</p>
+<h1 id="22-icmp">22. ICMP</h1>
+<p><strong>Internet Control Message Protocol (ICMP)</strong> provides network-layer control and error-reporting functions.</p>
+<p>Examples:</p>
+<ul>
+<li>Echo request/reply</li>
+<li>Destination unreachable</li>
+<li>Time exceeded</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Host A
+  |
+  | ICMP Echo Request
+  v
+Host B
+  |
+  | ICMP Echo Reply
+  v
+Host A
+</code></pre></div>
+<p>ICMP is also used in connection with TTL expiration and certain forwarding errors.</p>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 5, §5.6.</p>
+<p>Nmap uses ICMP behavior for host discovery.</p>
+<h1 id="23-nat">23. NAT</h1>
+<p><strong>Network Address Translation (NAT)</strong> translates addresses between address spaces.</p>
+<div class="highlight"><pre><span></span><code>Private host
+192.168.1.10
+      |
+      v
+     NAT
+      |
+      v
+Public address
+</code></pre></div>
+<p>Kurose &amp; Ross explains NAT conceptually; Purdy explains Linux Netfilter/iptables NAT operations.</p>
+<p>Important operations in Purdy include:</p>
+<div class="highlight"><pre><span></span><code>DNAT
+SNAT
+MASQUERADE
+REDIRECT
+</code></pre></div>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapter 4, §4.3.3; Purdy, NAT sections.</p>
+<h1 id="24-firewall">24. Firewall</h1>
+<p>A firewall filters traffic according to a security policy.</p>
+<div class="highlight"><pre><span></span><code>Incoming packet
+       |
+       v
++---------------+
+|   Firewall    |
++---------------+
+       |
+    +--+--+
+    |     |
+  Allow  Block
+</code></pre></div>
+<p>Filtering may use:</p>
+<ul>
+<li>Source IP</li>
+<li>Destination IP</li>
+<li>Protocol</li>
+<li>Source port</li>
+<li>Destination port</li>
+<li>Connection state</li>
+</ul>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapter 4, §4.5, <em>Middleboxes</em>; Purdy; Du firewall material.</p>
+<h1 id="25-netfilter-iptables">25. Netfilter / iptables</h1>
+<p><strong>Netfilter</strong> is the Linux kernel's packet-processing subsystem.</p>
+<p><strong>iptables</strong> is the user-space tool used to configure Netfilter.</p>
+<div class="highlight"><pre><span></span><code>User space
+    |
+    v
+iptables
+    |
+    | configure rules
+    v
+Netfilter
+    |
+    v
+Linux networking stack
+</code></pre></div>
+<p>Important hooks:</p>
+<div class="highlight"><pre><span></span><code>PREROUTING
+INPUT
+FORWARD
+OUTPUT
+POSTROUTING
+</code></pre></div>
+<p>Forwarding path:</p>
+<div class="highlight"><pre><span></span><code>Incoming packet
+      ↓
+PREROUTING
+      ↓
+Routing decision
+      ↓
+FORWARD
+      ↓
+POSTROUTING
+      ↓
+Outgoing interface
+</code></pre></div>
+<p>Local delivery:</p>
+<div class="highlight"><pre><span></span><code>PREROUTING
+    ↓
+Routing
+    ↓
+INPUT
+    ↓
+Local process
+</code></pre></div>
+<p>Locally generated:</p>
+<div class="highlight"><pre><span></span><code>Local process
+    ↓
+OUTPUT
+    ↓
+Routing
+    ↓
+POSTROUTING
+</code></pre></div>
+<p><strong>Primary source:</strong> Purdy, <em>Linux iptables Pocket Reference</em>, Concepts, Chains, Packet Flow, Tables, Rules, and Connection Tracking.</p>
+<h1 id="26-iptables-tables-and-rules">26. iptables Tables and Rules</h1>
+<p>Purdy groups rules into tables according to function.</p>
+<h2 id="filter">filter</h2>
+<p>Packet filtering:</p>
+<div class="highlight"><pre><span></span><code>ACCEPT
+DROP
+REJECT
+</code></pre></div>
+<h2 id="nat">nat</h2>
+<p>Network address translation:</p>
+<div class="highlight"><pre><span></span><code>DNAT
+SNAT
+MASQUERADE
+REDIRECT
+</code></pre></div>
+<h2 id="mangle">mangle</h2>
+<p>Packet modification/mangling.</p>
+<p>A rule can be understood as:</p>
+<div class="highlight"><pre><span></span><code>Rule = Match + Target
+</code></pre></div>
+<p>Examples of matches:</p>
+<div class="highlight"><pre><span></span><code>Source IP
+Destination IP
+Protocol
+TCP port
+UDP port
+Interface
+Connection state
+</code></pre></div>
+<p>Examples of targets:</p>
+<div class="highlight"><pre><span></span><code>ACCEPT
+DROP
+REJECT
+LOG
+DNAT
+SNAT
+</code></pre></div>
+<p><strong>Source:</strong> Purdy, Tables, Rules, Matches, and Targets.</p>
+<h1 id="27-connection-tracking">27. Connection Tracking</h1>
+<p>Purdy describes <strong>connection tracking</strong> as a stateful mechanism that allows packets to be interpreted in relation to a connection.</p>
+<div class="highlight"><pre><span></span><code>Packet
+  ↓
+Connection tracking
+  ↓
+Connection state
+  ↓
+Firewall rule
+  ↓
+Decision
+</code></pre></div>
+<p>A connection can have states such as:</p>
+<div class="highlight"><pre><span></span><code>NEW
+ESTABLISHED
+</code></pre></div>
+<p>This is particularly important for TCP.</p>
+<p><strong>Source:</strong> Purdy, <em>Connection Tracking</em>, p. 14 and <code>state</code> match material.</p>
+<h1 id="28-packet-sniffing">28. Packet Sniffing</h1>
+<p>Packet sniffing means capturing and inspecting network traffic.</p>
+<p>A captured packet can be examined layer by layer:</p>
+<div class="highlight"><pre><span></span><code>Ethernet
+   ↓
+IP
+   ↓
+TCP / UDP / ICMP
+   ↓
+Application protocol
+</code></pre></div>
+<p>Forshaw's Chapter 2 focuses on capturing application traffic and packet analysis. Du's packet-sniffing material discusses packet capture using pcap.</p>
+<p><strong>Sources:</strong> Forshaw, Chapter 2; Du, Chapter 15.</p>
+<h1 id="29-packet-spoofing">29. Packet Spoofing</h1>
+<p>Packet spoofing means constructing packets whose fields do not truthfully represent the actual sender or intended properties.</p>
+<p>Example: a forged source IP address.</p>
+<div class="highlight"><pre><span></span><code>Actual sender
+      |
+      | source IP = forged address
+      v
+    Network
+</code></pre></div>
+<p>Spoofing is relevant to several network attacks, including some DoS and ARP-related attacks.</p>
+<p><strong>Sources:</strong> Forshaw network-protocol attack material; Du packet spoofing/TCP-IP attack material.</p>
+<h1 id="30-ip-fragmentation">30. IP Fragmentation</h1>
+<p>IPv4 fragmentation divides an IP datagram's <strong>payload</strong> when the datagram cannot fit into the next link's MTU.</p>
+<p>The <strong>IPv4 header is copied into each fragment</strong>; it is not split.</p>
+<div class="highlight"><pre><span></span><code>Original:
+
++----------+---------------------------+
+| IP HDR   | IP Payload               |
++----------+---------------------------+
+
+After fragmentation:
+
++----------+------------------+
+| IP HDR   | Payload part 1   |
++----------+------------------+
+
++----------+------------------+
+| IP HDR   | Payload part 2   |
++----------+------------------+
+
++----------+------------------+
+| IP HDR   | Payload part 3   |
++----------+------------------+
+</code></pre></div>
+<p>Because TCP is inside the IP payload, a deliberately tiny first fragment can cause the <strong>TCP header</strong> to span fragments.</p>
+<p>Important fields:</p>
+<div class="highlight"><pre><span></span><code>Identification
+Flags
+Fragment Offset
+</code></pre></div>
+<p>Fragment offset is expressed in 8-byte units:</p>
+<div class="highlight"><pre><span></span><code>Actual byte offset = Fragment Offset × 8
+</code></pre></div>
+<p><code>MF = 1</code> means more fragments follow; <code>MF = 0</code> identifies the last fragment.</p>
+<p><strong>Sources:</strong> Du, <em>The Internet Protocol (IP) and Attacks</em>, IP Fragmentation; Lyon, fragmentation/firewall material.</p>
+<h1 id="31-ip-fragmentation-and-reassembly">31. IP Fragmentation and Reassembly</h1>
+<p>Fragments belonging to the same original datagram use the same identification information and offsets that allow reconstruction.</p>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code>Fragment 1
+Fragment 2
+Fragment 3
+      |
+      v
+Destination
+      |
+      v
+Reassembly
+      |
+      v
+Original IP datagram
+</code></pre></div>
+<p>Reassembly occurs at the destination. Du also discusses a reassembly timer; if the required fragments do not arrive in time, the partial datagram is discarded.</p>
+<p><strong>Source:</strong> Du, IP Fragmentation and reassembly material.</p>
+<h1 id="32-arp-attack-vector">32. ARP Attack Vector</h1>
+<p>ARP maps IPv4 addresses to MAC addresses, but the protocol does not strongly authenticate ARP information.</p>
+<p>An attacker on a local network can attempt to poison a victim's ARP cache.</p>
+<div class="highlight"><pre><span></span><code>Victim cache:
+
+B&#39;s IP address
+      ↓
+Attacker&#39;s MAC address
+</code></pre></div>
+<p>Instead of:</p>
+<div class="highlight"><pre><span></span><code>B&#39;s IP address
+      ↓
+B&#39;s MAC address
+</code></pre></div>
+<p>This can redirect traffic through the attacker and enable interception or disruption.</p>
+<p><strong>Primary source:</strong> Du, ARP cache-poisoning material / TCP-IP attacks.</p>
+<h1 id="33-ip-fragmentation-attack-vectors">33. IP Fragmentation Attack Vectors</h1>
+<p>Fragmentation is legitimate, but malformed fragments can exploit implementation weaknesses.</p>
+<h2 id="ping-of-death">Ping of Death</h2>
+<p>Fragments are crafted so that reassembly describes a packet larger than the maximum IPv4 size.</p>
+<div class="highlight"><pre><span></span><code>Fragments
+    ↓
+Reassembly
+    ↓
+Apparent size &gt; 65,535 bytes
+    ↓
+Vulnerable implementation
+    ↓
+Crash / DoS
+</code></pre></div>
+<h2 id="teardrop">Teardrop</h2>
+<p>Fragments are crafted with overlapping byte ranges.</p>
+<div class="highlight"><pre><span></span><code>Fragment 1
+0 ---------------- 1000
+
+Fragment 2
+       800 ---------------- 1300
+       ^^^^^ overlap ^^^^^
+</code></pre></div>
+<p>A vulnerable reassembly implementation may mishandle the overlap.</p>
+<h2 id="tiny-fragment-attack">Tiny Fragment Attack</h2>
+<p>The first fragment is made very small so important transport-layer header information is split across fragments, complicating simple firewall filtering.</p>
+<p><strong>Sources:</strong> Du, IP fragmentation attacks; Lyon, Nmap firewall/IDS fragmentation material.</p>
+<h1 id="34-denial-of-service-and-ddos">34. Denial of Service and DDoS</h1>
+<p>DoS aims to make a network, host, or service unavailable or degraded.</p>
+<p>Kurose &amp; Ross describes broad DoS categories including:</p>
+<ol>
+<li>Vulnerability attacks</li>
+<li>Bandwidth flooding</li>
+<li>Connection flooding</li>
+</ol>
+<h2 id="bandwidth-flooding">Bandwidth Flooding</h2>
+<div class="highlight"><pre><span></span><code>Attack traffic
+     ↓
+Link capacity exceeded
+     ↓
+Queue growth / packet loss
+     ↓
+Service degradation
+</code></pre></div>
+<h2 id="connection-flooding">Connection Flooding</h2>
+<div class="highlight"><pre><span></span><code>Many connection attempts
+        ↓
+TCP state / backlog consumed
+        ↓
+Resource exhaustion
+</code></pre></div>
+<h2 id="ddos">DDoS</h2>
+<p>A distributed attack uses many sources.</p>
+<div class="highlight"><pre><span></span><code>Source 1 \
+Source 2  \
+Source 3   \
+Source 4    ---&gt; Victim
+Source 5   /
+Source 6  /
+Source 7 /
+</code></pre></div>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 1, §1.6, <em>Networks Under Attack</em>.</p>
+<h1 id="35-tcp-syn-flood">35. TCP SYN Flood</h1>
+<p>Normal TCP:</p>
+<div class="highlight"><pre><span></span><code>Client                         Server
+   | -------- SYN ------------&gt; |
+   | &lt;------ SYN + ACK -------- |
+   | -------- ACK ------------&gt; |
+</code></pre></div>
+<p>SYN flood:</p>
+<div class="highlight"><pre><span></span><code>Attacker                         Server
+   | -------- SYN ------------&gt; |
+   | -------- SYN ------------&gt; |
+   | -------- SYN ------------&gt; |
+   | -------- SYN ------------&gt; |
+   | -------- SYN ------------&gt; |
+   |             ...            |
+</code></pre></div>
+<p>The target can accumulate incomplete connection state.</p>
+<div class="highlight"><pre><span></span><code>SYNs
+ ↓
+Half-open connections
+ ↓
+Backlog/state consumption
+ ↓
+Resource exhaustion
+ ↓
+Legitimate connections affected
+</code></pre></div>
+<p><strong>Sources:</strong> Kurose &amp; Ross, Chapter 1, §1.6 and Chapter 3, TCP connection management; Du, Chapter 16 / TCP-IP Attack material.</p>
+<h1 id="36-syn-cookies">36. SYN Cookies</h1>
+<p>SYN cookies are a countermeasure to SYN flooding.</p>
+<p>Instead of immediately maintaining normal per-connection state for every SYN, the server encodes connection information into a server-generated sequence number.</p>
+<div class="highlight"><pre><span></span><code>Client                         Server
+   | -------- SYN ------------&gt; |
+   | &lt;--- SYN-ACK + cookie -----|
+   |                            |
+   | -------- ACK ------------&gt; |
+   |                            |
+   |      Verify cookie         |
+   |                            |
+   |   Create normal state      |
+</code></pre></div>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code>SYN arrives
+    ↓
+Generate cookie
+    ↓
+Send SYN-ACK
+    ↓
+Wait for ACK
+    ↓
+Verify cookie
+    ↓
+Create connection state
+</code></pre></div>
+<p>The defense changes the resource cost of incomplete SYN attempts; it does not prevent the SYN packets from arriving.</p>
+<p><strong>Primary source:</strong> Du, Chapter 16, TCP attacks / SYN-cookie countermeasure and the associated SEED TCP/IP Attack Lab.</p>
+<h1 id="37-flooding-as-a-queueing-problem">37. Flooding as a Queueing Problem</h1>
+<p>A useful model is:</p>
+<div class="highlight"><pre><span></span><code>λ = arrival rate
+μ = service rate
+</code></pre></div>
+<p>If:</p>
+<div class="highlight"><pre><span></span><code>λ &lt; μ
+</code></pre></div>
+<p>service capacity can keep up.</p>
+<p>If:</p>
+<div class="highlight"><pre><span></span><code>λ &gt; μ
+</code></pre></div>
+<p>queues tend to grow.</p>
+<p>With finite queue capacity:</p>
+<div class="highlight"><pre><span></span><code>Queue grows
+   ↓
+Queue full
+   ↓
+Packets/requests dropped
+   ↓
+Service degrades
+</code></pre></div>
+<p><strong>Source:</strong> Kurose &amp; Ross, Chapter 1, §1.4.</p>
+<h1 id="38-layer-by-layer-view">38. Layer-by-Layer View</h1>
+<div class="highlight"><pre><span></span><code>+----------------------+
+| Application          |
++----------------------+
+| Transport            |
++----------------------+
+| Network              |
++----------------------+
+| Link                 |
++----------------------+
+| Physical             |
++----------------------+
+</code></pre></div>
+<p>Common examples:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Examples / concepts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application</td>
+<td>HTTP, DNS, SMTP</td>
+</tr>
+<tr>
+<td>Transport</td>
+<td>TCP, UDP, ports</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>IPv4, routing, ICMP, TTL</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>Ethernet, MAC, ARP</td>
+</tr>
+<tr>
+<td>Physical</td>
+<td>Signals / bits</td>
+</tr>
+</tbody>
+</table>
+<h1 id="39-security-topics-mapped-to-the-stack">39. Security Topics Mapped to the Stack</h1>
+<div class="highlight"><pre><span></span><code>Application
+    ↓
+HTTP / DNS attacks
+
+Transport
+    ↓
+SYN flood / TCP attacks
+
+Network
+    ↓
+IP spoofing / fragmentation / ICMP attacks
+
+Link
+    ↓
+ARP cache poisoning / Ethernet attacks
+</code></pre></div>
+<p>This layered view connects the networking fundamentals in Kurose &amp; Ross to the attack and defense material in Du, Nmap, Forshaw, and Purdy.</p>
+<h1 id="40-important-relationships-to-memorize">40. Important Relationships to Memorize</h1>
+<h2 id="ip-vs-mac">IP vs MAC</h2>
+<div class="highlight"><pre><span></span><code>IP  → Layer 3 / network delivery
+MAC → Layer 2 / local-link delivery
+</code></pre></div>
+<h2 id="routing-vs-arp">Routing vs ARP</h2>
+<div class="highlight"><pre><span></span><code>Routing
+  → determines next-hop IP
+
+ARP
+  → resolves next-hop IPv4 address to MAC
+</code></pre></div>
+<h2 id="packet-vs-frame">Packet vs Frame</h2>
+<div class="highlight"><pre><span></span><code>IP packet/datagram
+  → network layer
+
+Ethernet frame
+  → link layer
+</code></pre></div>
+<h2 id="tcp-vs-ip">TCP vs IP</h2>
+<div class="highlight"><pre><span></span><code>TCP
+  → end-to-end transport behavior
+
+IP
+  → packet delivery across networks
+</code></pre></div>
+<h2 id="switch-vs-router">Switch vs Router</h2>
+<div class="highlight"><pre><span></span><code>Switch
+  → MAC / frame forwarding
+
+Router
+  → IP / packet forwarding
+</code></pre></div>
+<h1 id="41-core-packet-journey">41. Core Packet Journey</h1>
+<p>Suppose Host A sends data to Host B on another network.</p>
+<div class="highlight"><pre><span></span><code>Application data
+      ↓
+TCP/UDP header added
+      ↓
+IP header added
+      ↓
+Routing determines next hop
+      ↓
+ARP resolves next-hop MAC
+      ↓
+Ethernet frame sent to router
+      ↓
+Router examines destination IP
+      ↓
+Routing lookup
+      ↓
+New link-layer frame
+      ↓
+Destination network
+      ↓
+Host B
+</code></pre></div>
+<p>The critical distinction is:</p>
+<div class="highlight"><pre><span></span><code>End-to-end IP destination:
+    B
+
+Current-link Ethernet destination:
+    next hop
+</code></pre></div>
+<h1 id="42-specialist-mental-model">42. Specialist Mental Model</h1>
+<p>When analyzing any networking problem, ask:</p>
+<div class="highlight"><pre><span></span><code>1. Which layer is involved?
+        ↓
+2. What address identifies the endpoint?
+        ↓
+3. What is the next hop?
+        ↓
+4. Which protocol is responsible?
+        ↓
+5. What packet/frame is actually transmitted?
+        ↓
+6. Which resource/state is being consumed?
+</code></pre></div>
+<p>For a packet going across networks:</p>
+<div class="highlight"><pre><span></span><code>Destination IP
+      ↓
+Routing
+      ↓
+Next-hop IP
+      ↓
+ARP
+      ↓
+Next-hop MAC
+      ↓
+Ethernet frame
+      ↓
+Router
+      ↓
+Repeat for next link
+</code></pre></div>
+<h1 id="43-book-to-topic-map">43. Book-to-Topic Map</h1>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Primary source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet architecture</td>
+<td>Kurose &amp; Ross, Ch. 1</td>
+</tr>
+<tr>
+<td>Protocols</td>
+<td>Kurose &amp; Ross, §1.1.3</td>
+</tr>
+<tr>
+<td>Packet switching</td>
+<td>Kurose &amp; Ross, §1.3</td>
+</tr>
+<tr>
+<td>Delay/loss/throughput</td>
+<td>Kurose &amp; Ross, §1.4</td>
+</tr>
+<tr>
+<td>Layering/encapsulation</td>
+<td>Kurose &amp; Ross, §1.5; Forshaw Ch. 1</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>Kurose &amp; Ross, Ch. 2</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>Kurose &amp; Ross, Ch. 2; Du Ch. 18 security material</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>Kurose &amp; Ross, Ch. 3; Du Ch. 16</td>
+</tr>
+<tr>
+<td>UDP</td>
+<td>Kurose &amp; Ross, §3.3; Nmap TCP/IP Reference</td>
+</tr>
+<tr>
+<td>IPv4</td>
+<td>Kurose &amp; Ross, Ch. 4; Nmap TCP/IP Reference</td>
+</tr>
+<tr>
+<td>Routing/forwarding</td>
+<td>Kurose &amp; Ross, Ch. 4–5</td>
+</tr>
+<tr>
+<td>ICMP</td>
+<td>Kurose &amp; Ross, Ch. 5; Nmap TCP/IP Reference</td>
+</tr>
+<tr>
+<td>Ethernet</td>
+<td>Kurose &amp; Ross, Ch. 6</td>
+</tr>
+<tr>
+<td>ARP</td>
+<td>Kurose &amp; Ross, §6.4.1; Du ARP attack material</td>
+</tr>
+<tr>
+<td>Ports / scanning</td>
+<td>Nmap, Ch. 4–5</td>
+</tr>
+<tr>
+<td>Packet capture / protocol analysis</td>
+<td>Forshaw, Ch. 1–3; Du Ch. 15</td>
+</tr>
+<tr>
+<td>Resource exhaustion / DoS</td>
+<td>Forshaw, Ch. 9</td>
+</tr>
+<tr>
+<td>Netfilter / iptables</td>
+<td>Purdy</td>
+</tr>
+<tr>
+<td>Connection tracking</td>
+<td>Purdy</td>
+</tr>
+<tr>
+<td>NAT implementation</td>
+<td>Purdy</td>
+</tr>
+<tr>
+<td>TCP attacks / SYN flooding</td>
+<td>Du, Ch. 16</td>
+</tr>
+<tr>
+<td>Firewalls</td>
+<td>Purdy; Du, Ch. 17</td>
+</tr>
+<tr>
+<td>IP fragmentation attacks</td>
+<td>Du; Nmap fragmentation material</td>
+</tr>
+</tbody>
+</table>
+<h1 id="44-exact-references">44. Exact References</h1>
+<h2 id="kurose-ross">Kurose &amp; Ross</h2>
+<p><strong>James F. Kurose and Keith W. Ross, <em>Computer Networking: A Top-Down Approach</em>, 8th ed., Pearson, 2020</strong></p>
+<p>Relevant sections:</p>
+<ul>
+<li>Chapter 1, §1.1 — What Is the Internet?</li>
+<li>§1.1.3 — What Is a Protocol?</li>
+<li>§1.3 — The Network Core</li>
+<li>§1.3.1 — Packet Switching</li>
+<li>§1.4 — Delay, Loss, and Throughput</li>
+<li>§1.5 — Protocol Layers</li>
+<li>§1.5.1 — Layered Architecture</li>
+<li>§1.5.2 — Encapsulation</li>
+<li>§1.6 — Networks Under Attack</li>
+<li>Chapter 2, §2.2 — HTTP</li>
+<li>Chapter 2, §2.4 — DNS</li>
+<li>Chapter 3, §3.3 — UDP</li>
+<li>Chapter 3, §3.5 — TCP</li>
+<li>Chapter 4, §4.1 — Network Layer Overview</li>
+<li>Chapter 4, §4.2 — What's Inside a Router?</li>
+<li>Chapter 4, §4.3 — IP</li>
+<li>§4.3.1 — IPv4 Datagram Format</li>
+<li>§4.3.2 — IPv4 Addressing</li>
+<li>§4.3.3 — NAT</li>
+<li>Chapter 4, §4.5 — Middleboxes</li>
+<li>Chapter 5, §5.2 — Routing Algorithms</li>
+<li>Chapter 5, §5.6 — ICMP</li>
+<li>Chapter 6, §6.4.1 — ARP</li>
+<li>Chapter 6, §6.4.2 — Ethernet</li>
+<li>Chapter 6, §6.4.3 — Link-Layer Switches</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The detailed IPv4 fragmentation discussion was removed from the main text of the 8th edition. Do not cite older-edition fragmentation pages as 8th-edition content.</p>
+</div>
+<h2 id="gordon-lyon-nmap">Gordon Lyon — Nmap</h2>
+<p><strong>Gordon Lyon, <em>Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning</em>, Nmap Project, 2009</strong></p>
+<p>Relevant material:</p>
+<ul>
+<li><strong>TCP/IP Reference</strong> — IPv4, TCP, UDP, ICMP packet structures</li>
+<li><strong>Chapter 3 — Host Discovery</strong> — ICMP, TCP SYN/ACK, UDP, ARP</li>
+<li><strong>Chapter 4 — Port Scanning Overview</strong> — ports and port states</li>
+<li><strong>Chapter 5 — Port Scanning Techniques</strong> — TCP behavior and UDP scanning</li>
+<li><strong>Firewall/IDS Evasion and Spoofing</strong> — fragmented packets, MTU, DF, fragment offsets</li>
+<li><strong>Subverting Intrusion Detection Systems</strong> — fragment assembly and IDS behavior</li>
+</ul>
+<p>Official book: https://nmap.org/book/</p>
+<h2 id="james-forshaw">James Forshaw</h2>
+<p><strong>James Forshaw, <em>Attacking Network Protocols: A Hacker's Guide to Capture, Analysis, and Exploitation</em>, No Starch Press, 2017</strong></p>
+<p>Relevant material:</p>
+<ul>
+<li>Chapter 1 — The Basics of Networking</li>
+<li>Network architecture and protocols</li>
+<li>Internet protocol suite</li>
+<li>Data encapsulation</li>
+<li>Headers, footers, and addresses</li>
+<li>Data transmission</li>
+<li>Network routing</li>
+<li>Network protocol analysis</li>
+<li>Chapter 2 — Capturing Application Traffic</li>
+<li>Chapter 3 — Network Protocol Structures</li>
+<li>Chapter 9 — The Root Causes of Vulnerabilities</li>
+<li>Denial-of-Service</li>
+<li>Memory exhaustion</li>
+<li>Storage exhaustion</li>
+<li>CPU exhaustion</li>
+<li>Algorithmic complexity</li>
+</ul>
+<h2 id="gregor-n-purdy">Gregor N. Purdy</h2>
+<p><strong>Gregor N. Purdy, <em>Linux iptables Pocket Reference</em>, O'Reilly Media, 2004</strong></p>
+<p>Relevant material:</p>
+<ul>
+<li>Introduction — Netfilter and iptables</li>
+<li>Concepts — tables, chains, rules, matches, targets</li>
+<li>Packet Flow — PREROUTING, INPUT, FORWARD, OUTPUT, POSTROUTING</li>
+<li>Connection Tracking</li>
+<li>Network Address Translation</li>
+<li>Stateless and Stateful Firewalls</li>
+<li>Internet Protocol match options, including <code>-f</code> / <code>--fragments</code></li>
+</ul>
+<h2 id="wenliang-du">Wenliang Du</h2>
+<p><strong>Wenliang Du, <em>Computer &amp; Internet Security: A Hands-on Approach</em>, 2nd ed.</strong></p>
+<p>Relevant material:</p>
+<ul>
+<li>IP and fragmentation material — IPv4 fragmentation, reassembly, Ping of Death, Teardrop, Tiny Fragment Attack</li>
+<li>Chapter 15 — Packet Sniffing and Spoofing</li>
+<li>Chapter 16 — TCP Attacks, including SYN flooding and SYN cookies</li>
+<li>Chapter 17 — Firewall, Netfilter, iptables</li>
+<li>Chapter 18 — DNS and attacks</li>
+</ul>
+<h1 id="45-final-revision-sheet">45. Final Revision Sheet</h1>
+<div class="highlight"><pre><span></span><code>NETWORKING BASICS
+=================
+
+Five layers:
+    Application
+    Transport
+    Network
+    Link
+    Physical
+
+Addressing:
+    Port → application endpoint
+    IP   → network-layer addressing
+    MAC  → local-link addressing
+
+Protocols:
+    HTTP / DNS
+    TCP / UDP
+    IP / ICMP
+    Ethernet / ARP
+
+ROUTING:
+    Destination IP
+        ↓
+    routing table
+        ↓
+    longest-prefix match
+        ↓
+    next hop / interface
+
+ARP:
+    next-hop IP
+        ↓
+    ARP
+        ↓
+    next-hop MAC
+
+ENCAPSULATION:
+    Application data
+        ↓
+    TCP/UDP segment
+        ↓
+    IP datagram
+        ↓
+    Ethernet frame
+
+SAME NETWORK:
+    IP destination = B
+    MAC destination = B
+    Router not required
+
+DIFFERENT NETWORK:
+    IP destination = B
+    MAC destination = next hop/router
+    Router forwards packet
+
+ROUTER:
+    receive frame
+        ↓
+    inspect IP destination
+        ↓
+    routing lookup
+        ↓
+    outgoing interface
+        ↓
+    new link-layer frame
+
+SECURITY:
+    ARP → ARP cache poisoning
+    IP  → spoofing / fragmentation attacks
+    TCP → SYN flooding / SYN cookies
+    Firewall → filtering / Netfilter / iptables
+</code></pre></div>
 
 
 
