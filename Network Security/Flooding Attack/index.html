@@ -10251,6 +10251,14 @@ CPU
 connection completion / cleanup rate
 </code></pre></div>
 <p>for a sufficient period can cause resource exhaustion.</p>
+<h2 id="prevention-syn-cookie">Prevention - SYN Cookie</h2>
+<p>A SYN Cookie is an identifier that allows the server to establish stateless connection to prevent SYN Flood. In this case the server calculates a hash value using timestamp, destination ip, source ip and other necessary details and provides a 32-bit Initial Sequence Number (ISN). The server completely ignores the state instead of allocating space on receiving initial SYN request.</p>
+<ul>
+<li>Client sends the SYN request  (*<em>seq: 1000000</em>)</li>
+<li>Server calculates the ISN and sends it along SYN-ACK (<strong>ack: 1000001, seq: 38712312</strong>)</li>
+<li>Client sends ISN+1 along with ACK (<strong>seq: 1000001, ack: 387123123</strong>).</li>
+<li>The server calculates new hash value using IP, ports, extracted timestamps and its secret key and compares it with the received cookie. If matched, connection is legitimate and space is allocated.</li>
+</ul>
 <hr />
 <h1 id="8-why-syn-floods-differ-from-bandwidth-floods">8. Why SYN Floods Differ from Bandwidth Floods</h1>
 <h2 id="bandwidth-flood">Bandwidth Flood</h2>
