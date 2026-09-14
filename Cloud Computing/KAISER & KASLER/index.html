@@ -25,7 +25,7 @@
     
     
       
-        <title>KAISER & KASLER - My Knowledge Base</title>
+        <title>KASLR and KAISER - My Knowledge Base</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#kaslr-and-kaiser" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              KAISER & KASLER
+              KASLR and KAISER
             
           </span>
         </div>
@@ -1203,6 +1208,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KASLR and KAISER
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1211,7 +1236,7 @@
   <span class="md-ellipsis">
     
   
-    KAISER & KASLER
+    KASLR and KAISER
   
 
     
@@ -1220,6 +1245,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-kaslr-kernel-address-space-layout-randomization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. KASLR — Kernel Address Space Layout Randomization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. KASLR — Kernel Address Space Layout Randomization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplified-pseudocode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simplified pseudocode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -10309,6 +10403,66 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-kaslr-kernel-address-space-layout-randomization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. KASLR — Kernel Address Space Layout Randomization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. KASLR — Kernel Address Space Layout Randomization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplified-pseudocode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simplified pseudocode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -10325,9 +10479,258 @@
 
 
 
-  <h1>KAISER & KASLER</h1>
+<h1 id="kaslr-and-kaiser">KASLR and KAISER</h1>
+<h2 id="1-kaslr-kernel-address-space-layout-randomization">1. KASLR — Kernel Address Space Layout Randomization</h2>
+<p>KASLR randomizes the virtual address at which the kernel is loaded.</p>
+<h3 id="simplified-pseudocode">Simplified pseudocode</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Normal kernel base address</span>
+<span class="cp">#define KERNEL_BASE 0xffffffff81000000</span>
+
+<span class="c1">// Choose a random offset</span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">random_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_random_offset</span><span class="p">();</span>
+
+<span class="c1">// Randomized kernel base</span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">kernel_base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KERNEL_BASE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">random_offset</span><span class="p">;</span>
+
+<span class="c1">// Load kernel at the randomized address</span>
+<span class="n">load_kernel</span><span class="p">(</span><span class="n">kernel_base</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="example">Example</h3>
+<p>Without KASLR:</p>
+<div class="highlight"><pre><span></span><code>Kernel base = 0xffffffff81000000
+</code></pre></div>
+<p>With KASLR:</p>
+<div class="highlight"><pre><span></span><code>Kernel base = 0xffffffffa7200000
+</code></pre></div>
+<p>The exact address changes between boots.</p>
+<h3 id="why">Why?</h3>
+<p>An attacker may need kernel addresses for attacks such as ROP.</p>
+<div class="highlight"><pre><span></span><code>Without KASLR:
+
+Attacker knows:
+    kernel_function = 0xffffffff81012340
+
+        ↓
+
+Can potentially construct an attack
+using known kernel addresses.
+</code></pre></div>
+<p>With KASLR:</p>
+<div class="highlight"><pre><span></span><code>Attacker knows only:
+
+    kernel_function = ?????????
+
+        ↓
+
+Must discover the randomized address first.
+</code></pre></div>
+<h1 id="2-the-problem-kaiser-solves">2. The problem KAISER solves</h1>
+<p>Traditionally, the kernel was mapped into the page table of<br />
+a user process even though user-mode code was not allowed<br />
+to access it.</p>
+<p>Simplified:</p>
+<div class="highlight"><pre><span></span><code>Process Page Table
+│
+├── User memory
+│      USER = 1
+│
+└── Kernel memory
+       USER = 0
+       PRESENT = 1
+</code></pre></div>
+<p><code>USER = 0</code> means that user-mode code cannot access the page.</p>
+<p>But the kernel mapping still exists in the page tables.</p>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code>User program
+     │
+     │ access kernel virtual address
+     ↓
+Page table
+     │
+     │ Kernel mapping exists
+     ↓
+Permission check
+     │
+     │ USER = 0
+     ↓
+Access denied / page fault
+</code></pre></div>
+<p>The problem is that the existence of the mapping can affect<br />
+microarchitectural structures such as address-translation<br />
+caches.</p>
+<p>An attacker can measure timing differences and infer whether<br />
+an address is mapped.</p>
+<p>This can defeat the purpose of KASLR.</p>
+<h1 id="3-kaiser-kernel-address-isolation">3. KAISER — Kernel Address Isolation</h1>
+<p>KAISER changes the page-table organization.</p>
+<p>Instead of keeping kernel mappings in the page table while<br />
+running user code, KAISER uses separate page tables.</p>
+<h2 id="user-shadow-page-table">User / Shadow page table</h2>
+<div class="highlight"><pre><span></span><code>User Page Table
+│
+├── User memory
+│
+├── Program
+│
+├── Libraries
+│
+└── Kernel memory
+       NOT MAPPED
+</code></pre></div>
+<h2 id="kernel-page-table">Kernel page table</h2>
+<div class="highlight"><pre><span></span><code>Kernel Page Table
+│
+├── User memory
+│
+└── Kernel memory
+       MAPPED
+</code></pre></div>
+<p>The important difference is:</p>
+<div class="highlight"><pre><span></span><code>OLD:
+
+Kernel mapping exists
+        ↓
+Access forbidden by permission
+        ↓
+Potential side channel
 
 
+KAISER:
+
+Kernel mapping does NOT exist
+        ↓
+No kernel translation available
+        ↓
+Side channel is removed
+</code></pre></div>
+<hr />
+<h1 id="4-switching-between-the-page-tables">4. Switching between the page tables</h1>
+<p>On x86, CR3 identifies the current page-table hierarchy.</p>
+<p>Simplified:</p>
+<div class="highlight"><pre><span></span><code>// Running user program
+
+load_cr3(user_page_table);
+
+// Execute user code
+run_user_program();
+</code></pre></div>
+<p>When entering the kernel:</p>
+<div class="highlight"><pre><span></span><code>// System call / interrupt occurs
+
+load_cr3(kernel_page_table);
+
+// Execute kernel code
+run_kernel_code();
+</code></pre></div>
+<p>When returning to user mode:</p>
+<div class="highlight"><pre><span></span><code>// Return from kernel
+
+load_cr3(user_page_table);
+
+// Continue user program
+continue_user_program();
+</code></pre></div>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code>             SYSTEM CALL
+User mode ───────────────────→ Kernel mode
+   │                              │
+   │                              │
+   │ CR3 = user_page_table        │ CR3 = kernel_page_table
+   │                              │
+   ↓                              ↓
+User mappings                 Kernel mappings
+Kernel absent                 Kernel present
+</code></pre></div>
+<hr />
+<h1 id="5-why-this-defeats-the-address-leaking-attack">5. Why this defeats the address-leaking attack</h1>
+<h3 id="before-kaiser">Before KAISER</h3>
+<div class="highlight"><pre><span></span><code>User page table
+
+Virtual address
+      │
+      ↓
+Page table
+      │
+      ├── User mapping
+      │
+      └── Kernel mapping
+              │
+              ↓
+        Translation exists
+              │
+              ↓
+       Microarchitectural
+       side channel
+              │
+              ↓
+      Attacker learns that
+      the address is mapped
+              │
+              ↓
+       KASLR weakened
+</code></pre></div>
+<h3 id="with-kaiser">With KAISER</h3>
+<div class="highlight"><pre><span></span><code>User page table
+
+Virtual address
+      │
+      ↓
+Page table
+      │
+      ├── User mapping
+      │
+      └── Kernel mapping
+              X
+           NOT PRESENT
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>KASLR</th>
+<th>KAISER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full name</td>
+<td>Kernel Address Space Layout Randomization</td>
+<td>Kernel Address Isolation</td>
+</tr>
+<tr>
+<td>Main idea</td>
+<td>Randomize kernel addresses</td>
+<td>Remove kernel mappings from user page tables</td>
+</tr>
+<tr>
+<td>Main goal</td>
+<td>Make kernel addresses difficult to predict</td>
+<td>Prevent user space from learning kernel address information</td>
+</tr>
+<tr>
+<td>Changes addresses?</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Changes page tables?</td>
+<td>Not primarily</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Uses separate page tables?</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Defends against address-discovery side channels?</td>
+<td>By itself, not sufficiently</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kpti">KPTI</h2>
+<p>It is essentially the <strong>production Linux version of the page-table isolation idea used by KAISER</strong>, introduced as a major mitigation for <strong>Meltdown</strong>.</p>
 
 
 
