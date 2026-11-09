@@ -337,6 +337,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../Fast%20Access%20Technologies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fast Access Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../High%20Speed%20LANs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    High Speed LANs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Internet%20Design%20Philosophy/" class="md-nav__link">
         
   
@@ -464,6 +520,67 @@
     <span class="md-ellipsis">
       
         Chanel Partition: Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collision-free-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collision Free Protocols
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collision Free Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bit-map-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bit Map Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-counting-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary Counting Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree-walk-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tree Walk Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limited-contention-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limited Contention Protocol
       
     </span>
   </a>
@@ -736,10 +853,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ieee-802154" class="md-nav__link">
+  <a href="#ieee-802154-ieee-802154" class="md-nav__link">
     <span class="md-ellipsis">
       
-        IEEE 802.15.4
+        IEEE 802.15.4 (IEEE 802.15.4)
       
     </span>
   </a>
@@ -10953,6 +11070,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#collision-free-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collision Free Protocols
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collision Free Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bit-map-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bit Map Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-counting-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary Counting Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree-walk-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tree Walk Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limited-contention-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limited Contention Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#random-access-protocols" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -11218,10 +11396,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ieee-802154" class="md-nav__link">
+  <a href="#ieee-802154-ieee-802154" class="md-nav__link">
     <span class="md-ellipsis">
       
-        IEEE 802.15.4
+        IEEE 802.15.4 (IEEE 802.15.4)
       
     </span>
   </a>
@@ -11264,6 +11442,60 @@
 </ul>
 </li>
 </ul>
+<h3 id="collision-free-protocols">Collision Free Protocols</h3>
+<h4 id="bit-map-protocol">Bit Map Protocol</h4>
+<ul>
+<li>Designed to guarantee that two nodes never transmit simultaneously</li>
+<li>
+<p><strong>How it works:</strong> If there are $N$ nodes on the network, each frame cycle begins with $N$ mini-slots. If Node $k$ has a frame ready, it transmits a single <code>1</code> bit during mini-slot $k$.</p>
+</li>
+<li>
+<p><strong>Data Transmission:</strong> Once all $N$ mini-slots pass, every node knows exactly which stations want to send. Nodes then transmit their full data frames in numerical order without any risk of collision.</p>
+</li>
+</ul>
+<h4 id="binary-counting-protocol">Binary Counting Protocol</h4>
+<ul>
+<li>Equal length addresses assigned to nodes</li>
+<li>Bit-by-Bit Broadcasting takes place, the one with higher order wins the lot</li>
+<li>Can cause starvation</li>
+</ul>
+<h3 id="tree-walk-protocol">Tree Walk Protocol</h3>
+<ul>
+<li>
+<p><strong>Slot 0 (Root Probe):</strong> In the first slot, permission to transmit is granted to the root node (which includes <strong>all nodes 0 to $N-1$</strong>).</p>
+</li>
+<li>
+<p><strong>Outcome Evaluation:</strong></p>
+<ul>
+<li>
+<p><strong>0 Frames Sent (Idle):</strong> No node has data. Channel remains idle.</p>
+</li>
+<li>
+<p><strong>1 Frame Sent (Success):</strong> Frame transmits successfully without collision.</p>
+</li>
+<li>
+<p><strong>$\ge 2$ Frames Sent (Collision):</strong> Two or more nodes transmit simultaneously. The protocol triggers a <strong>subtree split</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Subtree Division (On Collision):</strong></p>
+<ul>
+<li>
+<p>The tree splits: Node access is restricted strictly to the <strong>Left Subtree</strong> (nodes $0$ to $\frac{N}{2}-1$) for the next slot.</p>
+</li>
+<li>
+<p>The <strong>Right Subtree</strong> must remain silent until all collisions inside the left subtree are completely resolved.</p>
+</li>
+<li>
+<p>If the left subtree suffers another collision, it splits recursively into its own left/right branches until single leaf nodes transmit individually without collision</p>
+</li>
+<li>Skipping higher levels during high load - adaptive</li>
+</ul>
+</li>
+</ul>
+<h3 id="limited-contention-protocol">Limited Contention Protocol</h3>
+<p>Limited Contention Protocols are <strong>media access control (MAC) protocols</strong> that combine the advantages of collision-based protocols and collision-free protocols. They behave like slotted ALOHA under light loads and bitmap protocols under heavy loads, adapting dynamically to network conditions.</p>
 <h3 id="random-access-protocols">Random Access Protocols</h3>
 <h4 id="listen-before-transmit">Listen Before Transmit</h4>
 <ul>
@@ -11629,7 +11861,7 @@ Receiver:                     [Check/Receive DATA]
 <p>Transmitters dynamically adjust preamble length to match $\frac{\text{Time Uncertainty}}{\text{Byte Time}}$.</p>
 </li>
 </ul>
-<h3 id="ieee-802154">IEEE 802.15.4</h3>
+<h3 id="ieee-802154-ieee-802154">IEEE 802.15.4 (IEEE 802.15.4)</h3>
 </li>
 <li>
 <p><strong>Scope</strong>: Defines PHY and MAC layer specifications for Low-Rate Wireless Personal Area Networks (LR-WPANs).</p>
@@ -11674,6 +11906,7 @@ Receiver:                     [Check/Receive DATA]
 </ul>
 </li>
 </ul>
+<p><strong>Superframe Duration (SD)</strong> is the exact length of time (in symbols or milliseconds) that the <strong>active portion</strong> of the superframe lasts.</p>
 
 
 
