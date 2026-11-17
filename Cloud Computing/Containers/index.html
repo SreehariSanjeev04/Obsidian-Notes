@@ -12273,6 +12273,11 @@
 <li>A special cgroup filesystem mounted at /sys/fs/cgroup</li>
 <li>Tasks can be assigned to leaf nodes in hierarchy</li>
 </ul>
+<div class="highlight"><pre><span></span><code>/sys/fs/cgroup/
+ └── apps/                 &lt;-- Parent / Internal Node (CANNOT hold processes)
+      ├── web/             &lt;-- Leaf Node (CAN hold processes: nginx PID 101)
+      └── db/              &lt;-- Leaf Node (CAN hold processes: postgres PID 202)
+</code></pre></div>
 <h4 id="creating-a-container">Creating a container</h4>
 <ul>
 <li>Create a separate namespace for isolation</li>

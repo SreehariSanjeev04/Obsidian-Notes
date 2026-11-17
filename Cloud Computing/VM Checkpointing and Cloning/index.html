@@ -1707,7 +1707,7 @@
   <a href="#vm-checkpointing-for-high-availability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VM checkpointing for high availability
+        VM Checkpointing for high availability
       
     </span>
   </a>
@@ -11923,7 +11923,7 @@
   <a href="#vm-checkpointing-for-high-availability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VM checkpointing for high availability
+        VM Checkpointing for high availability
       
     </span>
   </a>
@@ -12043,7 +12043,7 @@
 
   <h1>VM Checkpointing and Cloning</h1>
 
-<h3 id="vm-checkpointing-for-high-availability">VM checkpointing for high availability</h3>
+<h3 id="vm-checkpointing-for-high-availability">VM Checkpointing for high availability</h3>
 <ul>
 <li>Checkpoint VM memory periodically at backup VM to recover from failures</li>
 <li>If primary VM fails, backup VM tasks over execution using checkpoint state</li>
@@ -12056,7 +12056,7 @@
 <h4 id="application-based-replication">Application based replication</h4>
 <ul>
 <li>Application communicates with other replicas and replicates state</li>
-<li>Consensus protocol like raft and paxos used to maintain consistency of replicate d state</li>
+<li>Consensus protocol like raft and paxos used to maintain consistency of replicated state</li>
 <li>Application decides what state to replicate</li>
 <li>Reliability via changes to application code</li>
 </ul>
@@ -12111,6 +12111,7 @@
 <h3 id="snowflock">Snowflock</h3>
 <ul>
 <li>Implement abstraction of “VM fork”</li>
+<li><strong>Demand Paging</strong> + <strong>Copy-on-Write</strong></li>
 <li>Examples of using VM fork<ul>
 <li>Run untrusted code in a sandbox</li>
 <li>Run a parallel computation on multiple forked VMs</li>
@@ -12118,11 +12119,11 @@
 <li>Fork VMs to utilize spare cpu cycles</li>
 </ul>
 </li>
-<li>Upon fork, parent copies VM descriptor to child VM (minimal VM state)</li>
+<li>Upon fork, parent copies VM descriptor (VM metadata) to child VM (minimal VM state)</li>
 <li>After clone, fetches memory on demand from parent</li>
-<li>All parent pages marked read only. When parent writes, copy of parent page is made for parent to modify. Original copy preserved for children.</li>
-<li>IP multicast used to distribute data to clones efficiently</li>
-<li>Disk also modified in parent in copy-on-write manner</li>
+<li>All parent pages marked <strong>read only</strong>. When parent writes, copy of parent page is made for parent to modify. Original copy preserved for children.</li>
+<li><strong>IP multicast</strong> used to distribute data to clones efficiently</li>
+<li>Disk also modified in parent in <strong>copy-on-write</strong> manner</li>
 </ul>
 
 
