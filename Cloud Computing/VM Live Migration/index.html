@@ -14,7 +14,7 @@
         <link rel="prev" href="../VM%20Checkpointing%20and%20Cloning/">
       
       
-        <link rel="next" href="../Virtualization/">
+        <link rel="next" href="../VM%20Virtualization/">
       
       
         
@@ -1842,10 +1842,49 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#which-is-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which is better?
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VM%20Virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VM Virtualization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -12008,6 +12047,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#which-is-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which is better?
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12099,16 +12149,24 @@
 <ul>
 <li><strong>Pseudo-paging</strong> <ul>
 <li>Uses in-memory swap device</li>
-<li>Only non-pageable memory transferred during stop-and-copy</li>
+<li>Only non-pageable memory transferred during stop-and-copy to the guest vm</li>
 <li>The guest fetches memory from the <strong>pseudo-paging</strong> device via page fault</li>
 </ul>
 </li>
-<li>Or just use <strong>Shadow page table</strong></li>
+<li>Or just use <strong>Shadow page table</strong><ul>
+<li>If page fault occurs, the hypervisor fetches from source and update</li>
+</ul>
+</li>
 </ul>
 <h3 id="failures">Failures</h3>
 <ul>
 <li><strong>Pre-copy</strong> - Simply abort the process, start with another target</li>
 <li><strong>Post-copy</strong> - Source has stale memory, target has updated memory</li>
+</ul>
+<h3 id="which-is-better">Which is better?</h3>
+<ul>
+<li>Pre-copy suited for interactive application</li>
+<li>Post copy is better for memory-intensive applications with large WSS (pre-copy would cause repeated dirty page transfers)</li>
 </ul>
 
 
