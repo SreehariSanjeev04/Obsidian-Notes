@@ -12071,7 +12071,7 @@
 </ul>
 <h4 id="tracking-dirty-pages">Tracking Dirty Pages</h4>
 <ul>
-<li><strong>Shadow page tables</strong> are maintained by Xen for GPA → HPA translation</li>
+<li><strong>Shadow page tables</strong> are maintained by Xen for GVA → GPA translation</li>
 <li>Shadow page table is reconstructed for each round</li>
 <li><strong>Dirty bitmap</strong> is used to track modifications</li>
 <li>Any page modified → Page fault → Bitmap is modified to indicate that the page has been modified</li>
