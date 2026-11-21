@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#motivation-the-high-bdp-problem" class="md-skip">
+        <a href="#five-essential-design-objectives-for-tcp-extensions" class="md-skip">
           Skip to content
         </a>
       
@@ -561,10 +561,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#motivation-the-high-bdp-problem" class="md-nav__link">
+  <a href="#five-essential-design-objectives-for-tcp-extensions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Motivation &amp; The High BDP Problem
+        Five Essential Design Objectives for TCP Extensions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivation-the-high-bdp-bandwidth-delay-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivation &amp; The High BDP (Bandwidth-Delay) Problem
       
     </span>
   </a>
@@ -634,6 +645,45 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Key Differences to Remember">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-small-buffer-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Small-Buffer Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-backoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Backoff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Reset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -11920,10 +11970,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#motivation-the-high-bdp-problem" class="md-nav__link">
+  <a href="#five-essential-design-objectives-for-tcp-extensions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Motivation &amp; The High BDP Problem
+        Five Essential Design Objectives for TCP Extensions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivation-the-high-bdp-bandwidth-delay-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivation &amp; The High BDP (Bandwidth-Delay) Problem
       
     </span>
   </a>
@@ -11994,6 +12055,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Key Differences to Remember">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-small-buffer-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Small-Buffer Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-backoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Backoff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Reset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -12015,7 +12115,15 @@
 
   <h1>TCP Extensions for High Speed Networks</h1>
 
-<h3 id="motivation-the-high-bdp-problem">Motivation &amp; The High BDP Problem</h3>
+<h3 id="five-essential-design-objectives-for-tcp-extensions">Five Essential Design Objectives for TCP Extensions</h3>
+<ul>
+<li><strong>Low-Speed Backward Compatibility</strong> - Must automatically collapse back into standard TCP behaviour when deployed on conventional, low-speed or short-distance paths</li>
+<li><strong>TCP-Friendliness</strong> - Must co-exist with legacy TCP flows without starving them of bandwidth on shared links</li>
+<li><strong>Intra-Protocol Fairness</strong> - Competing high-speed flows must share link capacity fairly, ensuring an equal average share of packets in flight at congestion events</li>
+<li><strong>Responsiveness</strong> - Must rapidly adapt to sudden network disturbances, such as new flows starting up or existing flows terminating</li>
+<li><strong>High Link Utilisation Efficiency</strong> - Must keep the bottleneck link operating at full capacity at all times without prolonged queue-empty periods</li>
+</ul>
+<h3 id="motivation-the-high-bdp-bandwidth-delay-problem">Motivation &amp; The High BDP (Bandwidth-Delay) Problem</h3>
 <ul>
 <li><strong>Congestion Window</strong> in TCP is a variable maintained by the sender to determine how much data it can send into the network without waiting for acknowledgement
 <img alt="Pasted image 20261121151146.png" src="../../attachments/Pasted%20image%2020261121151146.png" /></li>
@@ -12214,8 +12322,37 @@
 <td><strong>FAST TCP</strong></td>
 <td>Uses queueing delay instead of packet loss as the primary congestion signal.</td>
 </tr>
+<tr>
+<td>### Elapsed Time Scaling</td>
+<td></td>
+</tr>
 </tbody>
 </table>
+<ul>
+<li><strong>H-TCP (Hamilton TCP)</strong> adjusts its aggressiveness based on how much time has elapsed since the last congestion event</li>
+<li>Some links may have higher RTTs, causing larger number of RTTs to increase its window</li>
+<li>$\Delta = t_{\text{now}}-t_{\text{last congestion}}$, $\alpha = f(\Delta)$</li>
+<li>$cwnd \leftarrow cwnd+\frac{\alpha}{cwnd}$</li>
+</ul>
+<h3 id="the-small-buffer-problem">The Small-Buffer Problem</h3>
+<ul>
+<li>The <strong>Bandwidth-Delay Product (BDP)</strong> represents the amount of datas that must be in transit to keep a network link fully utilized</li>
+<li>Traditional TCP Reno uses half of capacity when congestion is detected</li>
+<li>A packet is lost because the router buffer is full, all that was required to do is drain the router’s buffer, but instead there is a 50% reduction in congestion window</li>
+</ul>
+<h3 id="adaptive-backoff">Adaptive Backoff</h3>
+<ul>
+<li>Adaptive Backoff attempts to solve this by dynamically choosing how much to reduce the congestion window. </li>
+<li>Adjust the reduction on information such as queueing delay, throughput before and after</li>
+</ul>
+<h3 id="adaptive-reset">Adaptive Reset</h3>
+<ul>
+<li>Gentle adaptive backoff is good generally, but new connections trying to join a link may have to compete for bandwidth due to large congestion window</li>
+<li>Adaptive Reset temporarily switch back to a more aggressive $50\%$ reduction a significant change in network conditions is detected.</li>
+<li>H-TCP monitors throughput across congestion epochs</li>
+<li>$\frac{|T_{\text{new}}-T_{\text{old}}|} {T_{\text{old}}} &gt; 0.20$, reset to $50\%$</li>
+<li>Algorithm is expected to approach its fair operating point after roughly four congestion-control cycles under the assumptions of the analysis.</li>
+</ul>
 
 
 
