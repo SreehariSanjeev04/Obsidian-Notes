@@ -582,6 +582,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#highspeed-tcp-hstcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HighSpeed TCP (HSTCP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scalable-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalable TCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-tcp-fast-aqm-scalable-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAST TCP (Fast AQM Scalable TCP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-differences-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Differences to Remember
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -11886,6 +11941,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#highspeed-tcp-hstcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HighSpeed TCP (HSTCP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scalable-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalable TCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-tcp-fast-aqm-scalable-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAST TCP (Fast AQM Scalable TCP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-differences-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Differences to Remember
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -11921,8 +12031,191 @@
 <h3 id="multcp-virtual-multi-flow-tcp">MulTCP (Virtual Multi-Flow TCP)</h3>
 <ul>
 <li>Emulates the behaviour of N virtual TCP connections aggregated inside a single physical TCP connection. </li>
-<li><strong>Slow Start</strong> - Triples the congestion window for each ACK during the first k RTTs (cwnd = 3^k), then doubles thereafter. k is chosen such that 3k = Nx2^k  </li>
+<li><strong>Slow Start</strong> - Triples the congestion window for each ACK during the first k RTTs ($\text{cwnd} = 3^k$), then doubles thereafter. k is chosen such that $3^k = N \cdot 2^k$</li>
+<li>After those k RTTs, it returns to ordinary exponential doubling</li>
+<li><strong>Linear Increase</strong> - Increments $\text{cwnd}$ by $\frac{N}{\text{cwnd}}$ per ACK (effectively adding +N packets per RTT)</li>
+<li><strong>Multiplicative Decrease</strong> - Upon loss, drops cwnd by one virtual flow share<ul>
+<li>$$\text{cwnd}_{\text{new}} = \text{cwnd} - \left(\frac{1}{N} \times 0.5 \times \text{cwnd}\right)$$</li>
 </ul>
+</li>
+<li><strong>Drawbacks</strong> <ul>
+<li><strong>Manual Parameter Selection</strong> - The target multiplier is static and set manually by the user, not dynamically controlled by the congestion</li>
+<li><strong>Risk of Congestion</strong> - Relies on external pricing and networking policing to prevent greedy flows from starving others</li>
+<li><strong>Burstiness &amp; Timeout Failures</strong> - More bursty than standard TCP and suffers severe performance drops during timeouts. Thoughout gains rarely reach N except when using SACK</li>
+</ul>
+</li>
+</ul>
+<h3 id="highspeed-tcp-hstcp">HighSpeed TCP (HSTCP)</h3>
+<ul>
+<li>Modify TCP’s response function dynamically based on the current window size</li>
+<li><strong>Window Update Equations</strong> - <ul>
+<li><strong>Increase Function</strong> - $w = w + \frac{a(w)}{w}$ per ACK</li>
+<li><strong>Decrease Function</strong> - $w = w \cdot (1 - b(w))$ per loss</li>
+</ul>
+</li>
+<li><strong>Operating Regimes</strong><ul>
+<li><strong>Low Window Mode (w &lt; 28 packets)</strong> - Sets $a(w) = 1$ and $b(w) = 0.5$ </li>
+<li>Behaves Similar to <strong>TCP Reno</strong></li>
+<li><strong>High Window Mode (w ≥ 38 packets)</strong> - $a(w)$ increases smoothly above 1 and $b(w)$ decreases below 0.5</li>
+<li>HSTCP dynamically emulates N parallel connections as the window grows, without requiring static user configuration</li>
+</ul>
+</li>
+</ul>
+<h3 id="scalable-tcp">Scalable TCP</h3>
+<ul>
+<li>Uses <strong>Multiplicative Increase Multiplicative Decrease (MIDM)</strong> model</li>
+<li>For $\text{cwnd} \le \text{lwnd}$ (where $\text{lwnd}$ = 16 packets), it uses AIMD</li>
+<li>For $\text{cwnd} \gt \text{lwnd}$ - <ul>
+<li><strong>Increase</strong> - $\text{cwnd}$ = $\text{cwnd}$ + 0.01 for each ACK ($1\%$ increase)</li>
+<li><strong>Decrease</strong> - $\text{cwnd}$ = $\text{cwnd} = \text{cwnd} - \lceil 0.125 \times \text{cwnd} \rceil$ or $\text{cwnd}=0.875\text{cwnd}$</li>
+</ul>
+</li>
+<li><strong>Constant Recovery Time</strong> - The time to double the window size is <strong>constant</strong> ($\approx70$) regardless of link bandwidth or current window size</li>
+</ul>
+<h3 id="fast-tcp-fast-aqm-scalable-tcp">FAST TCP (Fast AQM Scalable TCP)</h3>
+<ul>
+<li>FAST TCP is a delay-based congestion control algorithm</li>
+<li>Uses queuing delay to regulate congestion</li>
+<li><strong>Window Update Formula</strong> -<ul>
+<li>$$w = w \cdot \left(\frac{\text{baseRTT}}{\text{RTT}}\right) + \alpha$$</li>
+<li>$\text{baseRTT}$: Minimum observed RTT</li>
+<li>$\text{RTT}$ = Exponentially weighted moving average of current RTT</li>
+<li>$\alpha$: Parameter dictating queue occupancy, fairness and aggressiveness</li>
+</ul>
+</li>
+<li><strong>Pros</strong> - Proved theoretically to achieve proportional fairness and high link utilization</li>
+<li><strong>Cons</strong> - RTT measurements can be noisy or skewed by path asymmetry or route changes</li>
+</ul>
+<h3 id="comparison-table">Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>TCP Reno</th>
+<th>MulTCP</th>
+<th>HSTCP</th>
+<th>Scalable TCP</th>
+<th>FAST TCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Proposed by</strong></td>
+<td>Van Jacobson (1988)</td>
+<td>Research proposal</td>
+<td>Sally Floyd (2003)</td>
+<td>Tom Kelly (2003)</td>
+<td>FAST TCP research team</td>
+</tr>
+<tr>
+<td><strong>Congestion Model</strong></td>
+<td>AIMD</td>
+<td>Emulates multiple AIMD flows</td>
+<td>Window-dependent AIMD</td>
+<td>MIMD at high windows</td>
+<td>Delay-based</td>
+</tr>
+<tr>
+<td><strong>Congestion Signal</strong></td>
+<td>Packet loss</td>
+<td>Packet loss</td>
+<td>Packet loss</td>
+<td>Packet loss</td>
+<td>Queueing delay</td>
+</tr>
+<tr>
+<td><strong>Increase Mechanism</strong></td>
+<td>+1 MSS per RTT</td>
+<td>+N MSS per RTT</td>
+<td><code>a(w)</code> controls increase</td>
+<td>+1% per RTT</td>
+<td>RTT-based window adjustment</td>
+</tr>
+<tr>
+<td><strong>Decrease Mechanism</strong></td>
+<td>Halves window (50%)</td>
+<td>Reduces by <code>1/(2N)</code> of window</td>
+<td><code>b(w)</code> controls reduction</td>
+<td>Reduces by 12.5%</td>
+<td>Adjusts window based on RTT</td>
+</tr>
+<tr>
+<td><strong>Low-Window Behaviour</strong></td>
+<td>Standard TCP</td>
+<td>Depends on configured N</td>
+<td>Behaves like Reno</td>
+<td>Reno-like below threshold</td>
+<td>Delay-based</td>
+</tr>
+<tr>
+<td><strong>High-Window Behaviour</strong></td>
+<td>Slow additive growth</td>
+<td>Emulates N virtual flows</td>
+<td>More aggressive AIMD</td>
+<td>Multiplicative growth</td>
+<td>Delay-based adjustment</td>
+</tr>
+<tr>
+<td><strong>Parameter Configuration</strong></td>
+<td>Fixed</td>
+<td>N manually configured</td>
+<td>Dynamically determined by window</td>
+<td>Fixed constants: a = 0.01, b = 0.125</td>
+<td>α configured</td>
+</tr>
+<tr>
+<td><strong>Recovery / Scalability</strong></td>
+<td>Recovery time grows linearly with window size</td>
+<td>Faster growth, but timeout sensitivity remains</td>
+<td>Faster recovery than Reno</td>
+<td>Constant window-doubling time (~70 RTTs)</td>
+<td>Adjusts based on queueing delay</td>
+</tr>
+<tr>
+<td><strong>Main Advantage</strong></td>
+<td>Simplicity and widespread compatibility</td>
+<td>Emulates multiple flows through one connection</td>
+<td>Adapts aggressiveness to window size</td>
+<td>Fast recovery independent of window magnitude</td>
+<td>Can detect congestion before packet loss</td>
+</tr>
+<tr>
+<td><strong>Main Limitation</strong></td>
+<td>Poor scalability on high-BDP networks</td>
+<td>Static configuration and potential unfairness</td>
+<td>More complex response function</td>
+<td>Fairness and stability trade-offs</td>
+<td>Sensitive to RTT measurement errors and competing traffic</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-differences-to-remember">Key Differences to Remember</h2>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Core Idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MulTCP</strong></td>
+<td>Behaves like N parallel TCP connections.</td>
+</tr>
+<tr>
+<td><strong>HSTCP</strong></td>
+<td>Dynamically adjusts AIMD aggressiveness as the congestion window grows.</td>
+</tr>
+<tr>
+<td><strong>Scalable TCP</strong></td>
+<td>Uses multiplicative increase to achieve constant window-doubling time.</td>
+</tr>
+<tr>
+<td><strong>FAST TCP</strong></td>
+<td>Uses queueing delay instead of packet loss as the primary congestion signal.</td>
+</tr>
+</tbody>
+</table>
 
 
 
