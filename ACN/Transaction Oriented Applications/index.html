@@ -699,6 +699,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#implementation-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Policies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-performance-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High Performance Extensions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12092,6 +12114,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#implementation-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Policies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-performance-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High Performance Extensions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12178,6 +12222,22 @@ Client                         Server
 <h4 id="truncating-time-wait-using-connection-counts">Truncating TIME-WAIT Using Connection Counts</h4>
 <ul>
 <li>Using 32 bit Connection Count <code>CC</code>, the receiver can identify delayed segment to an older connection and reject it</li>
+</ul>
+<h3 id="implementation-policies">Implementation Policies</h3>
+<p>TCP allows implementations flexibility across five core operational policies:</p>
+<ul>
+<li><strong>Send Policy:</strong> Balances header overhead against latency. Sending small payloads increases header overhead, while delaying transmission to build larger segments increases latency. The <strong>Push</strong> <strong>flag</strong> forces TCP to transmit buffered data immediately.</li>
+<li><strong>Delivery Policy:</strong> Controls when receiving TCP passes data to the application. In-order segments can be buffered or delivered incrementally, while a <strong>Push</strong> <strong>request</strong> forces immediate delivery.</li>
+<li><strong>Accept Policy:</strong> Dictates whether out-of-order segments are stored in the receive buffer or discarded.</li>
+<li><strong>Retransmit Policy:</strong> Governs packet loss recovery using one of three strategies: <strong>First only</strong> (retransmit only the first unacknowledged segment), <strong>Retransmit all</strong>, or <strong>Retransmit individual</strong> (maintain an independent retransmission timer for each segment).</li>
+<li><strong>Acknowledgment Policy:</strong> Determines whether ACKs are generated as <strong>Immediate ACKs</strong> (sent right away without piggybacking) or <strong>Cumulative ACKs</strong> (delayed to piggyback on outgoing data or until a timer expires)</li>
+</ul>
+<h3 id="high-performance-extensions">High Performance Extensions</h3>
+<ul>
+<li><strong>Selective Acknowledgment (SACK):</strong>
+<img alt="Pasted image 20261122022210.png" src="../../attachments/Pasted%20image%2020261122022210.png" /></li>
+<li><strong>Window Scaling Option:</strong></li>
+<li><strong>Long Fat Pipe Networks (LFNs):</strong> Designed for high-bandwidth, long-delay paths (e.g., satellite links, referred to as "elephants") where standard 16-bit windows (max 64 KB) underutilize capacity. They use Window Scaling to expand the window size</li>
 </ul>
 
 
