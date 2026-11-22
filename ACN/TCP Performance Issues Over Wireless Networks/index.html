@@ -627,6 +627,73 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#flow-control-vs-congestion-avoidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow Control vs Congestion Avoidance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow Control vs Congestion Avoidance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#congestion-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Congestion Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loss-detection-algorithm-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loss Detection &amp; Algorithm Compression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loss Detection &amp; Algorithm Compression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-reno-vs-tcp-vegas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Reno vs TCP Vegas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -11948,6 +12015,73 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#flow-control-vs-congestion-avoidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow Control vs Congestion Avoidance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow Control vs Congestion Avoidance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#congestion-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Congestion Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loss-detection-algorithm-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loss Detection &amp; Algorithm Compression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loss Detection &amp; Algorithm Compression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-reno-vs-tcp-vegas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Reno vs TCP Vegas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -11970,9 +12104,33 @@
 <h3 id="tcp-performance-problems-in-wireless-networks">TCP Performance Problems in Wireless Networks</h3>
 <ul>
 <li>Bit errors, hand-offs/mobility disconnections, high/variable latency and link asymmetry (different bandwidth or capacity in the two directions)</li>
-<li><strong>Link-Layer Approaches</strong> - ARQ (Automatic Repeat Request), FEC (Forward Error Correction), Snoop TCP</li>
+<li><strong>Link-Layer Approaches</strong> - Link Layer ARQ (Automatic Repeat Request), FEC (Forward Error Correction), Snoop TCP</li>
 <li><strong>Split-Connection Approaches</strong> - Indirect TCP and Mobile TCP</li>
 <li><strong>End-to-End Approaches</strong> - Selective Acknowledgements (SACK), Explicit Loss Notification, Fast Re-transmit and Transmission Freeze </li>
+</ul>
+<h3 id="flow-control-vs-congestion-avoidance">Flow Control vs Congestion Avoidance</h3>
+<h4 id="flow-control">Flow Control</h4>
+<ul>
+<li>Protects the <strong>destination receive buffer</strong> from overflow by capping the maximum amount of unacknowledged data the sender can transmit</li>
+<li>The receiver advertises a receive window size in every ACK segment</li>
+<li>Timing &amp; Delay-Bandwidth Product Parameters - <ul>
+<li><strong>Round-Trip Time (</strong>$\text{rtt}$<strong>):</strong> Time elapsed between sending a segment and receiving its corresponding acknowledgment.</li>
+<li><strong>Transmission Time (</strong>$t$<strong>):</strong> Time required to transmit a full window of data over link bandwidth $b$: $$t = \frac{\text{wnd}}{b}$$</li>
+<li><strong>High Delay-Bandwidth Product Constraint (</strong>$\text{rtt} \times b$<strong>):</strong> On links where $t \le \text{rtt}$, the sender must pause transmission while waiting for ACKs. The maximum achievable throughput is constrained strictly by the flow control window: $$\text{Throughput}_{\text{max}} = \frac{\text{wnd}}{\text{rtt}}$$</li>
+</ul>
+</li>
+</ul>
+<h4 id="congestion-control">Congestion Control</h4>
+<ul>
+<li>Prevents the buffer overflow inside intermediate network routers</li>
+<li>Congestion control relies on indirect network measurements instead of receiver feedback</li>
+</ul>
+<h3 id="loss-detection-algorithm-compression">Loss Detection &amp; Algorithm Compression</h3>
+<h4 id="tcp-reno-vs-tcp-vegas">TCP Reno vs TCP Vegas</h4>
+<ul>
+<li><strong>TCP Reno</strong> relies on packet drops where as <strong>TCP Vegas</strong> relies on RTT / Queue Backlog</li>
+<li><strong>TCP Reno</strong> oscillates cwnd continuously whereas <strong>TCP Vegas</strong> causes smooth cwnd convergence</li>
+<li><strong>TCP Reno</strong> is biased against Long-RTT paths whereas <strong>TCP Vegas</strong> achieves stable throughput</li>
 </ul>
 
 
