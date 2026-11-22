@@ -580,6 +580,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="TCP Checksum &amp; Pseudo Header">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculation-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculation Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -606,6 +623,34 @@
     
   
     TCP Extensions for High Speed Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCP%20Performance%20Issues%20Over%20Wireless%20Networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TCP Performance Issues Over Wireless Networks
   
 
     
@@ -11940,6 +11985,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="TCP Checksum &amp; Pseudo Header">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculation-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculation Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -11972,6 +12034,12 @@
 <li><strong>Graceful Connection Shutdown</strong> - Guarantees that all data transmitted prior to issuing a close command is delivered</li>
 </ul>
 <h3 id="tcp-checksum-pseudo-header">TCP Checksum &amp; Pseudo Header</h3>
+<h4 id="calculation-protocol">Calculation Protocol</h4>
+<p><img alt="Pasted image 20261122130202.png" src="../../attachments/Pasted%20image%2020261122130202.png" />
+- <strong>16-Bit One’s Complement</strong> - The TCP checksum is calculated as the 16-bit one’s complement of the one’s complement sum of the pseudo header, the TCP header and the data payload
+- <strong>Zero Padding</strong> - If the total length of the TCP header plus data is an odd number of octets, a zero byte is appended at the end solely for the checksum computation
+- <strong>Initial Zeroing</strong> - The checksum field inside the TCP header is initialised to zero prior to running the calculation algorithm
+- <strong>Implicit TCP Length</strong> - The <strong>TCP Length field</strong> is not transmitted inside the actual TCP header; instead, it is derived from the IP length and included explicitly in the pseudo header during calculation </p>
 
 
 
