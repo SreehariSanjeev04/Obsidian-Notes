@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#dccp-design" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -339,6 +344,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datagram Congestion Control Protocol
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -355,6 +378,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dccp-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DCCP Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-dccp-packet-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9 DCCP Packet Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dccp-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The DCCP Header
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The DCCP Header">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partial-checksum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partial Checksum
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-feature-negotiation-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generic Feature Negotiation Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -11908,6 +12020,86 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dccp-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DCCP Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-dccp-packet-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9 DCCP Packet Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dccp-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The DCCP Header
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The DCCP Header">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partial-checksum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partial Checksum
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-feature-negotiation-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generic Feature Negotiation Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -11929,6 +12121,53 @@
 <li>UDP preferes timeliness over reliability, and due to the lack of native congestion control, it poses a severe risk of congestion collapse across the Internet</li>
 <li>TCP requires strict in-order delivery and full reliability, introducing arbitrary queueing delays and blocks</li>
 <li>DCCP provides end-to-end congestion control without forcing in-order delivery or payload transmissions</li>
+</ul>
+<h4 id="dccp-design">DCCP Design</h4>
+<ul>
+<li><strong>Unreliable Data + Reliable Control</strong> - DCCP never re-transmits data datagrams, but it does reliably re-transmit connection setup, teardown and congestion parameter negotiations</li>
+<li><strong>Every ACK has a sequence number</strong> - <code>DCCP-ACK</code> increments sequence number so that the sender knows that an ACK was lost on reverse path, preventing congestion slowdowns</li>
+<li><strong>Separating Network Loss from Buffer Drops</strong> - Because DCCP has no receive window, a slow receiver can overflow its socket buffer and discard packets even when the network is completely uncongested. If the packet is dropped due to full buffer, then <code>Data Dropped</code> is attached with acknowledgement </li>
+<li><strong>Asymmetric Half-Connections &amp; CCIDS</strong> - Real time sessions are rarely symmetric, so a session is split into two independent half-connections, letting each direction negotiate its own <strong>Congestion Control Identifier</strong> (CCID)<ul>
+<li><strong>CCID 2 (TCP-like)</strong> - Uses classic Additive Increase /  Multiplicative Decrease (AIMD) to grab maximum bandwidth quickly</li>
+<li><strong>CCID (TFRC - TCP Friendly Rate Control)</strong> - Uses an equation model to adjust sending rates smoothly</li>
+</ul>
+</li>
+<li><strong>1020-Byte Option and Simplified Handshake</strong></li>
+</ul>
+<h3 id="9-dccp-packet-types">9 DCCP Packet Types</h3>
+<ul>
+<li><strong>DCCP-Request</strong> <strong>:</strong> Sent by the client to initiate a connection.</li>
+<li><strong>DCCP-Response</strong> <strong>:</strong> Sent by the server in response to a request.</li>
+<li><strong>DCCP-Ack</strong> <strong>:</strong> Transmits acknowledgments when no application data is piggbacked.</li>
+<li><strong>DCCP-Data</strong> <strong>:</strong> Carries application payload without acknowledgments.</li>
+<li><strong>DCCP-DataAck</strong> <strong>:</strong> Carries application payload with piggybacked acknowledgments.</li>
+<li><strong>DCCP-CloseReq</strong> <strong>:</strong> Sent by the server to request connection closure.</li>
+<li><strong>DCCP-Close</strong> <strong>:</strong> Sent by the client to acknowledge connection closure.</li>
+<li><strong>DCCP-Reset</strong> <strong>:</strong> Terminates a connection abruptly or completes teardown.</li>
+<li><strong>DCCP-Move</strong> <strong>:</strong> Used for mobility endpoint handoffs</li>
+</ul>
+<h3 id="the-dccp-header">The DCCP Header</h3>
+<p>All DCCP packets begin with a 12-byte generic header</p>
+<p><img alt="Pasted image 20261122231826.png" src="../../attachments/Pasted%20image%2020261122231826.png" /></p>
+<ul>
+<li><strong>Data Offset (8 bits):</strong> Offset to the start of packet payload in 32-bit words.</li>
+<li><strong>CCval (4 bits):</strong> Used by specific CCIDs (e.g., window counter value).</li>
+<li><strong>Checksum Coverage / CsCov (4 bits):</strong> Specifies how much of the packet is covered by the checksum.</li>
+<li><strong>Type (4 bits):</strong> Specifies one of the 9 packet types.</li>
+<li><strong>Extended Sequence Numbers Flag</strong> <strong>X</strong> <strong>(1 bit):</strong> Indicates whether 24-bit or 48-bit sequence numbers are used.</li>
+<li><strong>Sequence Number:</strong> Incremented on <strong>every transmitted packet</strong>.</li>
+</ul>
+<h4 id="partial-checksum">Partial Checksum</h4>
+<ul>
+<li>Restricts the checksum coverage to the DCCP Header</li>
+</ul>
+<h3 id="generic-feature-negotiation-protocol">Generic Feature Negotiation Protocol</h3>
+<ul>
+<li>DCCP endpoints negotiate connection properties dynamically using <strong>Change</strong>, <strong>Prefer</strong> and <strong>Confirm</strong></li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li>Used <strong>Initial Sequence Numbers</strong>, <strong>Sliding Sequence Number Window</strong> and <strong>ECN Nonces</strong> as security measures</li>
 </ul>
 
 
