@@ -687,6 +687,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#association-setup-4-way-handshake-dos-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Association Setup - 4 Way Handshake &amp; Dos Protection
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12097,6 +12108,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#association-setup-4-way-handshake-dos-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Association Setup - 4 Way Handshake &amp; Dos Protection
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12138,7 +12160,12 @@
 <li><strong>Source &amp; Destination Port Addresses (16 bits each)</strong></li>
 <li><strong>Verification Tag (32 bits):</strong> A random value exchanged during setup that identifies the association. Every incoming packet must contain this tag; invalid tags are silently discarded. It protects against man-in-the-middle attacks, prevents blind packet injection, and <strong>obviates TCP's</strong> <strong>TIME-WAIT</strong> <strong>state requirement</strong>.</li>
 <li><strong>Checksum (32 bits):</strong> A 32-bit CRC checksum providing stronger data integrity than TCP's 16-bit checksum</li>
+<li><strong>Control Chunks</strong> - Handles association</li>
+<li><strong>Data Chunks</strong> - Handles user application data along with TSN, SSN, etc.</li>
 </ul>
+<h3 id="association-setup-4-way-handshake-dos-protection">Association Setup - 4 Way Handshake &amp; Dos Protection</h3>
+<p><img alt="Pasted image 20261123004137.png" src="../../attachments/Pasted%20image%2020261123004137.png" /></p>
+<p><strong>Handshake Sequeunce</strong> - <code>SHUTDOWN</code> → <code>SHUTDOWN-ACK</code> → <code>SHUTDOWN-COMPLETE</code>. <code>ABORT</code> control chunk immediately terminates the connection</p>
 
 
 
