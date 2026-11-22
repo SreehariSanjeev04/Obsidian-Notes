@@ -694,6 +694,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#delay-based-congestion-control-in-tcp-vegas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delay Based Congestion Control in TCP Vegas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-bottlenecks-in-wireless-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Bottlenecks in Wireless Networks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Bottlenecks in Wireless Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root-causes-of-non-congestion-losses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Causes of Non-Congestion Losses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-wireless-bottlenecks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secondary Wireless Bottlenecks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-ip-handoff-in-i-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile IP Handoff in I-TCP
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12082,6 +12143,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#delay-based-congestion-control-in-tcp-vegas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delay Based Congestion Control in TCP Vegas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-bottlenecks-in-wireless-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Bottlenecks in Wireless Networks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Bottlenecks in Wireless Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root-causes-of-non-congestion-losses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Causes of Non-Congestion Losses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-wireless-bottlenecks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secondary Wireless Bottlenecks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-ip-handoff-in-i-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile IP Handoff in I-TCP
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12104,9 +12226,22 @@
 <h3 id="tcp-performance-problems-in-wireless-networks">TCP Performance Problems in Wireless Networks</h3>
 <ul>
 <li>Bit errors, hand-offs/mobility disconnections, high/variable latency and link asymmetry (different bandwidth or capacity in the two directions)</li>
-<li><strong>Link-Layer Approaches</strong> - Link Layer ARQ (Automatic Repeat Request), FEC (Forward Error Correction), Snoop TCP</li>
-<li><strong>Split-Connection Approaches</strong> - Indirect TCP and Mobile TCP</li>
-<li><strong>End-to-End Approaches</strong> - Selective Acknowledgements (SACK), Explicit Loss Notification, Fast Re-transmit and Transmission Freeze </li>
+<li><strong>Link-Layer Approaches</strong>:<ul>
+<li><strong>Link-Layer ARQ</strong> - When a frame is corrupted by radio noise, the Base Station re-transmits it from a local buffer within a microseconds to a few milliseconds, avoiding TCP’s end-to-end Retransmission Timeout and unnecessary congestion control</li>
+<li><strong>Forward Error Control</strong> - Instead of waiting to re-transmit lost data, the sender attaches, redundant error-correcting parity bits to every frame before transmission. The receiver uses this redundancy to detect and reconstruct flipped bits on the fly </li>
+<li><strong>Snoop TCP</strong> - Places a TCP aware software agent between the server and the client, acting as a cache and transmitting missing frames</li>
+</ul>
+</li>
+<li><strong>Split-Connection Approaches</strong>:<ul>
+<li><strong>Indirect TCP</strong> - Splits communication into two completely independent TCP connections: a wired connection with Base Station and Host and a wireless connection with Base Station and Mobile Host. The Base Station immediately sends TCP ACKs back to the wired sender as soon as the packets arrive at the base station (breaks end-to-end TCP semantics)</li>
+<li><strong>Mobile TCP</strong> - Places a Supervisory Host that holds the ACK until it reaches the Mobile Device receives the data. If the mobile disconnects, it sends zero window advertisement to the wired sender, prompting it into persist mode</li>
+</ul>
+</li>
+<li><strong>End-to-End Approaches</strong>:<ul>
+<li><strong>Selective Acknowledgements (SACK)</strong> - SACK allows the receiver to list the exact blocks of non-contiguous data that arrived safely, so that the sender retransmits only the missing segments within a single RTT.</li>
+<li><strong>Explicit  Loss Notification</strong> - Attaches $\text{ELN}=1$ with ACKs to indicate the loss of segment due to wireless interference, so that the sender need not reduce the congestion window and send the missing segment</li>
+</ul>
+</li>
 </ul>
 <h3 id="flow-control-vs-congestion-avoidance">Flow Control vs Congestion Avoidance</h3>
 <h4 id="flow-control">Flow Control</h4>
@@ -12131,6 +12266,79 @@
 <li><strong>TCP Reno</strong> relies on packet drops where as <strong>TCP Vegas</strong> relies on RTT / Queue Backlog</li>
 <li><strong>TCP Reno</strong> oscillates cwnd continuously whereas <strong>TCP Vegas</strong> causes smooth cwnd convergence</li>
 <li><strong>TCP Reno</strong> is biased against Long-RTT paths whereas <strong>TCP Vegas</strong> achieves stable throughput</li>
+</ul>
+<h3 id="delay-based-congestion-control-in-tcp-vegas">Delay Based Congestion Control in TCP Vegas</h3>
+<ul>
+<li>
+<p>Instead of waiting for packet drops, TCP Vegas proactively estimates the network queue backlog using measurements.</p>
+</li>
+<li>
+<p><strong>Key Metrics:</strong></p>
+<ul>
+<li>$\text{cwnd}$<strong>:</strong> Current congestion window size.</li>
+<li>$\text{rtt}^<em>$</em><em>:</em>* Minimum observed round-trip time (base propagation delay under congestion-free conditions).</li>
+<li>$\text{rtt}$<strong>:</strong> Actual observed round-trip time (including queuing delay).</li>
+<li>$\text{diff}$<strong>:</strong> Estimated number of backlogged packets queued inside network buffers: $$\text{diff} = \left( \frac{\text{cwnd}}{\text{rtt}^<em>} - \frac{\text{cwnd}}{\text{rtt}} \right) \times \text{rtt}^</em>$$1</li>
+</ul>
+</li>
+<li><strong>Control Thresholds (</strong>$\alpha$ <strong>and</strong> $\beta$<strong>):</strong> Vegas aims to maintain between $\alpha$ (lower bound) and $\beta$ (upper bound) packets in the bottleneck queue1:<ul>
+<li><strong>If</strong> $\text{diff} &lt; \alpha$<strong>:</strong> Network queue is under-utilized; increment $\text{cwnd}$.</li>
+<li><strong>If</strong> $\text{diff} &gt; \beta$<strong>:</strong> Queue is building up; decrement $\text{cwnd} \leftarrow \text{cwnd} - 1$.</li>
+<li><strong>If</strong> $\alpha \le \text{diff} \le \beta$<strong>:</strong> Maintain current window size unchanged.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Property / Metric</th>
+<th>TCP Reno</th>
+<th>TCP Vegas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Congestion Metric</strong></td>
+<td>Reactive (Packet Loss / Duplicate ACKs / Timeouts)</td>
+<td>Proactive (Delay &amp; Estimated Queue Backlog $\text{diff}$)</td>
+</tr>
+<tr>
+<td><strong>Window Stability</strong></td>
+<td>Continually oscillates $\text{cwnd}$, causing delay jitter</td>
+<td>Converges smoothly, keeping steady queue occupancy</td>
+</tr>
+<tr>
+<td><strong>Bandwidth Estimation</strong></td>
+<td>Simple, loss-driven bandwidth probe</td>
+<td>Rate-based calculation ($\frac{\text{cwnd}}{\text{rtt}}$)</td>
+</tr>
+<tr>
+<td><strong>RTT Bias / Fairness</strong></td>
+<td><strong>Biased against long-RTT flows</strong> (short-RTT flows update $\text{cwnd}$ faster and claim unfair capacity)</td>
+<td>RTT-neutral queue backlogged estimation</td>
+</tr>
+<tr>
+<td><strong>Coexistence</strong></td>
+<td>Aggressive window probing starves competing Vegas flows</td>
+<td>Vulnerable to bandwidth starvation when competing with Reno</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tcp-bottlenecks-in-wireless-networks">TCP Bottlenecks in Wireless Networks</h3>
+<h4 id="root-causes-of-non-congestion-losses">Root Causes of Non-Congestion Losses</h4>
+<ul>
+<li><strong>Bit Errors &amp; Channel Impairments</strong> - High Bit Error Rates due to signal fading, noise, multi-path interference</li>
+<li><strong>Handoff Disconnections</strong> - Physical movement of the device causing disconnections</li>
+<li><strong>Burst Errors</strong> - Low signal strength causing consecutive packet losses within a single window, causing TCP to go to slow start</li>
+</ul>
+<h4 id="secondary-wireless-bottlenecks">Secondary Wireless Bottlenecks</h4>
+<ul>
+<li><strong>High &amp; Variable Latency</strong> - Long RTTs destabilise TCP timeout estimation algorithms</li>
+<li><strong>Asymmetric Links</strong> - Asymmetric bandwidth causes return path ACKs to accumulate or delay on slow uplink</li>
+</ul>
+<h3 id="mobile-ip-handoff-in-i-tcp">Mobile IP Handoff in I-TCP</h3>
+<ul>
+<li>When the Mobile Host moves from one Base Station to another Base Station, it should let the Wired Host know about the shift. The old Foreign Agent transmit the complete TCP to the new Foreign Agent (Buffered data, Sequence Numbers, Socket/Port tables) to rebuild the session</li>
 </ul>
 
 
