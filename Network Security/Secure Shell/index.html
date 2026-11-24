@@ -12440,7 +12440,19 @@
 <li>Once the algorithms are agreed upon (a variant of <strong>Diffie-Hellman</strong> or <strong>Elliptic Curve Diffie-Hellman</strong>)</li>
 <li>The client and server generate ephemeral public/private key pairs and trade public values</li>
 <li>The independently calculate a shared secret value (K) and an exchange hash (H)</li>
-<li></li>
+<li>
+<p>Because they both have K and H, they run them through a cryptographic hashing function to derive 6 independent symmetric key</p>
+<ul>
+<li>Encryption keys </li>
+<li>MAC keys</li>
+<li>Initialisation vectors</li>
+</ul>
+</li>
+<li>
+<p>The client and server never store the six symmetric session keys on a hard drive or disk</p>
+</li>
+<li>Stored in RAM</li>
+<li>They keys are allocated on the heap segment of the process memory</li>
 </ul>
 
 
