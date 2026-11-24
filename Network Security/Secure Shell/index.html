@@ -7650,6 +7650,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#server-host-key-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server-host-key proof
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12399,6 +12410,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#server-host-key-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server-host-key proof
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12433,7 +12455,7 @@
 <li>The server selects the very first algorithm on the client’s preference list that the server also supports</li>
 <li>The server reads the client's list from left to right</li>
 <li>For the first algorithm list by the client, the server checks its own list of supported algorithms</li>
-<li>If the server supports it, that algorithm is chosen</li>
+<li>If the server supports it, that algorithm is chosen, if not the connection is closed</li>
 </ul>
 <h3 id="execution-of-key-exchange-deriving-sessions-key">Execution of Key Exchange (Deriving Sessions Key)</h3>
 <ul>
@@ -12443,17 +12465,23 @@
 <li>
 <p>Because they both have K and H, they run them through a cryptographic hashing function to derive 6 independent symmetric key</p>
 <ul>
-<li>Encryption keys </li>
-<li>MAC keys</li>
-<li>Initialisation vectors</li>
+<li>Encryption keys (one for client-to-server and one for server-to-client)</li>
+<li>MAC keys (one for client-to-server and another for server-to-client)</li>
+<li>Initialisation vectors for ciphers</li>
 </ul>
 </li>
 <li>
 <p>The client and server never store the six symmetric session keys on a hard drive or disk</p>
 </li>
 <li>Stored in RAM</li>
-<li>They keys are allocated on the heap segment of the process memory</li>
+<li>They keys are allocated on the heap segment of the process memory<ul>
+<li>The main connection tracking structure <code>struct ssh</code> contains a sub-structure called <code>session_state</code></li>
+<li>The <code>session_state</code> holds a <code>newkeys</code> structure, which contains the active cryptographic configuration</li>
+<li>Modern SSH implementations use Memory Obfuscation/Encryption and Memory Zeroing</li>
 </ul>
+</li>
+</ul>
+<h3 id="server-host-key-proof">Server-host-key proof</h3>
 
 
 
