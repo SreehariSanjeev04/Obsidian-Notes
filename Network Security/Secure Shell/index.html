@@ -7659,13 +7659,41 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Server-host-key proof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#-required-to-prevent-a-man-in-the-middle-attack-during-key-the-key-exchange" class="md-nav__link">
+  <a href="#binary-packet-protocol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        - Required to prevent a Man-in-the-Middle attack during key the key exchange
+        Binary Packet Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-authentication-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Authentication Service
       
     </span>
   </a>
@@ -12430,13 +12458,41 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Server-host-key proof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#-required-to-prevent-a-man-in-the-middle-attack-during-key-the-key-exchange" class="md-nav__link">
+  <a href="#binary-packet-protocol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        - Required to prevent a Man-in-the-Middle attack during key the key exchange
+        Binary Packet Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-authentication-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Authentication Service
       
     </span>
   </a>
@@ -12504,7 +12560,27 @@
 </li>
 </ul>
 <h3 id="server-host-key-proof">Server-host-key proof</h3>
-<h2 id="-required-to-prevent-a-man-in-the-middle-attack-during-key-the-key-exchange">- Required to prevent a Man-in-the-Middle attack during key the key exchange</h2>
+<ul>
+<li>Required to prevent a Man-in-the-Middle attack during key the key exchange</li>
+<li>The client should know that it is an actual server, not an attacker in the middle</li>
+<li>Server must use its permanent, long-term Host Key (stored in <code>/etc/ssh/ssh_host_rsa_key</code> to mathematically sign the exchange</li>
+<li>The server takes its Exchange Hash and signs it with its private host key</li>
+<li>Signature, along with it’s server’s public key is sent back to the client</li>
+</ul>
+<h4 id="client-verification">Client Verification</h4>
+<ul>
+<li>Client uses the server’s public host key to verify the digital signature against its own calculated Exchange hash (H)</li>
+<li>if the signature matches, it mathematically proves that the entity does not possess the private key matching that of host key</li>
+</ul>
+<h3 id="binary-packet-protocol">Binary Packet Protocol</h3>
+<ul>
+<li>Used to guarantee encryption, data integrity, and authentication over an insecure network</li>
+<li>Once the initial plain-text version exchange completes, every single piece of data sent over an SSH connection including key exchanges, authentication requests is packaged into this binary format</li>
+</ul>
+<p><img alt="Pasted image 20261125002339.png" src="../../attachments/Pasted%20image%2020261125002339.png" /></p>
+<h3 id="user-authentication-service">User Authentication Service</h3>
+<p><img alt="Pasted image 20261125002521.png" src="../../attachments/Pasted%20image%2020261125002521.png" /></p>
+<p><code>SSH_MSG_EXT_INFO</code> message is an optional packet to negotiate for extra features and extenions.</p>
 
 
 
