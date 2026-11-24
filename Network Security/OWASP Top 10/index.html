@@ -7729,7 +7729,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#software-supply-chain-failures" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7738,10 +7743,83 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Software Supply Chain Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vulnerable-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vulnerable Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-confusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency Confusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compromised-development-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compromised Development Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compromised-build-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compromised Build Pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compromised Build Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defenses
+      
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptographic-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cryptographic Failures
+      
+    </span>
+  </a>
   
 </li>
       
@@ -12657,7 +12735,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#software-supply-chain-failures" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12666,10 +12749,83 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Software Supply Chain Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vulnerable-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vulnerable Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-confusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency Confusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compromised-development-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compromised Development Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compromised-build-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compromised Build Pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compromised Build Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defenses
+      
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptographic-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cryptographic Failures
+      
+    </span>
+  </a>
   
 </li>
       
@@ -12755,7 +12911,41 @@
 <li>Cloud security</li>
 <li>Automated configuration auditing</li>
 </ul>
-<h4 id="software-supply-chain-failures">Software Supply Chain Failures</h4>
+<h3 id="software-supply-chain-failures">Software Supply Chain Failures</h3>
+<ul>
+<li>Modern applications third party libraries, that may be affected</li>
+</ul>
+<h4 id="vulnerable-dependencies">Vulnerable Dependencies</h4>
+<ul>
+<li>Attacker exploits the vulnerability in one of the packages</li>
+</ul>
+<h4 id="dependency-confusion">Dependency Confusion</h4>
+<ul>
+<li>Misconfigured package manager installing the attacker’s package</li>
+</ul>
+<h4 id="compromised-development-tools">Compromised Development Tools</h4>
+<ul>
+<li>The developer may use malicious IDE extension</li>
+</ul>
+<h4 id="compromised-build-pipeline">Compromised Build Pipeline</h4>
+<ul>
+<li>An attacker can compromise the CI/CD system, modifying the build process to insert malicious code into the generated application</li>
+</ul>
+<h5 id="defenses">Defenses</h5>
+<ul>
+<li>Software Bill of Materials - Maintain an inventory of all direct and transitive dependencies</li>
+<li>Dependency scanning</li>
+<li>Dependency pinning</li>
+<li>Trusted repositories</li>
+<li>Patch management</li>
+<li>CI/CD security</li>
+<li>Least privilege</li>
+<li>Code review</li>
+</ul>
+<h3 id="cryptographic-failures">Cryptographic Failures</h3>
+<ul>
+<li>Occurs when an application fails to adequately protect sensitive information through cryptography </li>
+</ul>
 
 
 
