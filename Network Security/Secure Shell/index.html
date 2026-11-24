@@ -7617,6 +7617,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ssh-handshake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Handshake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-rule-client-preference-server-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Rule: Client Preference, Server Approval
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-of-key-exchange-deriving-sessions-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution of Key Exchange (Deriving Sessions Key)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12333,6 +12366,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ssh-handshake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Handshake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-rule-client-preference-server-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Rule: Client Preference, Server Approval
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-of-key-exchange-deriving-sessions-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution of Key Exchange (Deriving Sessions Key)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12356,6 +12422,26 @@
 <p><img alt="Pasted image 20261124211320.png" src="../../attachments/Pasted%20image%2020261124211320.png" /></p>
 <h3 id="ssh-architecture">SSH Architecture</h3>
 <p><img alt="Pasted image 20261124211421.png" src="../../attachments/Pasted%20image%2020261124211421.png" /></p>
+<p><img alt="Pasted image 20261124212604.png" src="../../attachments/Pasted%20image%2020261124212604.png" /></p>
+<h3 id="ssh-handshake">SSH Handshake</h3>
+<ul>
+<li>Client and Server agree on SSH Encryption, Message Authentication Code, and Key Exchange algorithms through a deterministic negotiation process <code>SSH_MSG_KEXINIT</code></li>
+<li>Client and Server include a comma-separated list of names for every algorithm it supports, ordered from most preferred to least preferred </li>
+</ul>
+<h3 id="selection-rule-client-preference-server-approval">Selection Rule: Client Preference, Server Approval</h3>
+<ul>
+<li>The server selects the very first algorithm on the client’s preference list that the server also supports</li>
+<li>The server reads the client's list from left to right</li>
+<li>For the first algorithm list by the client, the server checks its own list of supported algorithms</li>
+<li>If the server supports it, that algorithm is chosen</li>
+</ul>
+<h3 id="execution-of-key-exchange-deriving-sessions-key">Execution of Key Exchange (Deriving Sessions Key)</h3>
+<ul>
+<li>Once the algorithms are agreed upon (a variant of <strong>Diffie-Hellman</strong> or <strong>Elliptic Curve Diffie-Hellman</strong>)</li>
+<li>The client and server generate ephemeral public/private key pairs and trade public values</li>
+<li>The independently calculate a shared secret value (K) and an exchange hash (H)</li>
+<li></li>
+</ul>
 
 
 
