@@ -97,34 +97,6 @@
          <lastmod>2026-11-25</lastmod>
     </url>
     <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/ACN/Network%20Security/Buffer%20Overflow/</loc>
-         <lastmod>2026-11-25</lastmod>
-    </url>
-    <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/ACN/Network%20Security/Firewall/</loc>
-         <lastmod>2026-11-25</lastmod>
-    </url>
-    <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/ACN/Network%20Security/IDS%20and%20IPS/</loc>
-         <lastmod>2026-11-25</lastmod>
-    </url>
-    <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/ACN/Network%20Security/Malware%20Analysis%20and%20Disassembly/</loc>
-         <lastmod>2026-11-25</lastmod>
-    </url>
-    <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/ACN/Network%20Security/NOC%20and%20SOC/</loc>
-         <lastmod>2026-11-25</lastmod>
-    </url>
-    <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/ACN/Network%20Security/Placement%20of%20Network%20Security%20Devices/</loc>
-         <lastmod>2026-11-25</lastmod>
-    </url>
-    <url>
-         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/ACN/Network%20Security/SIEM/</loc>
-         <lastmod>2026-11-25</lastmod>
-    </url>
-    <url>
          <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Artificial%20Intelligence/Adversarial%20Search/</loc>
          <lastmod>2026-11-25</lastmod>
     </url>
@@ -813,11 +785,31 @@
          <lastmod>2026-11-25</lastmod>
     </url>
     <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/Buffer%20Overflow/</loc>
+         <lastmod>2026-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/Firewall/</loc>
+         <lastmod>2026-11-25</lastmod>
+    </url>
+    <url>
          <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/Flooding%20Attack/</loc>
          <lastmod>2026-11-25</lastmod>
     </url>
     <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/IDS%20and%20IPS/</loc>
+         <lastmod>2026-11-25</lastmod>
+    </url>
+    <url>
          <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/IP%20Fragmentation/</loc>
+         <lastmod>2026-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/Malware%20Analysis%20and%20Disassembly/</loc>
+         <lastmod>2026-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/NOC%20and%20SOC/</loc>
          <lastmod>2026-11-25</lastmod>
     </url>
     <url>
@@ -829,7 +821,15 @@
          <lastmod>2026-11-25</lastmod>
     </url>
     <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/Placement%20of%20Network%20Security%20Devices/</loc>
+         <lastmod>2026-11-25</lastmod>
+    </url>
+    <url>
          <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/Portions/</loc>
+         <lastmod>2026-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://sreeharisanjeev04.github.io/Personal-Notes/Network%20Security/SIEM/</loc>
          <lastmod>2026-11-25</lastmod>
     </url>
     <url>
